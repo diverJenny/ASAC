@@ -11,15 +11,17 @@
     <div class="page">
         <!-- header -->
         <div class="header">
-            <nav class="nav">
-                <div>
-                    <button>
-                        <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=undefined&q=75">
-                    </button>
-                    <a>로고</a>
-                </div>
-                <div>
-                    <ul>
+            <div class="mainBar">
+                <nav class="mainBar_nav">
+                    <div class="mainBar_nav_top">
+                        <button id="mainBar_nav_top_button" type="button">
+                            <img id="mainBar_nav_top_buttonImg" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=undefined&q=75" alt="hamberger menu">
+                        </button>
+                        <a href="/">
+                            <img id="mainBar_nav_top_logo" src="https://theme.zdassets.com/theme_assets/9309779/480a35976bf401a88dd7388d8f5c19d77227cd35.png">
+                        </a>
+                    </div>
+                    <ul class="mainBar_nav_menuBar">
                         <li>채용</li>
                         <li>이벤트</li>
                         <li>직군별 연봉</li>
@@ -28,15 +30,19 @@
                         <li>프리랜서</li>
                         <li>AI합격예측</li>
                     </ul>
-                </div>
-                <div>
-                    <ul>
+                    <ul class="mainBar_nav_aside">
                         <li>검색</li>
-                        <li>회원가입|로그인</li>
-                        <li>기업 서비스</li>
+                        <li>
+                            <a>회원가입/로그인</a>
+                        </li>
+                        <li class="poratService_button">
+                            <a id="mainBar_nav_corporatService_button">
+                                기업 서비스
+                            </a>
+                        </li>
                     </ul>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </div>
         <!-- center -->
         <div class="center">

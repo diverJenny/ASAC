@@ -1,8 +1,26 @@
 body {
     margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-.page {
+a ul {
+    position: relative;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 15px;
+    display: inline-block;
+}
+
+li {
+    list-style-type: none;
+    float: left;
+    margin-left: 20px;
+}
+
+.page{
      width: 100vw;
      height: 100vh;
      display: flex;
@@ -10,34 +28,96 @@ body {
 }
 
 .header {
+    width: 100%;
+    position: fixed;
+    padding-right: initial;
+    top: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+    z-index: 800;
+}
+
+.mainBar {
+    margin: 0 auto;
+    height: 50px;
+    max-width: 1060px;
+    position: relative;
+}
+
+.mainBar_nav{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: row;
-    gap: 10px;
-    padding: 15px;
-    border: 3px solid black ;
+    flex-wrap: wrap;
 }
 
-.header div, nav{
-    text-align: center;
-    background-color: tomato;
-}
-
-.nav{
-    width: 100vw;
+.mainBar_nav_top {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    padding: 15px;
-    border: 3px solid red;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -2;
+    margin-right: 15px;
 }
 
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
 
+#mainBar_nav_top_button {
+    margin-top: -2;
+    margin-right: 15px;
+}
 
-ul > li {
-    list-style-type: none;
-    float: left;
-    margin-left: 20px;
+#mainBar_nav_top_buttonImg {
+    width: 17px;
+    height: 14px;
+    object-fit: contain;
+}
+
+#mainBar_nav_top_logo {
+    width: 72px;
+    height: 17px;
+}
+
+.mainBar_nav_menuBar, .mainBar_nav_aside {
+    position: relative;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    display: inline-block;
+}
+.mainBar_nav_aside>ul li {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.poratService_button::before {
+    content: '\007C';
+    color: #e1e2e3;
+}
+
+.poratService_button {
+    display: flex;
+}
+
+#mainBar_nav_corporatService_button {
+    font-size: 13px;
+    color: #666;
+    line-height: 30px;
+    height: 30px;
+    border: 1px solid #e1e2e3;
+    border-radius: 15px;
+    padding: 0 10px;
+    margin-left: 15px;
+    font-weight: 400;
 }
 
 .center {
