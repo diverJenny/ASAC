@@ -37,7 +37,7 @@ button {
     /* border: 3px solid blue; */
 }
 
-.MainBar, .TopBanner_list, .careerContents {
+.MainBar, .TopBanner_list, .careerContents, .CareerContents_Wrapper {
     margin: 0 auto;
     max-width: 1060px;
 }
@@ -173,9 +173,23 @@ button {
     height: 16px;
 }
 
-.CareerContents_TitleWrapper {
+.CareerContents {
+    padding: 60px 0;
+}
+
+.CareerContents_Title_Wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.CareerContents_Title {
+    display: flex;
+    flex-direction: row;
+}
+
+.CareerContents_Title_Str {
+    margin: 0;
 }
 
 .QuestionButton {
@@ -189,9 +203,81 @@ button {
     margin-left: 4px;
 }
 
+.CareerContents_CategoryListSlide {
+    max-width: 1060px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .CareerContents_CategoryList {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.CareerContents_CategoryName {
+    color: #888;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 30px;
+    height: 30px;
+    border: 1px solid #e1e2e3;
+    border-radius: 50px;
+    padding: 5px 22px;
+    font-weight: 600;
+}
+
+/* .CareerContents_CategoryName {
+    display: flex;
+    padding: 9px 22px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 146.7%;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    color: #888;
+    border-color: #e1e2e3;
+    outline: none;
+    scroll-snap-align: start;
+    height: 40px;
+    position: relative;
+} */
+
+.CareerCategory_arrow_left {
+    left: 0;
+}
+
+.CareerContents_Category_arrow_left_button, .CareerContents_Category_arrow_right_button {
+    color: #888;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 30px;
+    height: 40px;
+    border: 1px solid #e1e2e3;
+    border-radius: 50px;
+    padding: 10px 10px;
+    font-weight: 600;
+}
+
+.CareerContents_Category_arrowIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.CareerContents_Category_arrow_left {
+    left: 0;
+    justify-content: start;
+}
+
+.CareerContents_List {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
 }
 
 .footer {
