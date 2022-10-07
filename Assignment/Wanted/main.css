@@ -18,120 +18,180 @@ button {
     background: none;
 }
 
-.page {
+.Page {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.header, .mainBar, .mainBar_nav {
+.Header, .MainBar, .MainBar_nav {
     width: auto;
     height: 50px;
 }
 
-.header {
+.Header {
     background-color: #fff;-webkit-box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
     z-index: 800;
+    /* border: 3px solid blue; */
 }
 
-.mainBar {
+.MainBar, .TopBanner_list, .careerContents {
     margin: 0 auto;
     max-width: 1060px;
 }
 
-.mainBar_nav {
+.MainBar_nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.mainBar_nav_top, .mainBar_nav_menuBar, .mainBar_nav_aside {
+.MainBar_nav_top, .MainBar_nav_menuBar, .MainBar_nav_aside {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-#mainBar_nav_top_button {
+#MainBar_nav_top_button {
     margin-top: -2;
     margin-right: 15px;
 }
 
-#mainBar_nav_top_buttonImg {
+#MainBar_nav_top_buttonImg {
     width: 17px;
     height: 14px;
     object-fit: contain;
 }
 
-#mainBar_nav_top_logo {
+#MainBar_nav_top_logo {
     width: 72px;
     height: 17px;
 }
 
-.mainBar_nav_menuBar li {
+.MainBar_nav_menuBar li {
     margin-left: 20px;
 }
 
-.mainBar_nav_menuBar, .mainBar_nav_aside {
+.MainBar_nav_menuBar, .MainBar_nav_aside {
     height: inherit;
     text-align: center;
     margin: 0;
 }
 
-.mainBar_nav_aside .li{
+.MainBar_nav_aside .li{
     margin: auto;
 }
 
-.mainBar_nav_search_button {
+.MainBar_nav_searchIcon_button {
     margin-right: 15px;
     vertical-align: middle;
 }
 
-.searchIcon {
+.SearchIcon {
     width: 12px;
     height: 12px;
+    margin-right: 20px;
+    align-items: center;
 }
 
-.login {
-    margin-right: 15px;
+.Login {
+    margin-right: 20px;
 }
 
-.poratService_button::before {
+.PoratService_button::before {
     content: '\007C';
     color: #e1e2e3;
 }
 
-#mainBar_nav_corporatService_button {
+#MainBar_nav_corporatService_button {
     height: 59.453px;
 }
 
-#mainBar_nav_corporatService_button {
+#MainBar_nav_corporatService_button {
     color: #666;
     line-height: 30px;
     height: 50px;
     border: 1px solid #e1e2e3;
     border-radius: 15px;
     padding: 5px 10px;
-    margin-left: 15px;
+    margin-left: 20px;
     font-weight: 400;
 }
 
-.center {
+/* .main, .TopBanner{
+    margin: 0 auto;
+    max-width: 1060px;
+} */
+.Main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
     padding-top: 15px;
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
-.center div {
+.Main div {
     text-align: center;
-    background-color: greenyellow;
+}
+
+.TopBanner_slider{
+    display: flex;
+    flex-direction: row;
+}
+
+.TopBanner_arrow {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    position: absolute;
+    top: 180px;
+    width: 30px;
+    height: 60px;
+    opacity: .5;
+    border-radius: 15px;
+    background-color: rgb(230, 225, 225);
+    font-size: 16px;
+    z-index: 10;
+}
+
+.Left_arrow {
+    left: calc((100% - 1210px)/2);
+}
+
+.Right_arrow {
+    right: calc((100% - 1200px)/2);
+}
+
+.TopBanner_arrowIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.CareerContents_TitleWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.QuestionButton {
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.QuestionButton_Icon {
+    width: 22px;
+    height: 22px;
+    margin-left: 4px;
+}
+
+.CareerContents_CategoryList {
+    display: flex;
+    flex-direction: row;
 }
 
 .footer {
