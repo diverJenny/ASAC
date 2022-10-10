@@ -18,6 +18,14 @@ button {
     background: none;
 }
 
+img {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
 .Page {
     width: 100vw;
     height: 100vh;
@@ -143,6 +151,13 @@ button {
 .TopBanner_slider{
     display: flex;
     flex-direction: row;
+    overflow-x: hidden;
+}
+
+.TopBanner_list_wrapper {
+    display: flex;
+    transition: .5s ease-out;
+    height: 100%;
 }
 
 .TopBanner_arrow {
@@ -195,6 +210,8 @@ button {
 .QuestionButton {
     margin-right: 15px;
     vertical-align: middle;
+    margin-left: 4px;
+    line-height: normal;
 }
 
 .QuestionButton_Icon {
@@ -278,6 +295,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -10px;
+    padding-left: 0;
 }
 
 .CareerContentCard_CareerContentCard {
@@ -308,9 +326,136 @@ button {
     outline-offset: -1px;
 }
 
-.footer {
-    text-align: center;
+.Footer {
+    /* text-align: center;
     border: 3px solid black;
     background-color: slategrey;
-    flex-basis: 100px ;
+    flex-basis: 100px ; */
+    padding: 18px 0 65px;
+    background-color: #fff;
+    border-top: 1px solid #ececec;
 }
+
+.Footer_rowClass {
+    width: 90%;
+    max-width: 1060px;
+    margin: 0 auto 18px;
+    display: flex;
+}
+
+.Footer_navLinks {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.Footer_navLinks_logo {
+    margin-right: 50px;
+}
+
+.Footer_navLinks_links {
+    display: flex;
+}
+
+.Footer_navLinks_links>a {
+    font-size: 15px;
+    color: #3a3a3a;
+    font-weight: 500;
+    line-height: 2.6;
+    margin-right: 45px;
+    white-space: nowrap;
+}
+
+.Footer_SocialLinks {
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    line-height: 2.6; 
+}
+
+.Footer_SocialLinks>a {
+    position: relative;
+    display: block;
+    float: left;
+    height: 20px;
+}
+
+.Footer_SocialLinks>a>img {
+    margin-left: 14px;
+}
+
+.Footer_Boarder {
+    border-top: 1px solid #ececec;
+    padding-top: 25px;
+}
+
+.Footer_CompanyInfo_Text {
+    float: left;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6666666667em;
+    color: #767676;
+    width: calc(100% - 290px);
+    margin-right: 40px;
+}
+
+.Footer_LocaleSelect {
+    position: relative;
+    width: 250px;
+    height: 36px;
+    float: left;
+}
+
+.Footer_LocaleSelect>img {
+    position: absolute;
+    left: 15px;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 17px;
+    z-index: 1;
+}
+
+.Footer_LocaleSelect>select {
+    width: 100%;
+    height: 40px;
+    background: #f2f4f7;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    line-height: 2.1;
+    color: #717171;
+    padding: 0 45px;
+    appearance: none;
+    font-weight: 500;
+}
+
+/* IE에서 select 화살표 제거 */
+select::-ms-expand {
+    display: none;
+}
+
+.Footer_LocaleSelect>i {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    line-height: 1.6;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #717171;
+}
+
+.Footer_LocaleSelect_arrow {
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+.Footer_LocaleSelect_arrow::before {
+    content: "\25BC";
+}
+
