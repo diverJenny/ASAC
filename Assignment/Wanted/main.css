@@ -156,9 +156,45 @@ a {
 
 .TopBanner_list_wrapper {
     display: flex;
-    transition: .5s ease-out;
     height: 100%;
+    overflow-x: hidden;
 }
+
+.TopBanner_list_wrapper_container {
+    display: flex;
+    transition: 500ms ease 0s;
+}
+
+.TopBanner_list_contents_information {
+    position: absolute;
+    bottom: 28px;
+    width: 330px;
+    height: 146px;
+    border-radius: 4px;
+    background-color: #fff;
+    opacity: 0;
+    text-align: left;
+    left: 34px; 
+}
+
+.TopBanner_list_contents_information>h2 {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.TopBanner_list_contents_information>h3 {
+    margin: 0 20px;
+    height: 44px;
+    font-size: 14px;
+    line-height: 1.64;
+    color: #333;
+}
+
+/* .TopBanner_list_contents_information {
+    animation: none;
+} */
 
 .TopBanner_arrow {
     /* display: flex;
