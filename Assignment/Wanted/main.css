@@ -326,8 +326,44 @@ a {
     border: 1px solid #e1e2e3;
     border-radius: 50px;
     padding: 10px 10px;
-    font-weight: 600;
     vertical-align: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 34px;
+    min-height: 34px;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
+    color: #939393;
+    background-color: #fff;
+    outline: none;
+}
+
+.CareerContents_Category_arrow_left_button>span, .CareerContents_Category_arrow_right_button>span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CareerContents_Category_arrow_Expand_button {
+    margin-left: 7px;
+    color: #888;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 30px;
+    height: 40px;
+    border: 1px solid #e1e2e3;
+    border-radius: 4px;
+    padding: 10px 10px;
+    vertical-align: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 34px;
+    min-height: 34px;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
+    color: #939393;
+    background-color: #fff;
+    outline: none;
 }
 
 .CareerContents_Category_arrowIcon {
@@ -549,7 +585,7 @@ a {
     justify-content: space-between;
 }
 
-.Article_Title>h2, .VOD_Title>h2, .Event_Title>h2 {
+.Article_Title>h2, .VOD_Title>h2, .Event_Title>h2, .RecruitInfo_Title>h2 {
     margin: 0 auto;
 }
 
@@ -766,27 +802,28 @@ a {
     outline-offset: -1px;
 }
 
-/* .SubscribeBanner_Wrapper {
+.SubscribeBanner_Wrapper {
     display: flex;
     max-width: 100%;
     width: 100%;
     padding: 60px 0;
     margin: 0 auto;
+    /* text-align: center; */
+    justify-content: center;
     background-color: #f7f7f7;
-} */
+}
 
-/* .SubscribeBanner_Container {
+.SubscribeBanner_Container {
     max-width: 1060px;
-    width: 87.72%;
     width: 100%;
-    display: inline;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     text-align: left;
-     */
 }
+
 
 .SubscribeBanner_Text {
     display: flex;
@@ -795,6 +832,7 @@ a {
 
 .SubscribeBanner_Text>p {
     margin-top: 0;
+    margin-bottom: 0;
     text-align: left;
 }
 
@@ -802,15 +840,62 @@ a {
     text-align: left;
 }
 
-.SubscribeBanner_Title {
+.SubscribeBanner_Button {
+    width: 260px;
+    height: 50px;
+    font-size: 16px;
+    margin-top: 25px;
+    color: #fff;
+    background-color: #36f;
+    border-radius: 25px;
+    border: none;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    min-width: 64px;
+    padding: 0 27px;
+    box-sizing: border-box;
+    font-weight: 700;
+    line-height: normal;
+    background-color: none;
+    cursor: pointer;
+}
+
+#SubscribeButton {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    color: #fff;
+}
+
+.SubscribeButton_Svg_Icon {
+    margin-top: 3px;
+    margin-right: 2px;
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: currentColor;
+    flex-shrink: 0;
+    font-size: inherit;
+}
+
+.SubscribeBanner_Title, .RecruitInfo_Title {
+    display: flex;
     text-align: left;
     flex-direction: row;
 }
 
 .SubscribeBanner_Title>p {
+    display: flex;
+    justify-content: center;
     font-size: 30px;
     font-weight: 700;
     word-break: keep-all;
+    color: #333;
+    /* align-items: center; */
     margin: 0;
 }
 
@@ -821,12 +906,90 @@ a {
     margin-right: 4px;
 }
 
-.SubscibeBanner_item {
+.SubscribeBanner_item img {
+    display: flex;
+    height: 158px;
 }
 
-.SubscribeBanner_item>img {
-    width: 544.825;
-    height: auto;
+.RecruitInfo_Wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1060px;
+    width: 100%;
+    padding: 60px 0;
+}
+
+.RecruitInfo_Header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.RecruitInfo_Main {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    flex-direction: row;
+    /* border: 1px solid #ececec; */
+    border-radius: 4px;
+    color: #333;
+}
+
+.RecruitmentQuikMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    padding: 18px 0 0;
+    box-sizing: border-box;
+    border: 1px solid #ececec;
+}
+
+.RecruitmentQuikMenu>a:first-child {
+    font-size: 32px;
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: currentColor;
+    flex-shrink: 0;
+    color: #333;
+}
+
+.RecruitmentQuikMenu>a:last-child {
+    height: 50px;
+    font-size: 16px;
+    /* padding: 6px 8px; */
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    min-width: 64px;
+    padding: 0 27px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.RecruitmentQuikMenu_Button_Icon {
+    margin-top: -2px;
+    margin-right: -1px;
+    margin-left: 2px;
+}
+
+.RecruitmentQuikMenu_Button_Svg {
+    width: 100%;
+    display: flex;
+    font-size: 16px;
+    width: 1em;
+    height: 1em;
 }
 
 .Footer {
@@ -834,6 +997,8 @@ a {
     border: 3px solid black;
     background-color: slategrey;
     flex-basis: 100px ; */
+    max-width: 100%;
+    width: 100%;
     padding: 18px 0 65px;
     background-color: #fff;
     border-top: 1px solid #ececec;
