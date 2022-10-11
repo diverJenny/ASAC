@@ -28,10 +28,11 @@ a {
 }
 
 .Page {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .Header, .MainBar, .MainBar_nav {
@@ -40,9 +41,11 @@ a {
 }
 
 .Header {
-    background-color: #fff;-webkit-box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+    background-color: #fff;
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
     z-index: 800;
+    position: fixed;
+    width: 100%;
     /* border: 3px solid blue; */
 }
 
@@ -136,13 +139,17 @@ a {
     max-width: 1060px;
 } */
 .Main {
+    /* margin-top: 50px; */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
     padding-top: 15px;
+    margin-top: 55px;
     /* border: 3px solid red; */
+    max-width: 1060px;
+    
 }
 
 .Main div {
@@ -244,8 +251,9 @@ a {
 
 .QuestionButton {
     margin-right: 15px;
-    vertical-align: middle;
+    margin-top: 5px;
     margin-left: 4px;
+    vertical-align: middle;
     line-height: normal;
 }
 
@@ -262,6 +270,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .CareerContents_CategoryList {
@@ -273,15 +282,19 @@ a {
 }
 
 .CareerContents_CategoryName {
+    margin: 0 auto;
     color: #888;
     font-weight: 600;
     font-size: 15px;
-    line-height: 30px;
+    line-height: 146.7%;
+    flex-shrink: 0;
     height: 30px;
     border: 1px solid #e1e2e3;
     border-radius: 50px;
     padding: 5px 22px;
-    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 /* .CareerContents_CategoryName {
@@ -337,8 +350,8 @@ a {
 .CareerContentCard_CareerContentCard {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 332px;
+    width: calc(25% - 20px);
+    /* height: 332px; */
     margin: 0 10px 50px;
 }
 
@@ -392,8 +405,9 @@ a {
 }
 
 .CareerContentCard_Info {
-    margin-top: 0;
+    margin-top: 12px;
     display: flex;
+    align-items: center;
 }
 
 .CareerContentCard_Info img{
@@ -448,6 +462,7 @@ a {
     max-width: 1060px;
     margin: 0 auto;
     padding-bottom: 60px;
+    width: 87.72%;
     display: block;
 }
 
@@ -589,7 +604,7 @@ a {
     margin: -10px;
 } */
 
-.Article_Contents_List, .VOD_Contents_List, .Event_Contents_List {
+.Article_Contents_List, .VOD_Contents_List {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -597,7 +612,7 @@ a {
     padding-left: 0;
 }
 
-.Article_Contents_Card, .VOD_Contents_Card, .Event_Contents_Card {
+.Article_Contents_Card, .VOD_Contents_Card {
     display: flex;
     flex-direction: column;
     width: 250px;
@@ -605,7 +620,7 @@ a {
     margin: 0 10px 50px;
 }
 
-.Article_Contents_Card>a>div, .VOD_Contents_Card>a>div, .Event_Contents_Card>a>div {
+.Article_Contents_Card>a>div, .VOD_Contents_Card>a>div {
     margin-top: 20px;
     position: relative;
     height: auto;
@@ -655,6 +670,7 @@ a {
 .LineBanner_Wrapper {
     margin: 60px auto 0;
     max-width: 1060px;
+    width: 87.72%;
 }
 
 .LineBanner_Text>span:first-child>em {
@@ -682,17 +698,64 @@ a {
     margin: 0 auto;
 }
 
+.Event_Contents_Wrapper {
+    /* margin: -8px; */
+    /* max-width: 1060px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Event_Contents_List {
+    max-width: 1060px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+}
+
+.Event_Contents_Card {
+    outline: none;
+    max-width: 1060px;
+    width: 100%;
+    padding: 8px;
+}
+
+.Event_Contents_Info {
+    margin-top: 12px;
+}
+
+.Event_Contents_Info>h3 {
+    font-size: 16px;
+    margin-top: 8px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #333;
+}
+
+.Event_Contents_Info>p {
+    margin-top: 3px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #aaa;
+}
+
+.Event_Contents_Card>a {
+    display: flex;
+    flex-direction: column;
+}
+
 .Event_Contents_Card>a>div:first-child {
     outline: none;
-    width: 538px;
-    position: relative;
-    height: auto;
-    padding-bottom: 52.3%;
+    width: 100%;
+    /* position: relative; */
+    height: 273px;
+    padding-bottom: 0;
     padding-left: 0;
 }
 
 .Event_Contents_Card>a>div>img {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     height: 100%;
     left: 0;
@@ -701,6 +764,69 @@ a {
     object-fit: cover;
     outline: 1px solid rgba(0,0,0,.05);
     outline-offset: -1px;
+}
+
+/* .SubscribeBanner_Wrapper {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    padding: 60px 0;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+} */
+
+/* .SubscribeBanner_Container {
+    max-width: 1060px;
+    width: 87.72%;
+    width: 100%;
+    display: inline;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+     */
+}
+
+.SubscribeBanner_Text {
+    display: flex;
+    flex-direction: column;
+}
+
+.SubscribeBanner_Text>p {
+    margin-top: 0;
+    text-align: left;
+}
+
+.SubscribeBanner_Text>a {
+    text-align: left;
+}
+
+.SubscribeBanner_Title {
+    text-align: left;
+    flex-direction: row;
+}
+
+.SubscribeBanner_Title>p {
+    font-size: 30px;
+    font-weight: 700;
+    word-break: keep-all;
+    margin: 0;
+}
+
+.SubscribeBanner_logo {
+    width: 160px;
+    height: 31px;
+    margin-top: 4px;
+    margin-right: 4px;
+}
+
+.SubscibeBanner_item {
+}
+
+.SubscribeBanner_item>img {
+    width: 544.825;
+    height: auto;
 }
 
 .Footer {
