@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.page {
+    width: 100wh;
+    height: 100vh;
+}
+
+.Header, .MainBar, .MainBar_nav {
+    width: auto;
+    height: 50px;
+}
