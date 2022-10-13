@@ -1,8 +1,9 @@
+/*----- nav bar hover test -----*/
+// var aLink = document.querySelector('.recruitA');
+// aLink.addEventListener('click', () => {
+//     alert('click');
+// })
 
-var aLink = document.querySelector('.recruitA');
-aLink.addEventListener('click', () => {
-    alert('click');
-})
 // /* ----- Top Banner Slide -----*/
 // const TopBannerWrapper = document.querySelector('.TopBanner_list_wrapper');
 // const TopBannerList = document.querySelector('.TopBanner_list_wrapper_container');

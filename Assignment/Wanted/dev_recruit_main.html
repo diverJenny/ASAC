@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/dev_recruit_main.css">
     <link rel="shortcut icon" type="imge/x-icon" href="images/wantedLogo.ico">
-    <title>개발 채용 정보 | 원티드</title>
+    <title>원티드-나다운 일의 시작</title>
 </head>
 <body>
-    <div class="page">
+    <div class="Page">
         <!-- header -->
-        <div class="header">
+        <div class="Header">
             <div class="MainBar">
                 <nav class="MainBar_nav">
                     <div class="MainBar_nav_top">
@@ -23,13 +23,28 @@
                         </a>
                     </div>
                     <ul class="MainBar_nav_menuBar">
-                        <li>채용</li>
-                        <li>이벤트</li>
-                        <li>직군별 연봉</li>
-                        <li>이력서</li>
-                        <li>커뮤니티</li>
-                        <li>프리랜서</li>
-                        <li>AI합격예측</li>
+                        <li>
+                            <a href="#">채용</a>
+                        </li>
+                        <li>
+                            <a href="">이벤트</a>
+                        </li>
+                        <li>
+                            <a href="">직군별 연봉</a>
+                        </li>
+                        <li>
+                            <a href="">이력서</a>
+                        </li>
+                        <li>
+                            <a href="">커뮤니티</a>
+                        </li>
+                        <li>
+                            <a href="">프리랜서</a>
+                        </li>
+                        <li>
+                            <a href="">AI합격예측</a>
+                        </li>
+                        <span class="MainBar_nav_menuBar_indicator"></span>
                     </ul>
                     <ul class="MainBar_nav_aside">
                         <li>
@@ -47,77 +62,214 @@
                     </ul>
                 </nav>
             </div>
-        </div><!-- //.header end -->
+        </div><!-- // .Header end -->
 
+        <!-- //lJobList_Search_Wrappre -->
+        <div class="JobList_Search_Wrapper">
+            <div class="JobList_Search_Navigation">
+                <div class="JobGroup_btn_container">
+                    <button class="JobGroup_btn">
+                        <span class="JobGroup_Title">개발</span>
+                        <span class="JboGroup_More">
+                            <svg xmlns="https://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                                <path fill="#767676" fill-rule="nonzero" d="M2.28 3.22a.75.75 0 0 0-1.06 1.06l4.25 4.25a.75.75 0 0 0 1.06 0l4.25-4.25a.75.75 0 0 0-1.06-1.06L6 6.94 2.28 3.22z"></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <!-- <input class="JobGroup_list">
+                    <label for="JobGroup_list"></label>
+                        <ul class="JobGroup_hidden_list">
+                            <li>전체</li>
+                            <li>개발</li>
+                            <li>경영·비즈니스</li>
+                            <li>마케팅·광고</li>
+                            <li>디자인</li>
+                            <li>영업</li>
+                            <li>고객서비스·리테일</li>
+                            <li>게임 제작</li>
+                            <li>HR</li>
+                            <li>미디어</li>
+                            <li>엔지니어링·설계</li>
+                            <li>금융</li>
+                        </ul> -->
+                </div>
+                <div>
+                    <div class="JobCategory_btn_container">
+                        <button class="JobCategory_btn">
+                            <span class="JobCategory_Title">개발 전체</span>
+                            <span class="JobCategory_More">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                                    <path fill="#767676" fill-rule="nonzero" d="M2.28 3.22a.75.75 0 0 0-1.06 1.06l4.25 4.25a.75.75 0 0 0 1.06 0l4.25-4.25a.75.75 0 0 0-1.06-1.06L6 6.94 2.28 3.22z"></path>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="JobList_Search_Filter">
+                <div class="JobList_Search_Filter_SelectGroup">
+                    <div>
+                        <div class="select_location">
+                            <button class="select_location_btn">
+                                <span>지역</span>
+                                <span>한국</span>
+                            </button>
+                        </div>
+                        <div class="select_career">
+                            <button class="select_career_btn">
+                                <span>경력</span>
+                                <span>전체</span>
+                                <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                    <path d="M7.33334 0.494202C7.85691 0.494202 8.14842 1.1611 7.82205 1.61224L4.50038 6.20371C4.25071 6.54882 3.77503 6.54971 3.5243 6.20554L0.179295 1.61408C-0.149094 1.16332 0.14211 0.494202 0.666672 0.494202H7.33334Z" fill="#333333"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="select_skill">
+                            <button class="select_skill_btn">
+                                <span>기술 스택</span>
+                                <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                    <path d="M7.33334 0.494202C7.85691 0.494202 8.14842 1.1611 7.82205 1.61224L4.50038 6.20371C4.25071 6.54882 3.77503 6.54971 3.5243 6.20554L0.179295 1.61408C-0.149094 1.16332 0.14211 0.494202 0.666672 0.494202H7.33334Z" fill="#333333"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="JobList_Search_Filter_SelectView">
+                        <div class="select_view">
+                            <button class="select_view_btn">
+                                <span>응답률순</span>
+                                <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                    <path d="M7.33334 0.494202C7.85691 0.494202 8.14842 1.1611 7.82205 1.61224L4.50038 6.20371C4.25071 6.54882 3.77503 6.54971 3.5243 6.20554L0.179295 1.61408C-0.149094 1.16332 0.14211 0.494202 0.666672 0.494202H7.33334Z" fill="#333333"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="divider">
+
+            <div class="JobList_Tag_Filter">
+                <div class="JobList_Tag_Slider">
+                    <div class="JobList_Tag_Slider_List">
+                        <div class="JobList_Tag_btn" id="JobList_Tag_Salary">
+                            <span>연봉이 최고의 복지
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75" alt="연봉이 최고의 복지">
+                            </span>
+                        </div>
+                        <div class="JobList_Tag_btn" id="JobList_Tag_WorkFromHome">
+                            <span>재택근무
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F5d873f3a-9f6e-11ec-b909-0242ac120002.png&w=50&q=75" alt="재택근무">
+                            </span>
+                        </div>
+                        <div class="JobList_Tag_btn" id="JobList_Tag_ResignationRate">
+                            <span>퇴사율 10% 이하
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F7d3cdb3c-9f6e-11ec-b909-0242ac120002.png&w=50&q=75" alt="퇴사율 10% 이하">
+                            </span>
+                        </div>
+                        <div class="JobList_Tag_btn" id="JobList_Tag_FastGrowing">
+                            <span>급성장 중
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F37dacf86-9f6e-11ec-b909-0242ac120002.png&w=50&q=75" alt="급성장 중">
+                            </span>
+                        </div>
+                        <div class="JobList_Tag_btn" id="JobList_Tag_MilitaryServiceSpecial">
+                            <span>병역특례
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F6eda33d2-9f6e-11ec-b909-0242ac120002.png&w=50&q=75" alt="병역특례">
+                            </span>
+                        </div>
+                        <div class="JobList_Tag_btn" id="JobList_Tag_FiftyPeopleOrLess">
+                            <span>50인 이하️
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F3a965d18-c524-11ec-901c-acde48001122.png&w=50&q=75" alt="50인 이하️">
+                            </span>
+                        </div>
+                        <div class="JobList_Tag_btn" id="JobList_Tag_OverFiftyPeople">
+                            <span>50인 이상️
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F4cec3244-c524-11ec-901c-acde48001122.png&w=50&q=75" alt="50인 이상️">
+                            </span>
+                        </div>
+                        <div class="JobList_Tag_btn" id="JobList_Tag_MoreThanFiveYears">
+                            <span>업력 5년 이상
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F45bb9794-c524-11ec-901c-acde48001122.png&w=50&q=75" alt="업력 5년 이상">
+                            </span>
+                        </div>
+                        <div class="JobList_Tag_btn" id="JobList_Tag_FlexibleWork">
+                            <span>유연근무
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F827f6146-9f6e-11ec-b909-0242ac120002.png&w=50&q=75" alt="유연근무">
+                            </span>
+                        </div>
+                        <div class="JobList_Tag_btn" id="JobList_Tag_FreeVacation">
+                            <span>자유로운 휴가
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F68dadb80-9f6e-11ec-b909-0242ac120002.png&w=50&q=75" alt="자유로운 휴가">
+                            </span>
+                        </div>
+                        <div class="JobList_Tag_btn" id="JobList_Tag_RewardForWork">
+                            <span>일한만큼 받는 보상
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F472333e8-9f6e-11ec-b909-0242ac120002.png&w=50&q=75" alt="일한만큼 받는 보상">
+                            </span>
+                        </div>
+                        <div class="JobList_Tag_btn" id="JobList_Tag_HorizontalCulture">
+                            <span>수평적 문화
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F78563d98-9f6e-11ec-b909-0242ac120002.png&w=50&q=75" alt="수평적 문화">
+                            </span>
+                        </div>
+                        <div class="JobList_Tag_btn" id="JobList_Tag_IndustryEmerging">
+                            <span>요즘 뜨는 산업
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F4e1b135a-9f6e-11ec-b909-0242ac120002.png&w=50&q=75" alt="요즘 뜨는 산업">
+                            </span>
+                        </div>
+                        <div class="JobList_Tag_btn" id="JobList_Tag_MealsAndSnacksProvided">
+                            <span>식사·간식 제공
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F53ca893e-9f6e-11ec-b909-0242ac120002.png&w=50&q=75" alt="식사·간식 제공">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="JobList_Tag_MoreBtn">
+                    <span class="JobList_Tag_MoreBtn_Icon">
+                        <svg class="JobList_Tag_MoreBtn_Icon_svg" viewBox="0 0 18 18"><path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div><!-- //.JobList_Search_Wrapper end -->
+        
         <!-- main -->
-        <div>
+        <div class="Main">
+            <div class="JobList_BookmarkBtn">
+                <svg width="13" height="17" viewBox="0 0 13 17" style="color:#36f">
+                    <defs>
+                        <path id="bookmarkIconFill" d="M6.25 13.21L.905 16.22c-.403.228-.905-.06-.905-.517V.596C0 .267.27 0 .605 0h11.29c.334 0 .605.267.605.596v15.107c0 .458-.502.745-.905.518L6.25 13.209z"></path>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" transform="translate(.188)">
+                        <use fill="currentColor" xlink:href="#bookmarkIconFill"></use>
+                    </g>
+                </svg>
+                <span>북마크 모아보기</span>
+                <svg width="12" height="12" viewBox="0 0 12 12">
+                    <path fill="currentColor" d="M4.22 9.72a.75.75 0 001.06 1.06l4.25-4.25a.75.75 0 000-1.06L5.28 1.22a.75.75 0 00-1.06 1.06L7.94 6 4.22 9.72z"></path>
+                </svg>
+            </div>
+            <div class="CompaniesActivelyHiring">
+                <h3>적극 채용 중인 회사</h3>
+                <div class="CompaniesActivelyHiring_List">
+                    <div class="CompaniesActivelyHiring_CompanyCard">
+                        <a href="#">
+                            <div class="CompaniesActivelyHiring_Company_Img">
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F5148%2Fzqoq1ivkli8iioas__400_400.jpg&w=400&q=75" alt="">
+                            </div>
+                            <div class="CompaniesActivelyHiring_Company_Logo">
+                                <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.e2c18b96.jpg&w=100&q=75" alt="나인코퍼레이션">
+                            </div>
+                            <span>나인코퍼레이션</span>
+                            <span>6개 포지션</span>
+                        </a>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
             
-        </div>
-
-        <!-- footer -->
-        <div class="Footer">
-            <div class="Footer_rowClass">
-                <div class="Footer_navLinks">
-                    <div class="Footer_navLinks_logo">
-                        <img src="images/footer/footerLogo.png" alt="wanted">
-                    </div>
-                    <div class="Footer_navLinks_links">
-                        <a href="#">기업소개</a>
-                        <a href="#">이용약관</a>
-                        <a href="#">개인정보 처리방침</a>
-                        <a href="#">고객센터</a>
-
-                    </div>
-                </div>
-                <div class="Footer_SocialLinks">
-                    <a href="images/footer/instagram.png" alt="instagram">
-                        <img src="images/footer/instagram.png" alt="">
-                    </a>
-                    <a href="https://www.youtube.com/channel/UC0tGZ6MqieGG2m5lA5PeQsw">
-                        <img src="images/footer/youtube.png" alt="youtube">
-                    </a>
-                    <a href="https://www.facebook.com/wantedkr">
-                        <img src="images/footer/facebook.png" alt="facebook">
-                    </a>
-                    <a href="https://blog.naver.com/wantedlab">
-                        <img src="images/footer/nblog.png" alt="blog">
-                    </a>
-                    <a href="https://pf.kakao.com/_XqCIxl">
-                        <img src="images/footer/kakaotalk.png" alt="kakao">
-                    </a>
-                    <a href="https://post.naver.com/my.nhn?memberNo=18284175">
-                        <img src="images/footer/npost.png" alt="post">
-                    </a>
-                    <a href="https://apps.apple.com/kr/app/id1074569961">
-                        <img src="images/footer/apple.png" alt="apple">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.wanted.android.wanted">
-                        <img src="images/footer/android.png" alt="google">
-                    </a>
-                </div>
-            </div>
-            <div class="Footer_rowClass Footer_Boarder">
-                <p class="Footer_CompanyInfo_Text">
-                    (주)원티드랩 (대표이사:이복기) | 서울특별시 송파구 올림픽로 300 롯데월드타워 35층 | 통신판매번호 : 2020-서울송파-3147
-                    <br>
-                    유료직업소개사업등록번호 : (국내) 제2020-3230259-14-5-00018호 | (국외) 서울동부-유-2020-2 | 사업자등록번호 : 299-86-00021 | 02-539-7118
-                    <br>
-                    © Wantedlab, Inc.
-                </p>
-                <div class="Footer_LocaleSelect">
-                    <img src="https://static.wanted.co.kr/images/userweb/ico_KR.svg" alt="country flag KR">
-                    <select class="Footer_LocaleSelect_box">
-                        <option value="KR">한국 (한국어)</option>
-                        <option value="JP">日本 (日本語)</option>
-                        <option value="WW">Worldwide (English)</option>
-                        <option value="SG">Singapore (English)</option>
-                    </select>
-                    <i class="Footer_LocaleSelect_arrow">
-                    </i>
-                </div>
-            </div>
-        </div><!-- //.Footer end-->
-
+            <div></div>
+        </div><!-- //.Main end -->
 
     </div><!-- //.page end -->
     <script type="text/javascript" src="scripts/dev_recruit_main.js"></script>
