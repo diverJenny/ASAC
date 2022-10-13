@@ -182,16 +182,14 @@ a {
 }
 
 .Main {
-    /* flex-grow: 1; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
     padding-top: 15px;
-    /* margin-top: 55px; */
     max-width: 1060px;
     width: 100%;
-    
+    padding-bottom: 50px;
 }
 
 .JobList_Search_Wrapper {
@@ -478,7 +476,8 @@ a {
 
 .JobList_BookmarkBtn {
     display: flex;
-    /* align-items: flex-start; */
+    flex-direction: row;
+    align-items: center;
     justify-content: left;
     max-width: 1060px;
     width: 100%;
@@ -486,6 +485,196 @@ a {
     margin-bottom: 12px;
     color: #36f;
 }
+
+.JobList_BookmarkBtn>a {
+    display: flex;
+    flex-direction: row;
+    color: #36f;
+    align-items: center;
+}
+
+.JobList_BookmarkBtn>a>svg:first-child {
+    display: flex;
+    width: 11px;
+    height: 16px;
+    color: #36f;
+    margin-right: 8px;
+    align-items: center;
+}
+
+.JobList_BookmarkBtn>a>svg:last-child {
+    display: flex;
+    width: 10px;
+    height: 16px;
+    color:#36f;
+    align-items: center;
+    padding-top: 2px;
+}
+
+.JobList_BookmarkBtn>a>span {
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: normal;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.CompaniesActivelyHiring {
+    display: block;
+}
+
+.CompaniesActivelyHiring_List {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.CompaniesActivelyHiring_Title {
+    display: flex;
+    justify-content: left;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: normal;
+    color: #333;
+    /* margin: 20px 0 14px; */
+}
+
+.CompaniesActivelyHiring_List>div {
+    display: block;
+    outline: none;
+    width: 215px;
+}
+
+.CompaniesActivelyHiring_Company_Img {
+    display: block;
+    z-index: 1;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    margin: 0 9px;
+}
+
+.CompaniesActivelyHiring_Company_Img>img {
+    display: block;
+    height: 147px;
+}
+
+.CompaniesActivelyHiring_Company_Info {
+    margin: 0 9px;
+    padding: 34px 16px 0;
+    height: 124px;
+    border: 1px solid #e1e2e3;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    position: relative;
+    text-align: left;
+}
+
+.CompaniesActivelyHiring_Company_Info>img {
+    position: absolute;
+    top: -25px;
+    left: 16px;
+    width: 50px;
+    height: 50px;
+    background-color: #f2f2f2;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    border: 1px solid #e1e2e3;
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%);
+}
+
+.CompaniesActivelyHiring_Company_Info>span {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -.3px;
+    color: #333;
+    line-height: 1.2;
+    margin: 4px 0;
+    overflow: hidden;
+    max-height: 58px;
+}
+
+.CompaniesActivelyHiring_Company_Info>span:last-child {
+    color: #999;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -.2px;
+}
+
+.RecruitList_Wrapper {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.RecruitList {
+    display: flex;
+    max-width: 1060px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+    justify-content: space-between;
+}
+
+.RecruitList>li {
+    display: block;
+    width: 25%;
+    list-style: none;
+    display: inline-block;
+}
+
+.RecruitList_Content {
+    display: flex;
+    padding: 10px;
+}
+
+.RecruitList_Content>a {
+    display: block;
+}
+
+.RecruitList_Content_Img {
+    display: block;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.RecruitList_Content_Img>img {
+    display: flex;
+    max-height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    /* padding-bottom: 75%; */
+    position: relative;
+    background-position: 50%;
+}
+
+/* .RecruitList_Content_Img>svg {
+} */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
