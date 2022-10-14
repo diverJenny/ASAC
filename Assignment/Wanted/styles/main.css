@@ -1094,7 +1094,7 @@ a {
 .Footer_rowClass {
     width: 90%;
     max-width: 1060px;
-    margin: 0 auto 18px;
+    margin: 0 auto;
     display: flex;
 }
 
@@ -1146,6 +1146,8 @@ a {
 }
 
 .Footer_CompanyInfo_Text {
+    display: block;
+    top: 0;
     float: left;
     font-size: 12px;
     font-weight: 500;
@@ -1153,9 +1155,11 @@ a {
     color: #767676;
     width: calc(100% - 290px);
     margin-right: 40px;
+    margin-top: 0;
 }
 
 .Footer_LocaleSelect {
+    display: block;
     position: relative;
     width: 250px;
     height: 36px;
