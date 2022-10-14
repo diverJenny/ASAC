@@ -403,6 +403,14 @@ a {
 .CareerCategory_arrow_left {
     left: 0;
 }
+.CareerContents_Category_arrow {
+    position: relative;
+    z-index: 1;
+}
+.CareerContents_Category_arrow {
+    position: relative;
+    z-index: 1;
+}
 
 .CareerContents_Category_arrow_left_button, .CareerContents_Category_arrow_right_button {
     color: #888;
@@ -955,6 +963,11 @@ a {
     align-items: center;
     font-size: 16px;
     color: #fff;
+}
+
+.SubscribeButton_Icon {
+    display: flex;
+    align-items: center;
 }
 
 .SubscribeButton_Svg_Icon {
