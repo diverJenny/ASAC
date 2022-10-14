@@ -28,12 +28,13 @@ a {
 }
 
 .Page {
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 30px;
+    height: auto;
 }
 
 .Header, .MainBar, .MainBar_nav {
@@ -45,7 +46,8 @@ a {
     background-color: #fff;
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
     z-index: 800;
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
 }
 
@@ -195,11 +197,10 @@ a {
 .JobList_Search_Wrapper {
     display: flex;
     flex-direction: column;
-    /* max-width: 100%; */
+    max-width: 1060px;
     width: 100%;
-    margin-top: 55px;
-    border-bottom: 1px solid #ececec;
     align-items: center;
+    justify-self: center;
 }
 
 .JobList_Search_Navigation {
@@ -262,6 +263,18 @@ a {
     color: #333;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+.JobList_Search_bar {
+    /* max-width: 1060px; */
+    /* width: 100%; */
+    display: block;
+    position: sticky;
+    top: 50px;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+
 }
 
 .JobList_Search_Filter {
@@ -682,7 +695,7 @@ a {
 
 .divider {
     text-align: center;
-    width: 1060px;
+    width: 100%;
     height: 1px;
     margin: 25px auto;
     border: none;
