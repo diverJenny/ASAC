@@ -44,11 +44,12 @@ a {
 
 .Header {
     background-color: #fff;
-    box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+    /* box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%); */
     z-index: 800;
     position: sticky;
     top: 0;
     width: 100%;
+    border-bottom: 1px solid #ececec;
 }
 
 .MainBar, .TopBanner_list, .careerContents, .CareerContents_Wrapper {
@@ -68,13 +69,6 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-.MainBar_nav_menuBar {
-    display: inline-flex;
-    position: relative;
-    overflow: hidden;
-    background-color: white;
 }
 
 #MainBar_nav_top_button {
@@ -97,17 +91,17 @@ a {
     display: flex;
 }
 
-.MainBar_nav_menuBar, .MainBar_nav_aside {
+.MainBar_nav_menuBar {
     text-align: center;
     margin: 0;
 }
 
-.MainBar_nav_aside .li{
+.MainBar_nav_aside {
+    display: flex;
     margin: auto;
 }
 
 .MainBar_nav_menuBar>li a {
-    display: block;
     color: #333;
     font-size: 14px;
     line-height: 20px;
@@ -169,10 +163,7 @@ a {
 }
 
 #MainBar_nav_corporatService_button {
-    height: 59.453px;
-}
-
-#MainBar_nav_corporatService_button {
+    font-size: 13px;
     color: #666;
     line-height: 30px;
     height: 50px;
@@ -267,8 +258,10 @@ a {
 
 .JobList_Search_bar {
     /* max-width: 1060px; */
-    /* width: 100%; */
+    width: 100%;
     display: block;
+    justify-content: center;
+    align-items: center;
     position: sticky;
     top: 50px;
     z-index: 999;
@@ -277,13 +270,6 @@ a {
 
 }
 
-.JobList_Search_Filter {
-    max-width: 1060px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-}
 
 .JobList_Search_Filter_SelectGroup {
     max-width: 1060px;
@@ -292,11 +278,19 @@ a {
     flex-direction: row;
     justify-content: space-between;
     padding-top: 20px;
+    margin: 0 auto;
 }
 
-.select_location, .select_career, .select_skill, .select_view {
+.JobList_Search_Filter {
+    max-width: 1060px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+.select_location, .select_career, .select_skill {
+    display: flex;
     align-items: center;
-    display: inline-flex;
     height: 40px;
     /* padding: 0 15px; */
     margin-bottom: 0;
@@ -318,9 +312,9 @@ a {
 
 .select_location_btn,
 .select_career_btn,
-.select_skill_btn,
-.select_view_btn {
-    display: block;
+.select_skill_btn{
+    display: flex;
+    vertical-align: middle;
     padding: 15px;
 }
 
@@ -330,10 +324,9 @@ a {
     margin-right: 15px;
 }
 
-
 .select_location_btn>span:last-child,
 .select_career_btn>span:nth-child(2) {
-    color: #36f!important;
+    color: #36f;
     font-weight: 600;
     margin-right: 0;
     overflow: hidden;
@@ -341,17 +334,44 @@ a {
 }
 
 .select_career_btn>svg, .select_skill_btn>svg {
+    margin-top: 5px;
     margin-left: 8px;
     transition: .3s;
 }
 
 .JobList_Search_Filter_SelectView {
-    display: flex;
+    position: relative;
+    width: 104px;
     height: 40px;
 }
 
-.select_view_btn>span {
-    margin-right: 8px;
+.select_view {
+    position: relative;
+    width: 104px;
+}
+
+.select_view_btn {
+    border-radius: 4px;
+    border: 1px solid #ececec;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    height: 40px;
+    letter-spacing: normal;
+    color: #000;
+    padding: 0 16px;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select_view_btn>svg {
+    width: 8px;
+    height: 7px;
 }
 
 .JobList_Tag_Filter {
@@ -695,6 +715,7 @@ a {
 
 .divider {
     text-align: center;
+    max-width: 1060px;
     width: 100%;
     height: 1px;
     margin: 25px auto;
