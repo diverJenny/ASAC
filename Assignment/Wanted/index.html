@@ -9,6 +9,80 @@
     <title>원티드-나다운 일의 시작</title>
 </head>
 <body>
+
+    <div id="LoginModal" class="LoginModal">
+        <div class="ModalHeader">
+            <img src="https://www.wantedlab.com/img/logo.png" alt="wanted">
+            <button class="LoginModal_CloseBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" color="#999">
+                    <path fill="currentColor" d="M17.97 19.03a.75.75 0 001.06-1.06l-6.5-6.5a.75.75 0 00-1.06 0l-6.5 6.5a.75.75 0 001.06 1.06L12 13.06l5.97 5.97zM12 10.94L6.03 4.97a.75.75 0 00-1.06 1.06l6.5 6.5a.75.75 0 001.06 0l6.5-6.5a.75.75 0 00-1.06-1.06L12 10.94z"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="ModalBody">
+            <div class="TextContainer">
+                <h1>
+                    직장인을위한
+                    <br>
+                커리어 플랫폼, 원티드!
+                </h1>
+                <br>
+                <h2>
+                    커리어 성장과 행복을 위한 여정
+                    <br>
+                    지금 원티드에서 시작하세요.
+                </h2>
+            </div>
+            <div class="InputWrapper">
+                <div class="Input_EmailContainer">
+                    <span>이메일</span>
+                    <input id="InputEmail" type="email" placeholder="이메일을 입력해 주세요.">
+                </div>
+                <div class="HowToLogin">
+                    <button class="EmailLoginBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
+                                <rect width="17.2" height="14" x="3.4" y="5" rx="3"></rect>
+                                <path d="M3.2 5.6L12 12l8.8-6.4"></path>
+                            </g>
+                        </svg>
+                        이메일로 계속하기
+                    </button>
+                    <span>or</span>
+                    <div class="SocialLoginWrapper">
+                        <span>다음 계정으로 계속하기</span>
+                        <div class="SocialLogin">
+                            <div class="SocialLogin_Kakao">
+                                <div class="SocialLogin_Kakao_btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="21" viewBox="0 0 22 21"><path fill="#000" fill-rule="nonzero" d="M11 0C5.242 0 0 3.823 0 8.539c0 2.932 1.904 5.519 4.804 7.056l-1.22 4.479c-.107.397.343.712.69.483l5.348-3.548c.452.044.91.069 1.377.069 6.076 0 11-3.823 11-8.54 0-4.715-4.924-8.538-11-8.538"></path></svg></div>
+                                <div class="SocialLogin_Name">kakao</div>
+                            </div>
+
+                            <div class="SocialLogin_Facebook">
+                                <div class="SocialLogin_Facebook_btn">
+                                    <img src="images/socialLogin/facebook.png" alt="facebook">
+                                </div>
+                                <div class="SocialLogin_Name">Facebook</div>
+                            </div>
+                            <div class="SocialLogin_Google">
+                                <div class="SocialLogin_Google_btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><g fill="none" fill-rule="nonzero"><path fill="#EA4335" d="M11.5 4.574c1.688 0 3.204.58 4.396 1.72l3.299-3.299C17.203 1.14 14.6 0 11.5 0 7.005 0 3.115 2.577 1.223 6.335l3.842 2.98c.905-2.718 3.44-4.741 6.435-4.741z"></path><path fill="#4285F4" d="M22.54 11.761c0-.815-.073-1.6-.21-2.352H11.5v4.448h6.19c-.268 1.438-1.078 2.656-2.296 3.471v2.886h3.717c2.174-2.002 3.429-4.95 3.429-8.453z"></path><path fill="#FBBC05" d="M5.065 13.685c-.23-.69-.36-1.427-.36-2.185s.13-1.495.36-2.185v-2.98H1.223C.444 7.888 0 9.645 0 11.5c0 1.856.444 3.612 1.223 5.165l3.842-2.98z"></path><path fill="#34A853" d="M11.5 23c3.105 0 5.708-1.03 7.61-2.786l-3.716-2.886c-1.03.69-2.347 1.098-3.894 1.098-2.995 0-5.53-2.023-6.435-4.741H1.223v2.98C3.115 20.423 7.005 23 11.5 23z"></path><path d="M0 0L23 0 23 23 0 23z"></path></g></svg>
+                                </div>
+                                <div class="SocialLogin_Name">Google</div>
+                            </div>
+                            <div class="SocialLogin_Apple">
+                                <div class="SocialLogin_Apple_btn">
+                                    <img src="images/socialLogin/Apple.png" alt="apple">
+                                </div>
+                                <div class="SocialLogin_Name">Apple</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="Page">
         <!-- header -->
         <div class="Header">
@@ -51,8 +125,8 @@
                             <button class="MainBar_nav_search_button">
                                 <img class="SearchIcon" src="images/search.png" alt="search">
                             </button></li>
-                        <li class="Login">
-                            <a>회원가입/로그인</a>
+                        <li id="LoginBtn" class="Login">
+                            <a class="LoginLink">회원가입/로그인</a>
                         </li>
                         <li class="PoratService_button">
                             <a id="MainBar_nav_corporatService_button">
@@ -920,6 +994,7 @@
             </div>
         </div><!-- footer end -->
     </div><!-- body end -->
+    
     <script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>

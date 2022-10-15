@@ -1,52 +1,25 @@
-/*----- nav bar hover test -----*/
-// var aLink = document.querySelector('.recruitA');
-// aLink.addEventListener('click', () => {
-//     alert('click');
-// })
+/* ---------- login modal ----------- */
+const loginModal = document.getElementById("LoginModal");
+const loginBtn = document.getElementById("LoginBtn");
 
-// /* ----- Top Banner Slide -----*/
-// const TopBannerWrapper = document.querySelector('.TopBanner_list_wrapper');
-// const TopBannerList = document.querySelector('.TopBanner_list_wrapper_container');
-// const TopBannerContents = document.querySelectorAll('.TopBanner_list_contents');
-// // 현재 슬라이드 화면 인덱스
-// let currentIndex = 0;
+loginBtn.addEventListener("click", () => {
+    loginModal.style.display = "block";
+});
 
-// TopBannerContents.forEach((inner) => {
-//     // TopBanner_list_contents의 너비 = TopBannerWrapper의 너비
-//     inner.style.width = `${TopBannerWrapper.clientWidth}px`;
-// });
+/* ---------- login modal Close ---------- */
+const loginModalCloseBtn = document.querySelector(".LoginModal_CloseBtn");
+loginModalCloseBtn.addEventListener("click", () => {
+    loginModal.style.display = "none";
+});
 
-// // TopBanner_list_wrapper_container의 너비 = contents너비 * 컨텐츠 개수
-// TopBannerList.style.width = `${TopBannerWrapper.clientWidth * TopBannerContents.length}px`;
-
-// // button event 등록
-// const topBannerButtonLeft = document.querySelector('.Left_arrow');
-// const topBannerButtonRight = document.querySelector('.Right_arrow');
-
-// topBannerButtonLeft.addEventListener('click', () => {
-//     console.log("leftButton");
-//     currentIndex--;
-//     // index 값이 0보다 작아지면 0으로 변경
-//     currentIndex = currentIndex < 0 ? 0 : currentIndex;
-//     TopBannerList.style.marginLeft = `-${TopBannerWrapper.clientWidth * currentIndex}px`;
-//     clearInterval(interval);
-//     interval = getInterval();
-// });
-
-// topBannerButtonRight.addEventListener('click', () => {
-//     currentIndex++;
-//     currentIndex = currentIndex >= TopBannerContents.length ? TopBannerContents.length -1 : currentIndex;
-//     TopBannerContents.style.marginLeft = `-${TopBannerWrapper.clientWidth * currentIndex}px`;
-//     clearInterval(interval);
-//     interval = getInterval();
-// })
-
-// const getInterval = () => {
-//     return setInterval(() => {
-//         currentIndex++;
-//         currentIndex = currentIndex >= TopBannerContents.length ? 0 : currentIndex;
-//         TopBannerList.style.marginLeft = `-${TopBannerWrapper.clientWidth * currentIndex}px`;
-//     }, 2000);
-// }
-
-// let interval = getInterval();
+/* ---------- login modal 이메일 입력 시 페이지 이동 ---------- */
+const loginEmailBtn = document.querySelector(".EmailLoginBtn");
+const loginEmailAdd = document.getElementById("InputEmail");
+loginEmailBtn.addEventListener("click", () => {
+    if(loginEmailAdd.value != "") {
+        alert("login");
+    }
+    else {
+        alert("이메일 주소를 입력하세요.");
+    }
+});

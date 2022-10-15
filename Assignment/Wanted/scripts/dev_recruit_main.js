@@ -1,5 +1,4 @@
-var btn = document.querySelector('.select_location');
-
-btn.addEventListener('click', () => {
-    alert('hi');
+var aLink = document.querySelector('recruitA');
+aLink.addEventListener('click', () => {
+    alert('click');
 })
