@@ -1356,7 +1356,8 @@ select::-ms-expand {
 }
 
 .SocialLogin_Kakao_btn,
-.SocialLogin_Facebook_btn {
+.SocialLogin_Facebook_btn,
+.SocialLogin_Apple_btn  {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1394,18 +1395,7 @@ select::-ms-expand {
     border: 2px solid #e1e2e3;
 }
 
-.SocialLogin_Apple_btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
+.SocialLogin_Apple_btn>img {
     width: 56px;
     height: 56px;
-    margin: 0 auto 8px;
-    border: 2px solid #e1e2e3;
-}
-
-.SocialLogin_Apple_btn>img {
-    width: 53px;
-    height: 35px;
 }

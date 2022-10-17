@@ -12,12 +12,16 @@ loginModalCloseBtn.addEventListener("click", () => {
     loginModal.style.display = "none";
 });
 
-/* ---------- login modal 이메일 입력 시 페이지 이동 ---------- */
+/* ---------- login modal 이메일 입력 시 3초 후 페이지 이동 ---------- */
 const loginEmailBtn = document.querySelector(".EmailLoginBtn");
 const loginEmailAdd = document.getElementById("InputEmail");
+const modalBody = document.querySelector(".ModalBldy");
+
 loginEmailBtn.addEventListener("click", () => {
     if(loginEmailAdd.value != "") {
-        alert("login");
+        setTimeout(() => (
+            location.href = "recruitmentDetailPage.html", 3000
+        ));
     }
     else {
         alert("이메일 주소를 입력하세요.");
