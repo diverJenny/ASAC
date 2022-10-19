@@ -214,7 +214,7 @@ a {
 .TopBanner_slider{
     display: flex;
     flex-direction: row;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .TopBanner_list_wrapper {
@@ -224,7 +224,8 @@ a {
 
 .TopBanner_list_wrapper_container {
     display: flex;
-    transition: 500ms ease 0s;
+    /* transition: 500ms ease 0s; */
+    transform: translate(0, 0);
 }
 
 .TopBanner_list_contents {
@@ -1115,6 +1116,7 @@ a {
     flex-grow: 1;
     display: flex;
     align-items: center;
+    padding-bottom: 18px;
 }
 
 .Footer_navLinks_logo {
@@ -1239,6 +1241,21 @@ select::-ms-expand {
     background-color: #fff;
     border: 1px solid black;
     z-index: 5;
+}
+
+.LoginModalContainer {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 900;
 }
 
 .LoginModal {

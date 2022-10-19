@@ -363,6 +363,7 @@ a {
     margin: 0;
     display: flex;
     flex-direction: row;
+    margin-left: 10px;
 }
 
 .Reactions_avatars>ul>li {
@@ -371,7 +372,20 @@ a {
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid #fff;
+    margin-left: -10%;
 
+}
+
+.Reactions_avatars>ul>li:first-child {
+    z-index: 2;
+}
+
+.Reactions_avatars>ul>li:nth-child(2) {
+    z-index: 1;
+}
+
+.Reactions_avatars>ul>li:last-child {
+    z-index: 0;
 }
 
 .Reactions_avatars>ul>li>img {
@@ -520,6 +534,7 @@ a {
     font-weight: 400;
     text-align: left;
     white-space: pre-wrap;
+    line-height: 25px;
 }
 
 .JobDetail_Content_Description_Skill>h3 {
