@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -1282,6 +1286,7 @@ select::-ms-expand {
     top: 9%;
     left: 530px;
     max-width: 500px;
+    max-height: calc(100vh - 100px);
     z-index: 5;
     border-radius: 5px;
     background-color: #fff;
@@ -1446,31 +1451,32 @@ select::-ms-expand {
 
 .SignUpModalContainer {
     /* display: none; */
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.2);
-    z-index: 900;
+    display: flex;
+    
 }
 
 .SignUpModal {
+    box-sizing: border-box;
     /* display: none; */
+    display: block;
     width: 400px;
     top: 9%;
     left: 530px;
     max-width: 500px;
+    max-height: calc(100vh - 135px);
     z-index: 5;
     border-radius: 5px;
     background-color: #fff;
     position: fixed;
     overflow: hidden;
-    border: 1px solid red;
+    border: 1px solid #e1e2e3;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+}
+
+.SignUpModal::-webkit-scrollbar {
+    display: none;
 }
 
 .SignUpModal_Header {
@@ -1478,7 +1484,7 @@ select::-ms-expand {
     width: auto;
     align-items: center;
     position: relative;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     height: 64px;
 }
 
@@ -1489,8 +1495,8 @@ select::-ms-expand {
 }
 
 .SignUpModal_BackBtn {
-    height: 18%;
     min-width: 64px;
+    height: 14%;
     display: flex;
     align-items: center;
     position: absolute;
@@ -1506,25 +1512,90 @@ select::-ms-expand {
     padding: 20px;
 }
 
-.SignUp_Input_Wrapper>div>span {
-    color: #666;
-    font-size: 13px;
+.SignUp_Input_Item>h4 {
+    color: #888;
+    font-size: 14px;
     font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.0145em;
     margin: 17px 0px 7px;
 }
 
-.SignUp_InputEmail_Container {
+.SignUp_InputPhoneNumber_Verification {
     display: flex;
-    flex-direction: column;
 }
 
-#SignUp_InputEmail {
-    /* width: 100%; */
+.SignUp_Input_Item>input,
+.SignUp_InputPhoneNumber_Container>select,
+.SignUp_InputPhoneNumber_Verification>input {
+    width: 100%;
     height: 50px;
     min-height: 50px;
     padding: 0px 12px;
-    color: #e1e2e3;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #ccc;
     border-radius: 5px;
     border: 1px solid #e1e2e3;
-    background-color: #ececec;
+}
+
+#SignUp_InputEmail,
+.SignUp_InputPhoneNumber_Verification>input:last-child {
+    background-color: #f2f4f7;
+}
+
+#SignUpInputName {
+    background-color: #fff;
+}
+
+.SignUp_InputPhoneNumber_Container>select {
+    color: #333;
+}
+
+.SignUp_InputPhoneNumber_Verification>button {
+    height: 50px;
+    min-height: 50px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 0 15px;
+    width: auto;
+    flex: 0 0 auto;
+    border-radius: 5px;
+    color: #ccc;
+    background-color: #f2f4f7;
+    border: 1px solid #f2f4f7;
+}
+
+.SignUp_InputPassword_Container>span {
+    color: #888;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.027em;
+    line-height: 18px;
+    margin-bottom: 10ox;
+}
+
+.SignUpModal_divider {
+    width: 100%;
+    border-top: 0.5px solid #e1e2e3;
+    margin: 8px auto;
+}
+
+.ConsentItems_Container {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.FullConsent>span {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.0096em;
+    line-height: 22px;
+    margin: 0 0 0 7px;
+}
+
+.ConsentItem>p {
+    
 }
