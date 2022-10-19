@@ -34,6 +34,10 @@ window.addEventListener("keyup", e => {
     }
 })
 
+window.addEventListener("click", e => {
+    e.target === loginModalBackground ? modalOff() : false
+});
+
 /* ---------- login modal 이메일 입력 시 3초 후 페이지 이동 ---------- */
 const loginEmailBtn = document.querySelector(".EmailLoginBtn");
 const loginEmailAdd = document.getElementById("InputEmail");
