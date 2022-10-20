@@ -43,12 +43,26 @@ const loginEmailBtn = document.querySelector(".EmailLoginBtn");
 const loginEmailAdd = document.getElementById("InputEmail");
 const modalBody = document.querySelector(".ModalBldy");
 const roadingStatus = document.querySelector(".roadingStatus");
+const signUpModalContainer = document.querySelector(".SignUpModalContainer");
+const signUpModal = document.querySelector(".SignUpModal");
+const signUpEmail = document.querySelector("#SignUp_InputEmail");
+
+function signUpModalOn() {
+    signUpModalContainer.style.display = "flex";
+    signUpModal.style.display = "block";
+}
+
+function signUpModalOff() {
+    signUpModalContainer.style.display = "none";
+    signUpModal.style.display = "none";
+}
 
 loginEmailBtn.addEventListener("click", () => {
     if(loginEmailAdd.value != "") {
         setTimeout(
-            "location.href = 'recruitmentDetailPage.html'" , 3000
+            signUpModalOn() , 3000
         );
+        signUpEmail.placeholder = loginEmailAdd.value;
     }
     else {
         alert("이메일 주소를 입력하세요.");
@@ -56,4 +70,54 @@ loginEmailBtn.addEventListener("click", () => {
 });
 
 
-/*-------------- SignUpModal 띄우기 ------------------ */
+/*-------------- SignUpModal 뒤로가기 ------------------ */
+const signUpBackBtn = document.querySelector(".SignUpModal_BackBtn");
+
+signUpBackBtn.addEventListener("click", () => {
+    signUpModalOff();
+});
+
+
+/*-------------- SignUpModal Checkbox ----------------*/
+const fullConsentChkBox = document.querySelector("#FullConsentChkBox");
+const consentOver14ChkBox = document.querySelector("#ConsentItem_Over14ChkBox");
+const consentTermOfSev = document.querySelector("#ConsentItem_TermsOfService");
+const consentPersonInfo = document.querySelector("#ConsentItem_PersonalInformation");
+
+function consentIsChked(consentChkbox) {
+    const isChked = consentChkbox.checked;
+    return isChked;
+}
+
+function consentChk(consentChkbox) {
+    if (consentIsChked(consentChkbox) === false) {
+        fullConsentChkBox.checked = false;
+    }
+    else if
+    (
+    consentIsChked(consentOver14ChkBox) === true &&
+    consentIsChked(consentTermOfSev) === true &&
+    consentIsChked(consentPersonInfo) === true
+    ) {
+        fullConsentChkBox.checked = true;
+    }
+}
+
+fullConsentChkBox.addEventListener("click", () => {
+    consentOver14ChkBox.checked = true;
+    consentTermOfSev.checked = true;
+    consentPersonInfo.checked = true;
+})
+
+consentOver14ChkBox.addEventListener("click", () => {
+    consentChk(consentOver14ChkBox);
+})
+
+consentTermOfSev.addEventListener("click", () => {
+    consentChk(consentTermOfSev);
+})
+
+consentPersonInfo.addEventListener("click", () => {
+    consentChk(consentPersonInfo);
+})
+

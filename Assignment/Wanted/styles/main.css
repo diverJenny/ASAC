@@ -1232,7 +1232,7 @@ select::-ms-expand {
     display: none;
 }
 
-.Footer_LocaleSelect>i {
+.Footer_LocaleSelect>i{
     position: absolute;
     width: 10px;
     height: 10px;
@@ -1280,6 +1280,21 @@ select::-ms-expand {
     background-color: rgba(0,0,0,0.2);
     z-index: 900;
 }
+
+/* .SignUpModalContainer {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ececec;
+    z-index: 900;
+} */
 
 .LoginModal {
     display: none;
@@ -1469,23 +1484,30 @@ select::-ms-expand {
     overflow-y: scroll;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none;
-    padding: 20px;
-    padding-bottom: 0;
+    padding: 0 20px;
+}
+
+.SignUpModal_Header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding-top: 20px;
 }
 
 .SignUpModal::-webkit-scrollbar {
     display: none;
 }
 
-.SignUpModal_Header {
+.SignUpModal_Title {
     display: flex;
     width: auto;
     align-items: center;
-    position: relative;
+    /* position: relative; */
+    /* top: 0px; */
     height: 64px;
 }
 
-.SignUpModal_Header>h2 {
+.SignUpModal_Title>h2 {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -1493,11 +1515,12 @@ select::-ms-expand {
 
 .SignUpModal_BackBtn {
     min-width: 64px;
-    height: 14%;
+    height: 80%;
     display: flex;
     align-items: center;
     position: absolute;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .SignUpModal_BackImg {
@@ -1518,6 +1541,12 @@ select::-ms-expand {
     margin: 17px 0px 7px;
 }
 
+.SignUp_Input_Item>input:focus,
+.SignUp_InputPhoneNumber_Container>select:focus,
+.SignUp_InputPhoneNumber_Verification>input:focus {
+    outline: 1px solid #36f;
+}
+
 .SignUp_InputPhoneNumber_Verification {
     display: flex;
 }
@@ -1531,13 +1560,27 @@ select::-ms-expand {
     padding: 0px 12px;
     margin-bottom: 8px;
     font-size: 16px;
-    color: #ccc;
+    color: #888;
     border-radius: 5px;
     border: 1px solid #e1e2e3;
 }
 
+.SignUp_Input_Item>input::placeholder,
+.SignUp_InputPhoneNumber_Verification>input::placeholder {
+    color: #ccc;
+}
+
+#SignUp_InputEmail::placeholder {
+    color: #969696;
+}
+
+#SignUp_InputEmail:focus {
+    outline: none;
+}
+
 #SignUp_InputEmail,
-.SignUp_InputPhoneNumber_Verification>input:last-child {
+.SignUp_InputPhoneNumber_Verification>input:last-child,
+#SignUp_InputPhoneNumber_Verification_Input {
     background-color: #f2f4f7;
 }
 
@@ -1628,7 +1671,7 @@ select::-ms-expand {
 }
 
 .ConsentChkBox[type="checkbox"] {
-    -webkit-appearance: none;
+    display: none;
     margin: 0;
 }
 
@@ -1637,7 +1680,7 @@ select::-ms-expand {
     align-items: center;
     width: 18px;
     height: 18px;
-    border: 1px solid #ececec;
+    border: 1px solid #e1e1e1;
     border-radius: 3px;
     cursor: pointer;
 }
