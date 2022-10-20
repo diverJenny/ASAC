@@ -1587,15 +1587,71 @@ select::-ms-expand {
     padding: 0 20px;
 }
 
-.FullConsent>span {
+.ConsentItem {
+    display: flex;
+    position: relative;
+    align-items: center;
+    min-height: 25px;
+    margin: 10px 0;
+}
+
+.ConsentItem>input {
+    opacity: 0;
+    width: calc(100% - 90px);
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.ConsentItem>label>span {
+    color: #888;
+    position: absolute;
+    font-weight: 500;
+    letter-spacing: 0.0096em;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0 0 0 7px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.ConsentItem>a {
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 0.0096em;
+    font-size: 15px;
+    line-height: 22px;
+    position: absolute;
+    right: 0;
+    margin: 0;
+}
+
+.ConsentChkBox[type="checkbox"] {
+    display: none;
+}
+
+.ConsentChkBox[type="checkbox"] + label {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.ConsentChkBox:checked + label {
+    color: #fff;
+    background: #36f;
+}
+
+.FullConsent>label>span {
+    position: absolute;
     color: #333;
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.0096em;
     line-height: 22px;
     margin: 0 0 0 7px;
-}
-
-.ConsentItem>p {
-    
+    /* margin-left: 25px; */
 }
