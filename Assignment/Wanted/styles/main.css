@@ -1265,7 +1265,8 @@ select::-ms-expand {
     z-index: 5;
 }
 
-.LoginModalContainer {
+.LoginModalContainer,
+.SignUpModalContainer {
     display: none;
     position: fixed;
     justify-content: center;
@@ -1449,17 +1450,12 @@ select::-ms-expand {
     height: 56px;
 }
 
-.SignUpModalContainer {
-    /* display: none; */
-    display: flex;
-    
-}
-
 .SignUpModal {
     box-sizing: border-box;
-    /* display: none; */
+    display: none;
     display: block;
     width: 400px;
+    height: 100%;
     top: 9%;
     left: 530px;
     max-width: 500px;
@@ -1473,6 +1469,8 @@ select::-ms-expand {
     overflow-y: scroll;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none;
+    padding: 20px;
+    padding-bottom: 0;
 }
 
 .SignUpModal::-webkit-scrollbar {
@@ -1484,7 +1482,6 @@ select::-ms-expand {
     width: auto;
     align-items: center;
     position: relative;
-    /* padding: 0 20px; */
     height: 64px;
 }
 
@@ -1509,7 +1506,7 @@ select::-ms-expand {
 
 .SignUp_Input_Wrapper {
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .SignUp_Input_Item>h4 {
@@ -1584,26 +1581,19 @@ select::-ms-expand {
 
 .ConsentItems_Container {
     width: 100%;
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 
 .ConsentItem {
     display: flex;
-    position: relative;
     align-items: center;
+    position: relative;
     min-height: 25px;
     margin: 10px 0;
 }
 
-.ConsentItem>input {
-    opacity: 0;
-    width: calc(100% - 90px);
-    height: 100%;
-    position: absolute;
-    cursor: pointer;
-}
-
 .ConsentItem>label>span {
+    display: flex;
     color: #888;
     position: absolute;
     font-weight: 500;
@@ -1626,25 +1616,6 @@ select::-ms-expand {
     margin: 0;
 }
 
-.ConsentChkBox[type="checkbox"] {
-    display: none;
-}
-
-.ConsentChkBox[type="checkbox"] + label {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    background: #fff;
-    cursor: pointer;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-}
-
-.ConsentChkBox:checked + label {
-    color: #fff;
-    background: #36f;
-}
-
 .FullConsent>label>span {
     position: absolute;
     color: #333;
@@ -1653,5 +1624,54 @@ select::-ms-expand {
     letter-spacing: 0.0096em;
     line-height: 22px;
     margin: 0 0 0 7px;
-    /* margin-left: 25px; */
+    margin-left: 25px;
 }
+
+.ConsentChkBox[type="checkbox"] {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.ConsentChkBox[type="checkbox"] + label {
+    display: flex;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ececec;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.ConsentChkBox[type="checkbox"] + label:hover {
+    background-color: #ececec;
+}
+
+.ConsentChkBox[type="checkbox"]:checked + label::after {
+    margin: auto;
+    content: '\2713';
+    color: #fff;
+    font-size: 16px;
+}
+
+.ConsentChkBox[type="checkbox"]:checked + label {
+    background: #36f;
+}
+
+.SignUp_Input_Submit {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding-bottom: 20px;
+}
+
+.SignUp_Input_SubmitBtn {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    color: #ccc;
+    background-color: #f2f4f7;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
