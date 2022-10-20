@@ -226,23 +226,24 @@ a {
     display: flex;
     width: 100%;
     flex-direction: row;
-    overflow: hidden;
 }
 
 .TopBanner_list_wrapper {
     display: flex;
-    width: 1060px;
+    width: 100vw;
+    /* overflow: hidden; */
+    position: relative;
 }
 
 .TopBanner_list_wrapper_container {
     display: flex;
-    /* transition: 500ms ease 0s; */
-    transform: translate(0, 0);
+    width: 100%;
+    transition: 0.5s ease-out;
 }
 
 .TopBanner_list_contents {
     position: relative;
-    max-width: 1060px;
+    /* max-width: 1060px; */
     margin: auto 13px;
     border-radius: 5px;
     /* border: 3px solid blue; */
@@ -326,6 +327,7 @@ a {
     background-color: rgb(230, 225, 225);
     font-size: 16px;
     z-index: 10;
+    cursor: pointer;
 }
 
 .Left_arrow {
@@ -377,7 +379,7 @@ a {
 .CareerContents_CategoryListSlide {
     max-width: 1060px;
     height: auto;
-    margin: 30px 0;
+    margin: 45px 0;
     display: flex;
     align-items: center;
     position: relative;

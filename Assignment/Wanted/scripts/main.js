@@ -121,3 +121,35 @@ consentPersonInfo.addEventListener("click", () => {
     consentChk(consentPersonInfo);
 })
 
+
+/*-------------- TopBanner Slide ----------------*/
+// const topBannerSlideWrapper = document.querySelector(".TopBanner_list_wrapper_container");
+// const topBannerSlideItem = document.querySelector(".TopBanner_list_contents");
+// const topBannerSlideItemWidth = topBannerSlideItem.clientWidth;
+// const topBannerSlideWidth = topBannerSlideWrapper.clientWidth;
+// const topBannerRight = document.querySelector(".Right_arrow");
+// let topBannerSlideIdx = 1;
+
+// topBannerRight.addEventListener("click", () => {
+//     topBannerSlideWrapper.style.transform = "translateX(-" + topBannerSlideItemWidth + "px)";
+// })
+
+const topBannerContainer = document.querySelector(".TopBanner_list_wrapper_container");
+const topBannerItem = document.querySelector(".TopBanner_list_contents");
+let currIndex = 0;
+const topBannerItemCnt = topBannerItem.length;
+const topBannerSlideWidth = 1060;
+const topBannerSlideMargin = 13;
+const topBannNxtBtn = document.querySelector(".Right_arrow");
+const topBannPreBtn = document.querySelector(".Left_arrow");
+
+makeClone();
+
+function makeClone() {
+    for(let i = 0; i < topBannerItemCnt; i++) {
+        const cloneSlide = topBannerItem[i].cloneNode(true);
+        cloneSlide.classList.add('clone');
+        topBannerContainer.appendChild(cloneSlide);
+    }
+    console.log(topBannerItemCnt);
+}
