@@ -1,6 +1,6 @@
-import '../css/main.css';
-import Header from '../component/header';
-import LoginModal from '../component/loginModal';
+import "../css/main.css";
+import Header from "../component/header";
+import LoginModal from "../component/loginModal";
 
 function Main() {
   return (
@@ -11,10 +11,18 @@ function Main() {
         <div className="TopBanner">
           <div className="TopBanner_slider">
             <button className="TopBanner_arrow Left_arrow">
-              <img className="TopBanner_arrowIcon" src={require('../images/chevron-left.png')} />
+              <img
+                className="TopBanner_arrowIcon"
+                src={require("../images/chevron-left.png")}
+                alt=""
+              />
             </button>
             <button className="TopBanner_arrow Right_arrow">
-              <img className="TopBanner_arrowIcon" src={require('../images/chevron-right.png')} />
+              <img
+                className="TopBanner_arrowIcon"
+                src={require("../images/chevron-right.png")}
+                alt=""
+              />
             </button>
             <div className="TopBanner_list_wrapper">
               <div className="TopBanner_list_wrapper_container">
@@ -268,7 +276,12 @@ function Main() {
                     나에게 필요한 커리어 인사이트
                   </h2>
                   <button className="QuestionButton">
-                    <svg width="22" height="22" className="" viewBox="0 0 17 17">
+                    <svg
+                      width="22"
+                      height="22"
+                      className=""
+                      viewBox="0 0 17 17"
+                    >
                       <defs>
                         <filter id="bfoh3u0w3a">
                           <feColorMatrix
@@ -353,7 +366,9 @@ function Main() {
                   </button>
                 </div>
                 <div className="CareerContents_CategoryList">
-                  <div className="CareerContents_CategoryName">라이프스타일</div>
+                  <div className="CareerContents_CategoryName">
+                    라이프스타일
+                  </div>
                   <div className="CareerContents_CategoryName">회사생활</div>
                   <div className="CareerContents_CategoryName">인간관계</div>
                   <div className="CareerContents_CategoryName">커리어고민</div>
@@ -611,7 +626,10 @@ function Main() {
                     <span className="CareerContentList_More_Button_Name">
                       더 많은 콘텐츠 보기
                       <span className="CareerContentList_More_Button_Icon">
-                        <svg className="SvgIcon_SvgIcon_svg" viewBox="0 0 19 19">
+                        <svg
+                          className="SvgIcon_SvgIcon_svg"
+                          viewBox="0 0 19 19"
+                        >
                           <path
                             d="M2.71967 5.71967C2.98594 5.4534 3.4026 5.4292 3.69621 5.64705L3.78033 5.71967L9.499 11.438L15.2162 5.7211C15.4824 5.45479 15.899 5.43051 16.1927 5.64832L16.2768 5.72092C16.5431 5.98715 16.5674 6.40381 16.3496 6.69745L16.277 6.78158L10.0304 13.0302C9.76416 13.2966 9.34745 13.3208 9.0538 13.103L8.96967 13.0303L2.71967 6.78033C2.42678 6.48744 2.42678 6.01256 2.71967 5.71967Z"
                             fill="currentColor"
@@ -632,11 +650,11 @@ function Main() {
                 <div className="CreatorBanner_Text">
                   <p>즐겨보는 크리에이터의 글도 추천하고 싶다면?</p>
                   <a href="#">
-                    <span>크리에이터 추천하기 {'>'}</span>
+                    <span>크리에이터 추천하기 {">"}</span>
                   </a>
                 </div>
                 <div className="CreatorBanner_Img">
-                  <img src={require('../images/creator.png')} alt="" />
+                  <img src={require("../images/creator.png")} alt="" />
                 </div>
               </div>
             </div>
@@ -745,7 +763,7 @@ function Main() {
               </button>
               <div className="VOD_Title">
                 <h2>직장인을 위한 Wanted+ VOD</h2>
-                <a href="#">VOD 전체보기 {'>'}</a>
+                <a href="#">VOD 전체보기 {">"}</a>
               </div>
               <button>
                 <span>
@@ -837,7 +855,7 @@ function Main() {
             <a href="#">
               <div className="LineBanner_Text">
                 <span>
-                  직군/직무를 입력하면 관련 콘텐츠를 추천해 드려요. {'>'}
+                  직군/직무를 입력하면 관련 콘텐츠를 추천해 드려요. {">"}
                   <em>👀</em>
                 </span>
                 <span></span>
@@ -856,7 +874,7 @@ function Main() {
               </button>
               <div className="Event_Title">
                 <h2>커리어 성장을 위한 맞춤 이벤트</h2>
-                <a href="#">이벤트 전체보기 {'>'}</a>
+                <a href="#">이벤트 전체보기 {">"}</a>
               </div>
               <button>
                 <span>
@@ -919,7 +937,11 @@ function Main() {
               <p>구독자의 서류 합격률이 비구독자보다 1.5배 높아요!</p>
               <a className="SubscribeBanner_Button" href="#">
                 <button id="SubscribeButton">
-                    <img className='SubscribeButtonImg' src={require('../images/check.png')} />
+                  <img
+                    className="SubscribeButtonImg"
+                    src={require("../images/check.png")}
+                    alt=""
+                  />
                   첫 구독 0원 신청하기
                 </button>
               </a>
@@ -941,14 +963,14 @@ function Main() {
           </div>
           <div className="RecruitInfo_Main">
             <div className="RecruitmentQuikMenu">
-              <a className="RecruitmentQuikMenu_Icon" href="">
+              <a className="RecruitmentQuikMenu_Icon" href="#">
                 <span>
                   <svg className="RecruitmentQuikMenu_Svg" viewBox="0 0 32 32">
                     <path d="M27.96 29.374a1 1 0 1 0 1.414-1.414l-8.667-8.667-.338-.294a1 1 0 0 0-1.357.05 9 9 0 1 1 2.24-3.676 1 1 0 1 0 1.909.6 11.01 11.01 0 0 0 .506-3.306c0-6.076-4.925-11-11-11-6.076 0-11 4.924-11 11 0 6.074 4.925 11 11 11 2.615 0 5.087-.918 7.04-2.549l8.253 8.256z"></path>
                   </svg>
                 </span>
               </a>
-              <a className="RecruitmentQuikMenu_Button" href="">
+              <a className="RecruitmentQuikMenu_Button" href="#">
                 채용공고
                 <span className="RecruitmentQuikMenu_Button_Icon">
                   <svg
@@ -961,14 +983,14 @@ function Main() {
               </a>
             </div>
             <div className="RecruitmentQuikMenu">
-              <a className="RecruitmentQuikMenu_Icon" href="">
+              <a className="RecruitmentQuikMenu_Icon" href="#">
                 <span>
                   <svg className="RecruitmentQuikMenu_Svg" viewBox="0 0 32 32">
                     <path d="M18.812 14.36c-.722.917-1.172 1.905-1.188 2.959-.023 1.658.907 2.901 2.613 3.605l.132.044c3.985 1.027 6.615 3.38 6.615 5.748L27 28.118c0 .03-.222.215-.4.215H5.33c-.157 0-.314-.14-.314-.203L5 26.705c0-2.283 2.384-4.493 6.185-5.564.349-.079.896-.273 1.458-.616.885-.54 1.504-1.297 1.654-2.301a1 1 0 1 0-1.978-.296c-.05.333-.293.63-.719.89-.345.21-.703.338-.909.385C6.075 20.503 3 23.353 3 26.716l.016 1.426c0 1.214 1.103 2.191 2.313 2.191h21.272c1.213-.002 2.399-.995 2.399-2.226l-.016-1.403c0-3.432-3.313-6.414-8.044-7.654-.944-.404-1.327-.932-1.316-1.702.008-.541.284-1.147.76-1.75.31-.394.622-.691.81-.84l.1-.092c1.409-1.474 2.319-3.428 2.319-5.333 0-4.169-3.488-7.666-7.648-7.666-4.158 0-7.647 3.498-7.647 7.666 0 1.795.506 3.33 1.55 4.628a1 1 0 1 0 1.558-1.255c-.748-.93-1.108-2.02-1.108-3.373 0-3.065 2.595-5.666 5.647-5.666 3.054 0 5.648 2.6 5.648 5.666 0 1.329-.67 2.786-1.722 3.906a7.46 7.46 0 0 0-1.079 1.122z"></path>
                   </svg>
                 </span>
               </a>
-              <a className="RecruitmentQuikMenu_Button" href="">
+              <a className="RecruitmentQuikMenu_Button" href="#">
                 내 프로필
                 <span className="RecruitmentQuikMenu_Button_Icon">
                   <svg
@@ -981,7 +1003,7 @@ function Main() {
               </a>
             </div>
             <div className="RecruitmentQuikMenu">
-              <a className="RecruitmentQuikMenu_Icon" href="">
+              <a className="RecruitmentQuikMenu_Icon" href="#">
                 <span>
                   <svg className="RecruitmentQuikMenu_Svg" viewBox="0 0 32 32">
                     <path d="M11.667 28.667a1 1 0 0 1-1-1v-7h-2v7a1 1 0 0 1-1 1H2.333a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1H17a1 1 0 0 1 1 1v4.333h11a1 1 0 0 1 .993.884l.007.116v12a1 1 0 1 1-2 0v-11H18v15.334h11a1 1 0 1 1 0 2H11.667zM16 6H3.333v20.667h3.334v-7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v7H16V6zm5 12.333c.736 0 1.333.597 1.333 1.334V21a1.333 1.333 0 1 1-2.666 0v-1.333c0-.737.597-1.334 1.333-1.334zM21 13c.736 0 1.333.597 1.333 1.333v1.334a1.333 1.333 0 1 1-2.666 0v-1.334c0-.736.597-1.333 1.333-1.333zM8 13a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-.667a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1H8zm0-5.333a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-.667a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1H8z"></path>
@@ -1001,14 +1023,14 @@ function Main() {
               </a>
             </div>
             <div className="RecruitmentQuikMenu">
-              <a className="RecruitmentQuikMenu_Icon" href="">
+              <a className="RecruitmentQuikMenu_Icon" href="#">
                 <span>
                   <svg className="RecruitmentQuikMenu_Svg" viewBox="0 0 32 32">
                     <path d="M10.667 21.667a3.67 3.67 0 0 1 3.528 2.666H28a1 1 0 0 1 0 2l-13.805.001a3.67 3.67 0 0 1-7.057 0H4a1 1 0 1 1 0-2h3.138a3.67 3.67 0 0 1 3.529-2.667zm0 2a1.668 1.668 0 0 0 0 3.333 1.668 1.668 0 0 0 0-3.333zm10.666-11.334A3.67 3.67 0 0 1 24.862 15H28a1 1 0 0 1 0 2h-3.138a3.67 3.67 0 0 1-7.057 0H4a1 1 0 0 1 0-2h13.805a3.67 3.67 0 0 1 3.528-2.667zm0 2a1.668 1.668 0 0 0 0 3.334 1.668 1.668 0 0 0 0-3.334zM10.667 3a3.67 3.67 0 0 1 3.528 2.666H28a1 1 0 0 1 0 2H14.195a3.67 3.67 0 0 1-7.057 0H4a1 1 0 1 1 0-2h3.138A3.67 3.67 0 0 1 10.667 3zm0 2a1.668 1.668 0 0 0 0 3.333 1.668 1.668 0 0 0 0-3.333z"></path>
                   </svg>
                 </span>
               </a>
-              <a className="RecruitmentQuikMenu_Button" href="">
+              <a className="RecruitmentQuikMenu_Button" href="#">
                 직군별 연봉
                 <span className="RecruitmentQuikMenu_Button_Icon">
                   <svg
@@ -1027,7 +1049,10 @@ function Main() {
           <div className="Footer_rowClass">
             <div className="Footer_navLinks">
               <div className="Footer_navLinks_logo">
-                <img src={require('../images/footer/footerLogo.png')} alt="wanted" />
+                <img
+                  src={require("../images/footer/footerLogo.png")}
+                  alt="wanted"
+                />
               </div>
               <div className="Footer_navLinks_links">
                 <a href="#">기업소개</a>
@@ -1038,28 +1063,40 @@ function Main() {
             </div>
             <div className="Footer_SocialLinks">
               <a href="images/footer/instagram.png" alt="instagram">
-                <img src={require('../images/footer/instagram.png')} alt="" />
+                <img src={require("../images/footer/instagram.png")} alt="" />
               </a>
               <a href="https://www.youtube.com/channel/UC0tGZ6MqieGG2m5lA5PeQsw">
-                <img src={require('../images/footer/youtube.png')} alt="youtube" />
+                <img
+                  src={require("../images/footer/youtube.png")}
+                  alt="youtube"
+                />
               </a>
               <a href="https://www.facebook.com/wantedkr">
-                <img src={require('../images/footer/facebook.png')} alt="facebook" />
+                <img
+                  src={require("../images/footer/facebook.png")}
+                  alt="facebook"
+                />
               </a>
               <a href="https://blog.naver.com/wantedlab">
-                <img src={require('../images/footer/nblog.png')} alt="blog" />
+                <img src={require("../images/footer/nblog.png")} alt="blog" />
               </a>
               <a href="https://pf.kakao.com/_XqCIxl">
-                <img src={require('../images/footer/kakaotalk.png')} alt="kakao" />
+                <img
+                  src={require("../images/footer/kakaotalk.png")}
+                  alt="kakao"
+                />
               </a>
               <a href="https://post.naver.com/my.nhn?memberNo=18284175">
-                <img src={require('../images/footer/npost.png')} alt="post" />
+                <img src={require("../images/footer/npost.png")} alt="post" />
               </a>
               <a href="https://apps.apple.com/kr/app/id1074569961">
-                <img src={require('../images/footer/apple.png')} alt="apple" />
+                <img src={require("../images/footer/apple.png")} alt="apple" />
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.wanted.android.wanted">
-                <img src={require('../images/footer/android.png')} alt="google" />
+                <img
+                  src={require("../images/footer/android.png")}
+                  alt="google"
+                />
               </a>
             </div>
           </div>
