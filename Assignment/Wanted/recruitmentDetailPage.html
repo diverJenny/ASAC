@@ -1,204 +1,288 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/recruitmentDetailPage.css">
-    <link rel="shortcut icon" type="imge/x-icon" href="images/wantedLogo.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/recruitmentDetailPage.css" />
+    <link rel="shortcut icon" type="imge/x-icon" href="images/wantedLogo.ico" />
     <title>[블루비커] 웹 프론트엔드 개발자(React) 채용 | 원티드</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- //.Login Modal -->
     <div id="LoginModal" class="LoginModal">
-        <div class="ModalHeader">
-            <img src="https://www.wantedlab.com/img/logo.png" alt="wanted">
-            <button class="LoginModal_CloseBtn">
-                <svg width="24" height="24" viewBox="0 0 24 24" color="#999">
-                    <path fill="currentColor" d="M17.97 19.03a.75.75 0 001.06-1.06l-6.5-6.5a.75.75 0 00-1.06 0l-6.5 6.5a.75.75 0 001.06 1.06L12 13.06l5.97 5.97zM12 10.94L6.03 4.97a.75.75 0 00-1.06 1.06l6.5 6.5a.75.75 0 001.06 0l6.5-6.5a.75.75 0 00-1.06-1.06L12 10.94z"></path>
-                </svg>
+      <div class="ModalHeader">
+        <img src="https://www.wantedlab.com/img/logo.png" alt="wanted" />
+        <button class="LoginModal_CloseBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" color="#999">
+            <path
+              fill="currentColor"
+              d="M17.97 19.03a.75.75 0 001.06-1.06l-6.5-6.5a.75.75 0 00-1.06 0l-6.5 6.5a.75.75 0 001.06 1.06L12 13.06l5.97 5.97zM12 10.94L6.03 4.97a.75.75 0 00-1.06 1.06l6.5 6.5a.75.75 0 001.06 0l6.5-6.5a.75.75 0 00-1.06-1.06L12 10.94z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div class="ModalBody">
+        <div class="TextContainer">
+          <h1>
+            직장인을위한
+            <br />
+            커리어 플랫폼, 원티드!
+          </h1>
+          <br />
+          <h2>
+            커리어 성장과 행복을 위한 여정
+            <br />
+            지금 원티드에서 시작하세요.
+          </h2>
+        </div>
+        <div class="InputWrapper">
+          <div class="Input_EmailContainer">
+            <span>이메일</span>
+            <input
+              id="InputEmail"
+              type="email"
+              placeholder="이메일을 입력해 주세요."
+            />
+          </div>
+          <div class="HowToLogin">
+            <button class="EmailLoginBtn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  stroke="#FFF"
+                  stroke-width="2"
+                >
+                  <rect width="17.2" height="14" x="3.4" y="5" rx="3"></rect>
+                  <path d="M3.2 5.6L12 12l8.8-6.4"></path>
+                </g>
+              </svg>
+              이메일로 계속하기
             </button>
-        </div>
-        <div class="ModalBody">
-            <div class="TextContainer">
-                <h1>
-                    직장인을위한
-                    <br>
-                커리어 플랫폼, 원티드!
-                </h1>
-                <br>
-                <h2>
-                    커리어 성장과 행복을 위한 여정
-                    <br>
-                    지금 원티드에서 시작하세요.
-                </h2>
-            </div>
-            <div class="InputWrapper">
-                <div class="Input_EmailContainer">
-                    <span>이메일</span>
-                    <input id="InputEmail" type="email" placeholder="이메일을 입력해 주세요.">
+            <span>or</span>
+            <div class="SocialLoginWrapper">
+              <span>다음 계정으로 계속하기</span>
+              <div class="SocialLogin">
+                <div class="SocialLogin_Kakao">
+                  <div class="SocialLogin_Kakao_btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="21"
+                      viewBox="0 0 22 21"
+                    >
+                      <path
+                        fill="#000"
+                        fill-rule="nonzero"
+                        d="M11 0C5.242 0 0 3.823 0 8.539c0 2.932 1.904 5.519 4.804 7.056l-1.22 4.479c-.107.397.343.712.69.483l5.348-3.548c.452.044.91.069 1.377.069 6.076 0 11-3.823 11-8.54 0-4.715-4.924-8.538-11-8.538"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="SocialLogin_Name">kakao</div>
                 </div>
-                <div class="HowToLogin">
-                    <button class="EmailLoginBtn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
-                                <rect width="17.2" height="14" x="3.4" y="5" rx="3"></rect>
-                                <path d="M3.2 5.6L12 12l8.8-6.4"></path>
-                            </g>
-                        </svg>
-                        이메일로 계속하기
-                    </button>
-                    <span>or</span>
-                    <div class="SocialLoginWrapper">
-                        <span>다음 계정으로 계속하기</span>
-                        <div class="SocialLogin">
-                            <div class="SocialLogin_Kakao">
-                                <div class="SocialLogin_Kakao_btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="21" viewBox="0 0 22 21"><path fill="#000" fill-rule="nonzero" d="M11 0C5.242 0 0 3.823 0 8.539c0 2.932 1.904 5.519 4.804 7.056l-1.22 4.479c-.107.397.343.712.69.483l5.348-3.548c.452.044.91.069 1.377.069 6.076 0 11-3.823 11-8.54 0-4.715-4.924-8.538-11-8.538"></path></svg></div>
-                                <div class="SocialLogin_Name">kakao</div>
-                            </div>
 
-                            <div class="SocialLogin_Facebook">
-                                <div class="SocialLogin_Facebook_btn">
-                                    <img src="images/socialLogin/facebook.png" alt="facebook">
-                                </div>
-                                <div class="SocialLogin_Name">Facebook</div>
-                            </div>
-                            <div class="SocialLogin_Google">
-                                <div class="SocialLogin_Google_btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><g fill="none" fill-rule="nonzero"><path fill="#EA4335" d="M11.5 4.574c1.688 0 3.204.58 4.396 1.72l3.299-3.299C17.203 1.14 14.6 0 11.5 0 7.005 0 3.115 2.577 1.223 6.335l3.842 2.98c.905-2.718 3.44-4.741 6.435-4.741z"></path><path fill="#4285F4" d="M22.54 11.761c0-.815-.073-1.6-.21-2.352H11.5v4.448h6.19c-.268 1.438-1.078 2.656-2.296 3.471v2.886h3.717c2.174-2.002 3.429-4.95 3.429-8.453z"></path><path fill="#FBBC05" d="M5.065 13.685c-.23-.69-.36-1.427-.36-2.185s.13-1.495.36-2.185v-2.98H1.223C.444 7.888 0 9.645 0 11.5c0 1.856.444 3.612 1.223 5.165l3.842-2.98z"></path><path fill="#34A853" d="M11.5 23c3.105 0 5.708-1.03 7.61-2.786l-3.716-2.886c-1.03.69-2.347 1.098-3.894 1.098-2.995 0-5.53-2.023-6.435-4.741H1.223v2.98C3.115 20.423 7.005 23 11.5 23z"></path><path d="M0 0L23 0 23 23 0 23z"></path></g></svg>
-                                </div>
-                                <div class="SocialLogin_Name">Google</div>
-                            </div>
-                            <div class="SocialLogin_Apple">
-                                <div class="SocialLogin_Apple_btn">
-                                    <img src="images/socialLogin/Apple-Logo2.png" alt="apple">
-                                </div>
-                                <div class="SocialLogin_Name">Apple</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="SocialLogin_Facebook">
+                  <div class="SocialLogin_Facebook_btn">
+                    <img src="images/socialLogin/facebook.png" alt="facebook" />
+                  </div>
+                  <div class="SocialLogin_Name">Facebook</div>
                 </div>
+                <div class="SocialLogin_Google">
+                  <div class="SocialLogin_Google_btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="23"
+                      height="23"
+                      viewBox="0 0 23 23"
+                    >
+                      <g fill="none" fill-rule="nonzero">
+                        <path
+                          fill="#EA4335"
+                          d="M11.5 4.574c1.688 0 3.204.58 4.396 1.72l3.299-3.299C17.203 1.14 14.6 0 11.5 0 7.005 0 3.115 2.577 1.223 6.335l3.842 2.98c.905-2.718 3.44-4.741 6.435-4.741z"
+                        ></path>
+                        <path
+                          fill="#4285F4"
+                          d="M22.54 11.761c0-.815-.073-1.6-.21-2.352H11.5v4.448h6.19c-.268 1.438-1.078 2.656-2.296 3.471v2.886h3.717c2.174-2.002 3.429-4.95 3.429-8.453z"
+                        ></path>
+                        <path
+                          fill="#FBBC05"
+                          d="M5.065 13.685c-.23-.69-.36-1.427-.36-2.185s.13-1.495.36-2.185v-2.98H1.223C.444 7.888 0 9.645 0 11.5c0 1.856.444 3.612 1.223 5.165l3.842-2.98z"
+                        ></path>
+                        <path
+                          fill="#34A853"
+                          d="M11.5 23c3.105 0 5.708-1.03 7.61-2.786l-3.716-2.886c-1.03.69-2.347 1.098-3.894 1.098-2.995 0-5.53-2.023-6.435-4.741H1.223v2.98C3.115 20.423 7.005 23 11.5 23z"
+                        ></path>
+                        <path d="M0 0L23 0 23 23 0 23z"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="SocialLogin_Name">Google</div>
+                </div>
+                <div class="SocialLogin_Apple">
+                  <div class="SocialLogin_Apple_btn">
+                    <img src="images/socialLogin/Apple-Logo2.png" alt="apple" />
+                  </div>
+                  <div class="SocialLogin_Name">Apple</div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div><!-- //.LoginModal end-->
+      </div>
+    </div>
+    <!-- //.LoginModal end-->
 
     <div class="Page">
-        <!-- header -->
-        <div class="Header">
-            <div class="MainBar">
-                <nav class="MainBar_nav">
-                    <div class="MainBar_nav_top">
-                        <button id="MainBar_nav_top_button" type="button">
-                            <img id="MainBar_nav_top_buttonImg" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=undefined&q=75" alt="hamberger menu">
-                        </button>
-                        <a href="/">
-                            <img id="MainBar_nav_top_logo" src="https://www.wantedlab.com/img/logo.png">
-                        </a>
-                    </div>
-                    <ul class="MainBar_nav_menuBar">
-                        <li>
-                            <a href="#">채용</a>
-                        </li>
-                        <li>
-                            <a href="">이벤트</a>
-                        </li>
-                        <li>
-                            <a href="">직군별 연봉</a>
-                        </li>
-                        <li>
-                            <a href="">이력서</a>
-                        </li>
-                        <li>
-                            <a href="">커뮤니티</a>
-                        </li>
-                        <li>
-                            <a href="">프리랜서</a>
-                        </li>
-                        <li>
-                            <a href="">AI합격예측</a>
-                        </li>
-                        <span class="MainBar_nav_menuBar_indicator"></span>
-                    </ul>
-                    <ul class="MainBar_nav_aside">
-                        <li>
-                            <button class="MainBar_nav_search_button">
-                                <img class="SearchIcon" src="images/search.png" alt="search">
-                            </button></li>
-                        <li id="LoginBtn"  class="Login">
-                            <a>회원가입/로그인</a>
-                        </li>
-                        <li class="PoratService_button">
-                            <a id="MainBar_nav_corporatService_button">
-                                기업 서비스
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+      <!-- header -->
+      <div class="Header">
+        <div class="MainBar">
+          <nav class="MainBar_nav">
+            <div class="MainBar_nav_top">
+              <button id="MainBar_nav_top_button" type="button">
+                <img
+                  id="MainBar_nav_top_buttonImg"
+                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=undefined&q=75"
+                  alt="hamberger menu"
+                />
+              </button>
+              <a href="/">
+                <img
+                  id="MainBar_nav_top_logo"
+                  src="https://www.wantedlab.com/img/logo.png"
+                />
+              </a>
             </div>
-        </div><!-- // .Header end -->
+            <ul class="MainBar_nav_menuBar">
+              <li>
+                <a href="#">채용</a>
+              </li>
+              <li>
+                <a href="">이벤트</a>
+              </li>
+              <li>
+                <a href="">직군별 연봉</a>
+              </li>
+              <li>
+                <a href="">이력서</a>
+              </li>
+              <li>
+                <a href="">커뮤니티</a>
+              </li>
+              <li>
+                <a href="">프리랜서</a>
+              </li>
+              <li>
+                <a href="">AI합격예측</a>
+              </li>
+              <span class="MainBar_nav_menuBar_indicator"></span>
+            </ul>
+            <ul class="MainBar_nav_aside">
+              <li>
+                <button class="MainBar_nav_search_button">
+                  <img
+                    class="SearchIcon"
+                    src="images/search.png"
+                    alt="search"
+                  />
+                </button>
+              </li>
+              <li id="LoginBtn" class="Login">
+                <a>회원가입/로그인</a>
+              </li>
+              <li class="PoratService_button">
+                <a id="MainBar_nav_corporatService_button"> 기업 서비스 </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- // .Header end -->
 
-        <!-- main -->
-        <div class="Main">
-            <div class="JobDetail_Wrapper">
-                <div class="JobDetail_Content">
-                    <div class="JobDetail_Content_imgs">
-                        <button class="JobDetail_Content_imgs_Arrow JobDetail_Content_imgs_leftArrow">
-                            <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"></path></svg>
-                        </button>
-                        <button class="JobDetail_Content_imgs_Arrow JobDetail_Content_imgs_rightArrow">
-                            <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18"><path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path></svg>
-                        </button>
-                        <div class="JobDetail_Content_img">
-                            <img src="./images/JobDetail/블루비커.png" alt="">
-                        </div>
-                    </div>
-                    <div class="JobDetail_Content_Header">
-                        <h2>웹 프론트엔드 개발자(React)</h2>
-                        <a class="JobDetail_Content_CompanyName" href="#">블루비커</a>
-                        <button class="JobDetail_Content_ResponeseLevel">
-                            응답률 높음
-                        </button>
-                        <div class="JobDetail_Content_CompanyLocation">
-                            <span>서울</span>
-                            <span>·</span>
-                            <span>한국</span>
-                        </div>
-                        <div class="JobDetail_Content_Tags">
-                            <ul class="JobDetail_Content_Tags_List">
-                                <li>
-                                    <a href="#">#인원급성장</a>
-                                </li>
-                                <li>
-                                    <a href="#">#50명이하</a>
-                                </li>
-                                <li>
-                                    <a href="#">#설립3년이하</a>
-                                </li>
-                                <li>
-                                    <a href="#">#스톡옵션</a>
-                                </li>
-                                <li>
-                                    <a href="#">#스타트업</a>
-                                </li>
-                                <li>
-                                    <a href="#">#워크샵</a>
-                                </li>
-                                <li>
-                                    <a href="#">#간식</a>
-                                </li>
-                                <li>
-                                    <a href="#">#건강검진</a>
-                                </li>
-                                <li>
-                                    <a href="#">#IT, 컨텐츠</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="JobDetail_Content_DescriptionWrapper">
-                        <div class="JobDetail_Content_Description">
-                            <pre>
+      <!-- main -->
+      <div class="Main">
+        <div class="JobDetail_Wrapper">
+          <div class="JobDetail_Content">
+            <div class="JobDetail_Content_imgs">
+              <button
+                class="JobDetail_Content_imgs_Arrow JobDetail_Content_imgs_leftArrow"
+              >
+                <svg
+                  class="SvgIcon_SvgIcon__root__svg__DKYBi"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"
+                  ></path>
+                </svg>
+              </button>
+              <button
+                class="JobDetail_Content_imgs_Arrow JobDetail_Content_imgs_rightArrow"
+              >
+                <svg
+                  class="SvgIcon_SvgIcon__root__svg__DKYBi"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"
+                  ></path>
+                </svg>
+              </button>
+              <div class="JobDetail_Content_img">
+                <img src="./images/JobDetail/블루비커.png" alt="" />
+              </div>
+            </div>
+            <div class="JobDetail_Content_Header">
+              <h2>웹 프론트엔드 개발자(React)</h2>
+              <a class="JobDetail_Content_CompanyName" href="#">블루비커</a>
+              <button class="JobDetail_Content_ResponeseLevel">
+                응답률 높음
+              </button>
+              <div class="JobDetail_Content_CompanyLocation">
+                <span>서울</span>
+                <span>·</span>
+                <span>한국</span>
+              </div>
+              <div class="JobDetail_Content_Tags">
+                <ul class="JobDetail_Content_Tags_List">
+                  <li>
+                    <a href="#">#인원급성장</a>
+                  </li>
+                  <li>
+                    <a href="#">#50명이하</a>
+                  </li>
+                  <li>
+                    <a href="#">#설립3년이하</a>
+                  </li>
+                  <li>
+                    <a href="#">#스톡옵션</a>
+                  </li>
+                  <li>
+                    <a href="#">#스타트업</a>
+                  </li>
+                  <li>
+                    <a href="#">#워크샵</a>
+                  </li>
+                  <li>
+                    <a href="#">#간식</a>
+                  </li>
+                  <li>
+                    <a href="#">#건강검진</a>
+                  </li>
+                  <li>
+                    <a href="#">#IT, 컨텐츠</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="JobDetail_Content_DescriptionWrapper">
+              <div class="JobDetail_Content_Description">
+                <pre>
 ＜서비스 소개＞
 
 ✓ Medmap – 메디컬 지도를 펼치세요!
@@ -351,316 +435,539 @@ https://platum.kr/archives/158548
 • 처우에 대해 최종적으로 협의 후, 입사 일자를 결정합니다.
 
 ✓ 블루비커에 관심을 갖고 지원해 주신 모든 분들의 서류를 정말 감사한 마음으로 읽어 보고 있습니다. 채용의 모든 전형에서 가능한 빠른 피드백을 드리고자 노력하겠습니다.
-                            </pre>
-                        </div>
-                        <div class="JobDetail_Content_Description_Skill">
-                            <h3>기술스택 ・ 툴</h3>
-                            <ul class="JobDetail_Content_Description_Skill_List">
-                                <li>Git</li>
-                                <li>Azure</li>
-                                <li>React</li>
-                                <li>JavaScript</li>
-                                <li>TypeScript</li>
-                                <li>Redux</li>
-                                <li>Nest.js</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr class="JobContent_divider">
-                    <div class="JobWorkPlace">
-                        <div class="Deadline">
-                            <span>마감일</span>
-                            <span>상시</span>
-                        </div>
-                        <div class="WorkPlace">
-                            <span>근무지역</span>
-                            <span>서울 용산구 한강대로 366 트윈시티 남산 2 패스트파이브</span>
-                        </div>
-                        <a class="WorkPlaceMap" href="#">
-                            <img src="https://naveropenapi.apigw.ntruss.com/map-static/v2/raster-cors?w=700&h=254&markers=type:d|size:mid|pos:126.9729133 37.5511247|color:red&scale=2&X-NCP-APIGW-API-KEY-ID=z7e7ujba1u" alt="">
-                        </a>
-                    </div>
-                    <div class="JobContent_CompanyInfo">
-                        <div class="JobContent_CompanyInfo_Company">
-                            <img src="https://static.wanted.co.kr/images/wdes/0_5.0852ff23.jpg" alt="블루비커">
-                            <div>
-                                <span>블루비커</span>
-                                <span>IT, 컨텐츠</span>
-                            </div>
-                        </div>
-                        <div class="JobContent_CompanyInfo_FllowBtn">
-                            <span>팔로우</span>
-                        </div>
-                    </div>
-                    <div class="StealingWarning">
-                        <div class="StealingWarning_Header">
-                            <svg class="" width="24" height="24" viewBox="0 0 24 24"><g fill="currentColor" fill-rule="evenodd"><path fill-rule="nonzero" d="M15.266 20.658A9.249 9.249 0 0112 21.25a9.25 9.25 0 010-18.5 9.21 9.21 0 016.54 2.71A9.217 9.217 0 0121.25 12a9.213 9.213 0 01-2.71 6.54.75.75 0 101.061 1.062A10.713 10.713 0 0022.75 12c0-2.89-1.146-5.599-3.149-7.601A10.717 10.717 0 0012 1.25C6.063 1.25 1.25 6.063 1.25 12S6.063 22.75 12 22.75c1.31 0 2.591-.235 3.794-.688a.75.75 0 10-.528-1.404z"></path><path d="M13 16a1 1 0 11-2 0 1 1 0 012 0"></path><path fill-rule="nonzero" d="M11.25 7v5a.75.75 0 101.5 0V7a.75.75 0 10-1.5 0z"></path></g></svg>
-                            <div class="StealingWarning_content">
-                                <span>
-                                    본 채용정보는 원티드랩의 동의없이 무단전재, 재배포, 재가공할 수 없으며, 구직활동 이외의 
-                                    용도로 사용할 수 없습니다.
-                                </span>
-                                <svg class="StealingWarning_BodyBtn" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 21 13" focusable="false" role="presentation">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M20.1005 2.7169L10.9931 11.8244C10.4724 12.3451 9.62815 12.3451 9.10745 11.8244L-8.00829e-06 2.7169L1.88561 0.831278L10.0503 8.99593L18.2149 0.831278L20.1005 2.7169Z" />
-                                </svg>
-                            </div>                            
-                        </div>
-                        <div class="StealingWarning_Body">
-                            <span>
-                                본 채용 정보는 <strong>블루비커</strong>에서 제공한 자료를 바탕으로 원티드랩에서 표현을 수정하고 이의 배열 및 구성을 편집하여 완성한 원티드랩의 저작자산이자 영업자산입니다. 본 정보 및 데이터베이스의 일부 내지는 전부에 대하여 원티드랩의 동의 없이 무단전재 또는 재배포, 재가공 및 크롤링할 수 없으며, 게재된 채용기업의 정보는 구직자의 구직활동 이외의 용도로 사용될 수 없습니다. 원티드랩은 <strong>블루비커</strong> 에서 게재한 자료에 대한 오류나 그 밖에 원티드랩이 가공하지 않은 정보의 내용상 문제에 대하여 어떠한 보장도 하지 않으며, 사용자가 이를 신뢰하여 취한 조치에 대해 책임을 지지 않습니다. <strong><저작권자 (주)원티드랩. 무단전재-재배포금지></strong>
-                            </span>
-                        </div>
-                    </div>
-                </div><!-- //.JobDetail_Content end -->
-                <div class="JobDetail_Process">
-                    <h3>채용보상금</h3>
-                    <button class="JobDetail_ShareBtn" type="button">
-                        <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 19 19">
-                            <defs>
-                                <path id="shareIcon" d="M5.336 7.75c-.551-.703-1.418-1.136-2.365-1.136C1.337 6.614 0 7.898 0 9.494c0 1.596 1.336 2.879 2.971 2.879.93 0 1.785-.419 2.338-1.102l8.495 4.482c.128.068.276.092.42.068l.025-.004c.213-.036.395-.173.489-.367.101-.21.249-.393.437-.54.673-.526 1.643-.407 2.168.266.526.673.407 1.643-.265 2.167-.673.526-1.643.407-2.168-.266-.226-.29-.644-.34-.933-.115-.29.226-.34.644-.115.933.977 1.251 2.783 1.473 4.034.496 1.25-.976 1.472-2.782.495-4.033-.977-1.251-2.783-1.473-4.033-.496-.169.132-.32.28-.454.442L5.478 9.858c-.322-.241-.816-.145-1 .255-.259.558-.844.93-1.507.93-.913 0-1.642-.7-1.642-1.55 0-.849.73-1.55 1.642-1.55.636 0 1.2.343 1.473.863.107.368.526.64.954.413l9.026-4.762.118-.079.029-.024c.233-.197.303-.527.169-.8-.104-.212-.158-.442-.158-.68 0-.853.692-1.545 1.544-1.545.853 0 1.545.692 1.545 1.544 0 .854-.691 1.545-1.545 1.545-.367 0-.664.297-.664.664 0 .367.297.665.664.665C17.714 5.747 19 4.46 19 2.873 19 1.287 17.713 0 16.126 0c-1.586 0-2.873 1.287-2.873 2.873 0 .224.026.445.076.66L5.336 7.748z"></path>
-                            </defs>
-                            <g fill="none" fill-rule="evenodd">
-                                <use fill="#36F" xlink:href="#shareIcon"></use>
-                            </g>
-                        </svg>
-                    </button>
-                    <div class="JobDetail_Reward">
-                        <div class="JobDetail_Reward_Recommender">
-                            <h3>추천인</h3>
-                            <span>500,000원</span>
-                        </div>
-                        <div class="JobDetail_Reward_Applicant">
-                            <h3>지원자</h3>
-                            <span>500,000원</span>
-                        </div>
-                    </div>
-                    <button class="JobDetail_BookMarkBtn">
-                        <svg width="13" height="17" viewBox="0 0 13 17" style="color: rgb(51, 102, 255);"><defs><path id="bookmarkIconLine" d="M1.481 1.481h9.382v10.727c0 .409.331.74.74.74.41 0 .741-.331.741-.74V.74c0-.41-.331-.741-.74-.741H.74C.33 0 0 .332 0 .74v14.814c0 .568.614.925 1.108.643l5.18-2.873 5.104 2.873c.355.203.807.08 1.01-.276.203-.355.08-.808-.275-1.01l-5.471-3.083c-.228-.13-.507-.13-.735 0l-4.44 2.45V1.48z"></path></defs><g fill="none" fill-rule="evenodd"><use fill="currentColor" xlink:href="#bookmarkIconLine"></use></g></svg>
-                        북마크하기
-                    </button>
-                    <button class="JobDetail_ApplyBtn">
-                        지원하기
-                    </button>
-                    <div class="Reactions">
-                        <button class="Reactions_LikeBtn">
-                            <svg viewBox="0 0 132.29 120.5" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(.43865 0 0 .43865 8.1199 -19.589)">
-                                <path d="m255.06 68.053a87.637 87.639 45 0 0-59.609-23.395 87.637 87.639 45 0 0-63.12 26.906l-0.0359-0.03594-0.0356 0.03558a87.637 87.639 45 0 0-63.119-26.905 87.637 87.639 45 0 0-87.639 87.639 87.637 87.639 45 0 0 26.905 63.119l-0.035992 0.036 123.92 123.92 123.93-123.93-8e-3 -8e-3a87.637 87.639 45 0 0 26.878-63.148 87.637 87.639 45 0 0-28.028-64.243z" fill="#e1e2e3" stroke-width="4.7339"/>
-                                </g>
-                            </svg>
-                            <span>9</span>
-                        </button>
-                        <button class="Reactions_avatars">
-                            <ul>
-                                <li>
-                                    <img src="https://lh3.googleusercontent.com/a/AATXAJyptvBO9pOC55mAwO0IA3-llT_OIJ3QyPcS1-DN=s96-c" alt="">
-                                </li>
-                                <li>
-                                    <img src="https://k.kakaocdn.net/dn/chOGWm/btrJ7se3l3K/eeQiZuGgc7rBHKj9RBRFk1/img_110x110.jpg" alt="">
-                                </li>
-                                <li>
-                                    <img src="https://lh3.googleusercontent.com/a/ALm5wu2bYv18aK6_ahAXODnanhRHwCfEqvoUbqKJCBKA=s96-c" alt="">
-                                </li>
-                            </ul>
-                        </button>
-                    </div>
-                </div><!-- //.JobDetail_Process end -->
-            </div><!-- //.JobDetail_Wrapper end -->
-
-            <div class="JobAssociatedContainer">
-                <h3>이 포지션을 찾고 계셨나요?</h3>
+                            </pre
+                >
+              </div>
+              <div class="JobDetail_Content_Description_Skill">
+                <h3>기술스택 ・ 툴</h3>
+                <ul class="JobDetail_Content_Description_Skill_List">
+                  <li>Git</li>
+                  <li>Azure</li>
+                  <li>React</li>
+                  <li>JavaScript</li>
+                  <li>TypeScript</li>
+                  <li>Redux</li>
+                  <li>Nest.js</li>
+                </ul>
+              </div>
+            </div>
+            <hr class="JobContent_divider" />
+            <div class="JobWorkPlace">
+              <div class="Deadline">
+                <span>마감일</span>
+                <span>상시</span>
+              </div>
+              <div class="WorkPlace">
+                <span>근무지역</span>
+                <span
+                  >서울 용산구 한강대로 366 트윈시티 남산 2 패스트파이브</span
+                >
+              </div>
+              <a class="WorkPlaceMap" href="#">
+                <img
+                  src="https://naveropenapi.apigw.ntruss.com/map-static/v2/raster-cors?w=700&h=254&markers=type:d|size:mid|pos:126.9729133 37.5511247|color:red&scale=2&X-NCP-APIGW-API-KEY-ID=z7e7ujba1u"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="JobContent_CompanyInfo">
+              <div class="JobContent_CompanyInfo_Company">
+                <img
+                  src="https://static.wanted.co.kr/images/wdes/0_5.0852ff23.jpg"
+                  alt="블루비커"
+                />
                 <div>
-                    <ul class="RecruitList">
-                        <li>
-                            <div class="RecruitList_Content">
-                                <a href="#">
-                                    <div class="RecruitList_Content_Img">
-                                        <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31699%2F0dxtcoprgjpv9hwf__400_400.jpg&w=400&q=75" alt="밴플">
-                                        <svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="https://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z" fill="white"></path>
-                                            <path d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z" fill="black" fill-opacity="0.25"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="RecruitList_Content_Info">
-                                        <span class="RecruitList_Content_Info_Position">iOS 개발자</span>
-                                        <span class="RecruitList_Content_Info__CompanyName">밴플</span>
-                                        <div class="RecruitList_Content_Info_ResponseLevelLabel">
-                                            <span>응답률 매우 높음</span>
-                                        </div>
-                                        <div class="RecruitList_Content_Info_Location">
-                                            <span>서울</span>
-                                            <span>·</span>
-                                            <span>한국</span>
-                                        </div>
-                                        <span class="RecruitList_Content_Info_Reward">채용보상금 1,000,000원</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="RecruitList_Content">
-                                <a href="#">
-                                    <div class="RecruitList_Content_Img">
-                                        <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13294%2F9hn1fne7p3vl2qzy__400_400.jpg&w=400&q=75" alt="토모큐브">
-                                        <svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="https://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z" fill="white"></path>
-                                            <path d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z" fill="black" fill-opacity="0.25"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="RecruitList_Content_Info">
-                                        <span class="RecruitList_Content_Info_Position">소프트웨어 개발자</span>
-                                        <span class="RecruitList_Content_Info__CompanyName">토모큐브</span>
-                                        <span class="RecruitList_Content_Info_ResponseLevelLabel">응답률 매우 높음</span>
-                                        <div class="RecruitList_Content_Info_Location">
-                                            <span>서울</span>
-                                            <span>·</span>
-                                            <span>한국</span>
-                                        </div>
-                                        <span class="RecruitList_Content_Info_Reward">채용보상금 1,000,000원</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="RecruitList_Content">
-                                <a href="#">
-                                    <div class="RecruitList_Content_Img">
-                                        <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22152%2Fzfcvnwqkqwrddima__400_400.png&w=400&q=75" alt="비팩토리(B Factory)">
-                                        <svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="https://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z" fill="white"></path>
-                                            <path d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z" fill="black" fill-opacity="0.25"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="RecruitList_Content_Info">
-                                        <span class="RecruitList_Content_Info_Position">머신러닝 엔지니어</span>
-                                        <span class="RecruitList_Content_Info__CompanyName">비팩토리(B Factory)</span>
-                                        <span class="RecruitList_Content_Info_ResponseLevelLabel">응답률 매우 높음</span>
-                                        <div class="RecruitList_Content_Info_Location">
-                                            <span>서울</span>
-                                            <span>·</span>
-                                            <span>한국</span>
-                                        </div>
-                                        <span class="RecruitList_Content_Info_Reward">채용보상금 1,000,000원</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="RecruitList_Content">
-                                <a href="#">
-                                    <div class="RecruitList_Content_Img">
-                                        <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13152%2Fwmppturqz9kuz3ty__400_400.jpg&w=400&q=75" alt="">
-                                        <svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="https://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z" fill="white"></path>
-                                            <path d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z" fill="black" fill-opacity="0.25"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="RecruitList_Content_Info">
-                                        <span class="RecruitList_Content_Info_Position">[CB개발실] 웹 서비스 개발자(전문계약직)</span>
-                                        <span class="RecruitList_Content_Info__CompanyName">나이스평가정보</span>
-                                        <span class="RecruitList_Content_Info_ResponseLevelLabel">응답률 매우 높음</span>
-                                        <div class="RecruitList_Content_Info_Location">
-                                            <span>서울</span>
-                                            <span>·</span>
-                                            <span>한국</span>
-                                        </div>
-                                        <span class="RecruitList_Content_Info_Reward">채용보상금 1,000,000원</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="RecruitList_Content">
-                                <a href="#">
-                                    <div class="RecruitList_Content_Img">
-                                        <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22504%2Ffjwzfbmvnplelloe__400_400.jpg&w=400&q=75" alt="">
-                                        <svg width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="https://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z" fill="white"></path>
-                                            <path d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z" fill="black" fill-opacity="0.25"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="RecruitList_Content_Info">
-                                        <span class="RecruitList_Content_Info_Position">Backend Engineer</span>
-                                        <span class="RecruitList_Content_Info__CompanyName">카카오브레인</span>
-                                        <div class="RecruitList_Content_Info_Location">
-                                            <span>경기</span>
-                                            <span>·</span>
-                                            <span>한국</span>
-                                        </div>
-                                        <span class="RecruitList_Content_Info_Reward">채용보상금 1,000,000원</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
+                  <span>블루비커</span>
+                  <span>IT, 컨텐츠</span>
                 </div>
-            </div><!-- //.JobAssociatedContainer end-->
-        </div><!-- //.Main end -->
-
-        <!-- //.Footer -->
-        <div class="Footer">
-            <div class="Footer_rowClass">
-                <div class="Footer_navLinks">
-                    <div class="Footer_navLinks_logo">
-                        <img src="images/footer/footerLogo.png" alt="wanted">
-                    </div>
-                    <div class="Footer_navLinks_links">
-                        <a href="#">기업소개</a>
-                        <a href="#">이용약관</a>
-                        <a href="#">개인정보 처리방침</a>
-                        <a href="#">고객센터</a>
-
-                    </div>
-                </div>
-                <div class="Footer_SocialLinks">
-                    <a href="images/footer/instagram.png" alt="instagram">
-                        <img src="images/footer/instagram.png" alt="">
-                    </a>
-                    <a href="https://www.youtube.com/channel/UC0tGZ6MqieGG2m5lA5PeQsw">
-                        <img src="images/footer/youtube.png" alt="youtube">
-                    </a>
-                    <a href="https://www.facebook.com/wantedkr">
-                        <img src="images/footer/facebook.png" alt="facebook">
-                    </a>
-                    <a href="https://blog.naver.com/wantedlab">
-                        <img src="images/footer/nblog.png" alt="blog">
-                    </a>
-                    <a href="https://pf.kakao.com/_XqCIxl">
-                        <img src="images/footer/kakaotalk.png" alt="kakao">
-                    </a>
-                    <a href="https://post.naver.com/my.nhn?memberNo=18284175">
-                        <img src="images/footer/npost.png" alt="post">
-                    </a>
-                    <a href="https://apps.apple.com/kr/app/id1074569961">
-                        <img src="images/footer/apple.png" alt="apple">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.wanted.android.wanted">
-                        <img src="images/footer/android.png" alt="google">
-                    </a>
-                </div>
+              </div>
+              <div class="JobContent_CompanyInfo_FllowBtn">
+                <span>팔로우</span>
+              </div>
             </div>
-            <div class="Footer_rowClass Footer_Boarder">
-                <p class="Footer_CompanyInfo_Text">
-                    (주)원티드랩 (대표이사:이복기) | 서울특별시 송파구 올림픽로 300 롯데월드타워 35층 | 통신판매번호 : 2020-서울송파-3147
-                    <br>
-                    유료직업소개사업등록번호 : (국내) 제2020-3230259-14-5-00018호 | (국외) 서울동부-유-2020-2 | 사업자등록번호 : 299-86-00021 | 02-539-7118
-                    <br>
-                    © Wantedlab, Inc.
-                </p>
-                <div class="Footer_LocaleSelect">
-                    <img src="https://static.wanted.co.kr/images/userweb/ico_KR.svg" alt="country flag KR">
-                    <select class="Footer_LocaleSelect_box">
-                        <option value="KR">한국 (한국어)</option>
-                        <option value="JP">日本 (日本語)</option>
-                        <option value="WW">Worldwide (English)</option>
-                        <option value="SG">Singapore (English)</option>
-                    </select>
-                    <i class="Footer_LocaleSelect_arrow">
-                    </i>
+            <div class="StealingWarning">
+              <div class="StealingWarning_Header">
+                <svg class="" width="24" height="24" viewBox="0 0 24 24">
+                  <g fill="currentColor" fill-rule="evenodd">
+                    <path
+                      fill-rule="nonzero"
+                      d="M15.266 20.658A9.249 9.249 0 0112 21.25a9.25 9.25 0 010-18.5 9.21 9.21 0 016.54 2.71A9.217 9.217 0 0121.25 12a9.213 9.213 0 01-2.71 6.54.75.75 0 101.061 1.062A10.713 10.713 0 0022.75 12c0-2.89-1.146-5.599-3.149-7.601A10.717 10.717 0 0012 1.25C6.063 1.25 1.25 6.063 1.25 12S6.063 22.75 12 22.75c1.31 0 2.591-.235 3.794-.688a.75.75 0 10-.528-1.404z"
+                    ></path>
+                    <path d="M13 16a1 1 0 11-2 0 1 1 0 012 0"></path>
+                    <path
+                      fill-rule="nonzero"
+                      d="M11.25 7v5a.75.75 0 101.5 0V7a.75.75 0 10-1.5 0z"
+                    ></path>
+                  </g>
+                </svg>
+                <div class="StealingWarning_content">
+                  <span>
+                    본 채용정보는 원티드랩의 동의없이 무단전재, 재배포, 재가공할
+                    수 없으며, 구직활동 이외의 용도로 사용할 수 없습니다.
+                  </span>
+                  <svg
+                    class="StealingWarning_BodyBtn"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 21 13"
+                    focusable="false"
+                    role="presentation"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      fill="currentColor"
+                      d="M20.1005 2.7169L10.9931 11.8244C10.4724 12.3451 9.62815 12.3451 9.10745 11.8244L-8.00829e-06 2.7169L1.88561 0.831278L10.0503 8.99593L18.2149 0.831278L20.1005 2.7169Z"
+                    />
+                  </svg>
                 </div>
+              </div>
+              <div class="StealingWarning_Body">
+                <span>
+                  본 채용 정보는 <strong>블루비커</strong>에서 제공한 자료를
+                  바탕으로 원티드랩에서 표현을 수정하고 이의 배열 및 구성을
+                  편집하여 완성한 원티드랩의 저작자산이자 영업자산입니다. 본
+                  정보 및 데이터베이스의 일부 내지는 전부에 대하여 원티드랩의
+                  동의 없이 무단전재 또는 재배포, 재가공 및 크롤링할 수 없으며,
+                  게재된 채용기업의 정보는 구직자의 구직활동 이외의 용도로
+                  사용될 수 없습니다. 원티드랩은 <strong>블루비커</strong> 에서
+                  게재한 자료에 대한 오류나 그 밖에 원티드랩이 가공하지 않은
+                  정보의 내용상 문제에 대하여 어떠한 보장도 하지 않으며,
+                  사용자가 이를 신뢰하여 취한 조치에 대해 책임을 지지 않습니다.
+                  <strong><저작권자 (주)원티드랩. 무단전재-재배포금지></strong>
+                </span>
+              </div>
             </div>
-        </div><!-- //.Footer end -->
-    </div><!-- body end -->
+          </div>
+          <!-- //.JobDetail_Content end -->
+          <div class="JobDetail_Process">
+            <h3>채용보상금</h3>
+            <button class="JobDetail_ShareBtn" type="button">
+              <svg
+                xmlns="https://www.w3.org/2000/svg"
+                xmlns:xlink="https://www.w3.org/1999/xlink"
+                width="20"
+                height="20"
+                viewBox="0 0 19 19"
+              >
+                <defs>
+                  <path
+                    id="shareIcon"
+                    d="M5.336 7.75c-.551-.703-1.418-1.136-2.365-1.136C1.337 6.614 0 7.898 0 9.494c0 1.596 1.336 2.879 2.971 2.879.93 0 1.785-.419 2.338-1.102l8.495 4.482c.128.068.276.092.42.068l.025-.004c.213-.036.395-.173.489-.367.101-.21.249-.393.437-.54.673-.526 1.643-.407 2.168.266.526.673.407 1.643-.265 2.167-.673.526-1.643.407-2.168-.266-.226-.29-.644-.34-.933-.115-.29.226-.34.644-.115.933.977 1.251 2.783 1.473 4.034.496 1.25-.976 1.472-2.782.495-4.033-.977-1.251-2.783-1.473-4.033-.496-.169.132-.32.28-.454.442L5.478 9.858c-.322-.241-.816-.145-1 .255-.259.558-.844.93-1.507.93-.913 0-1.642-.7-1.642-1.55 0-.849.73-1.55 1.642-1.55.636 0 1.2.343 1.473.863.107.368.526.64.954.413l9.026-4.762.118-.079.029-.024c.233-.197.303-.527.169-.8-.104-.212-.158-.442-.158-.68 0-.853.692-1.545 1.544-1.545.853 0 1.545.692 1.545 1.544 0 .854-.691 1.545-1.545 1.545-.367 0-.664.297-.664.664 0 .367.297.665.664.665C17.714 5.747 19 4.46 19 2.873 19 1.287 17.713 0 16.126 0c-1.586 0-2.873 1.287-2.873 2.873 0 .224.026.445.076.66L5.336 7.748z"
+                  ></path>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <use fill="#36F" xlink:href="#shareIcon"></use>
+                </g>
+              </svg>
+            </button>
+            <div class="JobDetail_Reward">
+              <div class="JobDetail_Reward_Recommender">
+                <h3>추천인</h3>
+                <span>500,000원</span>
+              </div>
+              <div class="JobDetail_Reward_Applicant">
+                <h3>지원자</h3>
+                <span>500,000원</span>
+              </div>
+            </div>
+            <button class="JobDetail_BookMarkBtn">
+              <svg
+                width="13"
+                height="17"
+                viewBox="0 0 13 17"
+                style="color: rgb(51, 102, 255)"
+              >
+                <defs>
+                  <path
+                    id="bookmarkIconLine"
+                    d="M1.481 1.481h9.382v10.727c0 .409.331.74.74.74.41 0 .741-.331.741-.74V.74c0-.41-.331-.741-.74-.741H.74C.33 0 0 .332 0 .74v14.814c0 .568.614.925 1.108.643l5.18-2.873 5.104 2.873c.355.203.807.08 1.01-.276.203-.355.08-.808-.275-1.01l-5.471-3.083c-.228-.13-.507-.13-.735 0l-4.44 2.45V1.48z"
+                  ></path>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <use fill="currentColor" xlink:href="#bookmarkIconLine"></use>
+                </g>
+              </svg>
+              북마크하기
+            </button>
+            <button class="JobDetail_ApplyBtn">지원하기</button>
+            <div class="Reactions">
+              <button class="Reactions_LikeBtn">
+                <svg
+                  viewBox="0 0 132.29 120.5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g transform="matrix(.43865 0 0 .43865 8.1199 -19.589)">
+                    <path
+                      d="m255.06 68.053a87.637 87.639 45 0 0-59.609-23.395 87.637 87.639 45 0 0-63.12 26.906l-0.0359-0.03594-0.0356 0.03558a87.637 87.639 45 0 0-63.119-26.905 87.637 87.639 45 0 0-87.639 87.639 87.637 87.639 45 0 0 26.905 63.119l-0.035992 0.036 123.92 123.92 123.93-123.93-8e-3 -8e-3a87.637 87.639 45 0 0 26.878-63.148 87.637 87.639 45 0 0-28.028-64.243z"
+                      fill="#e1e2e3"
+                      stroke-width="4.7339"
+                    />
+                  </g>
+                </svg>
+                <span>9</span>
+              </button>
+              <button class="Reactions_avatars">
+                <ul>
+                  <li>
+                    <img
+                      src="https://lh3.googleusercontent.com/a/AATXAJyptvBO9pOC55mAwO0IA3-llT_OIJ3QyPcS1-DN=s96-c"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="https://k.kakaocdn.net/dn/chOGWm/btrJ7se3l3K/eeQiZuGgc7rBHKj9RBRFk1/img_110x110.jpg"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="https://lh3.googleusercontent.com/a/ALm5wu2bYv18aK6_ahAXODnanhRHwCfEqvoUbqKJCBKA=s96-c"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </button>
+            </div>
+          </div>
+          <!-- //.JobDetail_Process end -->
+        </div>
+        <!-- //.JobDetail_Wrapper end -->
+
+        <div class="JobAssociatedContainer">
+          <h3>이 포지션을 찾고 계셨나요?</h3>
+          <div>
+            <ul class="RecruitList">
+              <li>
+                <div class="RecruitList_Content">
+                  <a href="#">
+                    <div class="RecruitList_Content_Img">
+                      <img
+                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31699%2F0dxtcoprgjpv9hwf__400_400.jpg&w=400&q=75"
+                        alt="밴플"
+                      />
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="https://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
+                          fill="black"
+                          fill-opacity="0.25"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="RecruitList_Content_Info">
+                      <span class="RecruitList_Content_Info_Position"
+                        >iOS 개발자</span
+                      >
+                      <span class="RecruitList_Content_Info__CompanyName"
+                        >밴플</span
+                      >
+                      <div class="RecruitList_Content_Info_ResponseLevelLabel">
+                        <span>응답률 매우 높음</span>
+                      </div>
+                      <div class="RecruitList_Content_Info_Location">
+                        <span>서울</span>
+                        <span>·</span>
+                        <span>한국</span>
+                      </div>
+                      <span class="RecruitList_Content_Info_Reward"
+                        >채용보상금 1,000,000원</span
+                      >
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="RecruitList_Content">
+                  <a href="#">
+                    <div class="RecruitList_Content_Img">
+                      <img
+                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13294%2F9hn1fne7p3vl2qzy__400_400.jpg&w=400&q=75"
+                        alt="토모큐브"
+                      />
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="https://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
+                          fill="black"
+                          fill-opacity="0.25"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="RecruitList_Content_Info">
+                      <span class="RecruitList_Content_Info_Position"
+                        >소프트웨어 개발자</span
+                      >
+                      <span class="RecruitList_Content_Info__CompanyName"
+                        >토모큐브</span
+                      >
+                      <span class="RecruitList_Content_Info_ResponseLevelLabel"
+                        >응답률 매우 높음</span
+                      >
+                      <div class="RecruitList_Content_Info_Location">
+                        <span>서울</span>
+                        <span>·</span>
+                        <span>한국</span>
+                      </div>
+                      <span class="RecruitList_Content_Info_Reward"
+                        >채용보상금 1,000,000원</span
+                      >
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="RecruitList_Content">
+                  <a href="#">
+                    <div class="RecruitList_Content_Img">
+                      <img
+                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22152%2Fzfcvnwqkqwrddima__400_400.png&w=400&q=75"
+                        alt="비팩토리(B Factory)"
+                      />
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="https://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
+                          fill="black"
+                          fill-opacity="0.25"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="RecruitList_Content_Info">
+                      <span class="RecruitList_Content_Info_Position"
+                        >머신러닝 엔지니어</span
+                      >
+                      <span class="RecruitList_Content_Info__CompanyName"
+                        >비팩토리(B Factory)</span
+                      >
+                      <span class="RecruitList_Content_Info_ResponseLevelLabel"
+                        >응답률 매우 높음</span
+                      >
+                      <div class="RecruitList_Content_Info_Location">
+                        <span>서울</span>
+                        <span>·</span>
+                        <span>한국</span>
+                      </div>
+                      <span class="RecruitList_Content_Info_Reward"
+                        >채용보상금 1,000,000원</span
+                      >
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="RecruitList_Content">
+                  <a href="#">
+                    <div class="RecruitList_Content_Img">
+                      <img
+                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13152%2Fwmppturqz9kuz3ty__400_400.jpg&w=400&q=75"
+                        alt=""
+                      />
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="https://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
+                          fill="black"
+                          fill-opacity="0.25"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="RecruitList_Content_Info">
+                      <span class="RecruitList_Content_Info_Position"
+                        >[CB개발실] 웹 서비스 개발자(전문계약직)</span
+                      >
+                      <span class="RecruitList_Content_Info__CompanyName"
+                        >나이스평가정보</span
+                      >
+                      <span class="RecruitList_Content_Info_ResponseLevelLabel"
+                        >응답률 매우 높음</span
+                      >
+                      <div class="RecruitList_Content_Info_Location">
+                        <span>서울</span>
+                        <span>·</span>
+                        <span>한국</span>
+                      </div>
+                      <span class="RecruitList_Content_Info_Reward"
+                        >채용보상금 1,000,000원</span
+                      >
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="RecruitList_Content">
+                  <a href="#">
+                    <div class="RecruitList_Content_Img">
+                      <img
+                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22504%2Ffjwzfbmvnplelloe__400_400.jpg&w=400&q=75"
+                        alt=""
+                      />
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="https://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
+                          fill="white"
+                        ></path>
+                        <path
+                          d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
+                          fill="black"
+                          fill-opacity="0.25"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="RecruitList_Content_Info">
+                      <span class="RecruitList_Content_Info_Position"
+                        >Backend Engineer</span
+                      >
+                      <span class="RecruitList_Content_Info__CompanyName"
+                        >카카오브레인</span
+                      >
+                      <div class="RecruitList_Content_Info_Location">
+                        <span>경기</span>
+                        <span>·</span>
+                        <span>한국</span>
+                      </div>
+                      <span class="RecruitList_Content_Info_Reward"
+                        >채용보상금 1,000,000원</span
+                      >
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- //.JobAssociatedContainer end-->
+      </div>
+      <!-- //.Main end -->
+
+      <!-- //.Footer -->
+      <div class="Footer">
+        <div class="Footer_rowClass">
+          <div class="Footer_navLinks">
+            <div class="Footer_navLinks_logo">
+              <img src="images/footer/footerLogo.png" alt="wanted" />
+            </div>
+            <div class="Footer_navLinks_links">
+              <a href="#">기업소개</a>
+              <a href="#">이용약관</a>
+              <a href="#">개인정보 처리방침</a>
+              <a href="#">고객센터</a>
+            </div>
+          </div>
+          <div class="Footer_SocialLinks">
+            <a href="https://www.instagram.com/wantedjobs.kr/" alt="instagram">
+              <img src="images/footer/instagram.png" alt="" />
+            </a>
+            <a href="https://www.youtube.com/channel/UC0tGZ6MqieGG2m5lA5PeQsw">
+              <img src="images/footer/youtube.png" alt="youtube" />
+            </a>
+            <a href="https://www.facebook.com/wantedkr">
+              <img src="images/footer/facebook.png" alt="facebook" />
+            </a>
+            <a href="https://blog.naver.com/wantedlab">
+              <img src="images/footer/nblog.png" alt="blog" />
+            </a>
+            <a href="https://pf.kakao.com/_XqCIxl">
+              <img src="images/footer/kakaotalk.png" alt="kakao" />
+            </a>
+            <a href="https://post.naver.com/my.nhn?memberNo=18284175">
+              <img src="images/footer/npost.png" alt="post" />
+            </a>
+            <a href="https://apps.apple.com/kr/app/id1074569961">
+              <img src="images/footer/apple.png" alt="apple" />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.wanted.android.wanted"
+            >
+              <img src="images/footer/android.png" alt="google" />
+            </a>
+          </div>
+        </div>
+        <div class="Footer_rowClass Footer_Boarder">
+          <p class="Footer_CompanyInfo_Text">
+            (주)원티드랩 (대표이사:이복기) | 서울특별시 송파구 올림픽로 300
+            롯데월드타워 35층 | 통신판매번호 : 2020-서울송파-3147
+            <br />
+            유료직업소개사업등록번호 : (국내) 제2020-3230259-14-5-00018호 |
+            (국외) 서울동부-유-2020-2 | 사업자등록번호 : 299-86-00021 |
+            02-539-7118
+            <br />
+            © Wantedlab, Inc.
+          </p>
+          <div class="Footer_LocaleSelect">
+            <img
+              src="https://static.wanted.co.kr/images/userweb/ico_KR.svg"
+              alt="country flag KR"
+            />
+            <select class="Footer_LocaleSelect_box">
+              <option value="KR">한국 (한국어)</option>
+              <option value="JP">日本 (日本語)</option>
+              <option value="WW">Worldwide (English)</option>
+              <option value="SG">Singapore (English)</option>
+            </select>
+            <i class="Footer_LocaleSelect_arrow"> </i>
+          </div>
+        </div>
+      </div>
+      <!-- //.Footer end -->
+    </div>
+    <!-- body end -->
     <script type="text/javascript" src="scripts/main.js"></script>
-    <script type="text/javascript" src="scripts/recruitmentDetailPage.js"></script>
-</body>
+    <script
+      type="text/javascript"
+      src="scripts/recruitmentDetailPage.js"
+    ></script>
+  </body>
 </html>
