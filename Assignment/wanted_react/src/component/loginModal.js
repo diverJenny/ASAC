@@ -1,3 +1,5 @@
+import "../css/loginModal.css";
+
 function LoginModal() {
   return (
     <>

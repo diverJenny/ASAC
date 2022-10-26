@@ -1,0 +1,141 @@
+
+.Footer {
+    /* text-align: center;
+    border: 3px solid black;
+    background-color: slategrey;
+    flex-basis: 100px ; */
+    max-width: 100%;
+    width: 100%;
+    padding: 18px 0 65px;
+    background-color: #fff;
+    border-top: 1px solid #ececec;
+}
+
+.Footer_rowClass {
+    width: 90%;
+    max-width: 1060px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.Footer_navLinks {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding-bottom: 18px;
+}
+
+.Footer_navLinks_logo {
+    margin-right: 50px;
+}
+
+.Footer_navLinks_links {
+    display: flex;
+}
+
+.Footer_navLinks_links>a {
+    font-size: 15px;
+    color: #3a3a3a;
+    font-weight: 500;
+    line-height: 2.6;
+    margin-right: 45px;
+    white-space: nowrap;
+}
+
+.Footer_SocialLinks {
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    line-height: 2.6; 
+}
+
+.Footer_SocialLinks>a {
+    position: relative;
+    display: block;
+    float: left;
+    height: 20px;
+}
+
+.Footer_SocialLinks>a>img {
+    margin-left: 14px;
+    vertical-align: middle;
+}
+
+.Footer_Boarder {
+    border-top: 1px solid #ececec;
+    padding-top: 25px;
+}
+
+.Footer_CompanyInfo_Text {
+    display: block;
+    top: 0;
+    float: left;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6666666667em;
+    color: #767676;
+    width: calc(100% - 290px);
+    margin-right: 40px;
+    margin-top: 0;
+}
+
+.Footer_LocaleSelect {
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 36px;
+    float: left;
+}
+
+.Footer_LocaleSelect>img {
+    position: absolute;
+    left: 15px;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 17px;
+    z-index: 1;
+}
+
+.Footer_LocaleSelect>select {
+    width: 100%;
+    height: 40px;
+    background: #f2f4f7;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    line-height: 2.1;
+    color: #717171;
+    padding: 0 45px;
+    appearance: none;
+    font-weight: 500;
+}
+
+/* IE에서 select 화살표 제거 */
+select::-ms-expand {
+    display: none;
+}
+
+.Footer_LocaleSelect>i{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    line-height: 1.6;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #717171;
+}
+
+.Footer_LocaleSelect_arrow {
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+.Footer_LocaleSelect_arrow::before {
+    content: "\25BC";
+}

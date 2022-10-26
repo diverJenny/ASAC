@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "subTitle": "3분만에 읽는 Wanted+ 아티클",
+        "subTitleLink": "아티클 전체보기 >" 
+    },
+    {
+        "id": 2,
+        "subTitle": "직장인을 위한 Wanted+ VOD",
+        "subTitleLink": "VOD 전체보기 >"
+    },
+    {
+        "id": 3,
+        "subTitle": "커리어 성장을 위한 맞춤 이벤트",
+        "subTitleLink": "이벤트 전체보기 >"
+    }
+]

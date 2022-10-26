@@ -1,8 +1,15 @@
+import "../css/base_page.css";
 import "../css/main.css";
-import Header from "../component/header";
 import LoginModal from "../component/loginModal";
+import Header from "../component/header";
+import Footer from "../component/footer";
+
+const TopBennerContents = require("../topBannerContents.json");
+const SubTitle = require("../subTitle.json");
+const CareerCategory = require("../careerCategory.json");
 
 function Main() {
+  console.log(SubTitle);
   return (
     <>
       <LoginModal />
@@ -26,242 +33,41 @@ function Main() {
             </button>
             <div className="TopBanner_list_wrapper">
               <div className="TopBanner_list_wrapper_container">
-                <div className="TopBanner_list_contents">
-                  <div className="TopBanner_list_contents_Img_Container">
-                    <a href="#">
-                      <img
-                        className="TopBanner_list_contents_Img"
-                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1791%2F19d8e5bf.jpg&w=1060&q=100"
-                        alt="우리 회사를 소개합니다."
-                      />
-                    </a>
-                  </div>
-                  <div className="TopBanner_list_contents_information">
-                    <h2 className="TopBanner_list_contents_information_h2">
-                      우리 회사를 소개합니다.
-                    </h2>
-                    <h3>'회사'에 대한 정보, 원티드가 찾아드릴게요!</h3>
-                    <hr className="divider" />
-                    <div className="TopBanner_list_contents_link">
-                      <a href="#">
-                        <span>
-                          바로가기
-                          <svg
-                            className="TopBanner_list_contents_information_Svg"
-                            viewBox="0 0 18 18"
-                          >
-                            <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
-                          </svg>
-                        </span>
-                      </a>
+                {
+                  TopBennerContents.map((i) => (
+                    <div className="TopBanner_list_contents">
+                      <div className="TopBanner_list_contents_Img_Container">
+                        <a href="#">
+                          <img
+                            className="TopBanner_list_contents_Img"
+                            src={i.imgSrc}
+                            alt={i.infoTitle}
+                          />
+                        </a>
+                      </div>
+                      <div className="TopBanner_list_contents_information">
+                        <h2 className="TopBanner_list_contents_information_h2">
+                          {i.infoTitle}
+                        </h2>
+                        <h3>{i.infoSubTitle}</h3>
+                        <hr className="divider" />
+                        <div className="TopBanner_list_contents_link">
+                          <a href="#">
+                            <span>
+                              바로가기
+                              <svg
+                                className="TopBanner_list_contents_information_Svg"
+                                viewBox="0 0 18 18"
+                              >
+                                <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div className="TopBanner_list_contents">
-                  <div className="TopBanner_list_contents_Img_Container">
-                    <a href="#">
-                      <img
-                        className="TopBanner_list_contents_Img"
-                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1835%2F487d8bb0.jpg&w=1060&q=100"
-                        alt="Startup Lead Group Coaching"
-                      />
-                    </a>
-                  </div>
-                  <div className="TopBanner_list_contents_information">
-                    <h2>Startup Lead Group Coaching</h2>
-                    <h3>팀장을 위한 그룹코칭</h3>
-                    <hr className="divider" />
-                    <div className="TopBanner_list_contents_link">
-                      <a href="#">
-                        <span>
-                          바로가기
-                          <svg
-                            className="TopBanner_list_contents_information_Svg"
-                            viewBox="0 0 18 18"
-                          >
-                            <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
-                          </svg>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="TopBanner_list_contents">
-                  <div className="TopBanner_list_contents_Img_Container">
-                    <a href="#">
-                      <img
-                        className="TopBanner_list_contents_Img"
-                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1843%2F6e4ca95f.jpg&w=1060&q=100"
-                        alt="원티드긱스 &lt;개발자의 달&gt;"
-                      />
-                    </a>
-                  </div>
-                  <div className="TopBanner_list_contents_information">
-                    <h2>원티드긱스 &lt;개발자의 달&gt;</h2>
-                    <h3>프리랜서 개발자를 위한 이벤트</h3>
-                    <hr className="divider" />
-                    <div className="TopBanner_list_contents_link">
-                      <a href="#">
-                        <span>
-                          바로가기
-                          <span className="">
-                            <svg
-                              className="TopBanner_list_contents_information_Svg"
-                              viewBox="0 0 18 18"
-                            >
-                              <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
-                            </svg>
-                          </span>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="TopBanner_list_contents">
-                  <div className="TopBanner_list_contents_Img_Container">
-                    <a href="#">
-                      <img
-                        className="TopBanner_list_contents_Img"
-                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1844%2F3d999be3.jpg&w=1060&q=100"
-                        alt="[FREE] GDSC Job Fair Live"
-                      />
-                    </a>
-                  </div>
-                  <div className="TopBanner_list_contents_information">
-                    <h2>[FREE] GDSC Job Fair Live</h2>
-                    <h3>국내 최고 스타트업 채용소식을 볼 수 있는 기회!</h3>
-                    <hr className="divider" />
-                    <div className="TopBanner_list_contents_link">
-                      <a href="#">
-                        <span>
-                          바로가기
-                          <svg
-                            className="TopBanner_list_contents_information_Svg"
-                            viewBox="0 0 18 18"
-                          >
-                            <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
-                          </svg>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="TopBanner_list_contents">
-                  <div className="TopBanner_list_contents_Img_Container">
-                    <a href="#">
-                      <img
-                        className="TopBanner_list_contents_Img"
-                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1852%2F41073f1a.jpg&w=1060&q=100"
-                        alt="단 4주! 백엔드 신입딱지 떼기"
-                      />
-                    </a>
-                  </div>
-                  <div className="TopBanner_list_contents_information">
-                    <h2>단 4주! 백엔드 신입딱지 떼기</h2>
-                    <h3>프리온보딩 백엔드 코스</h3>
-                    <hr className="divider" />
-                    <div className="TopBanner_list_contents_link">
-                      <a href="#">
-                        <span>
-                          바로가기
-                          <svg
-                            className="TopBanner_list_contents_information_Svg"
-                            viewBox="0 0 18 18"
-                          >
-                            <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
-                          </svg>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="TopBanner_list_contents">
-                  <div className="TopBanner_list_contents_Img_Container">
-                    <a href="#">
-                      <img
-                        className="TopBanner_list_contents_Img"
-                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1851%2F62d57330.jpg&w=1060&q=100"
-                        alt="기업이 원하는 프론트 개발자 되기"
-                      />
-                    </a>
-                  </div>
-                  <div className="TopBanner_list_contents_information">
-                    <h2>기업이 원하는 프론트 개발자 되기</h2>
-                    <h3>프리온보딩 프론트엔드 코스</h3>
-                    <hr className="divider" />
-                    <div className="TopBanner_list_contents_link">
-                      <a href="#">
-                        <span>
-                          바로가기
-                          <svg
-                            className="TopBanner_list_contents_information_Svg"
-                            viewBox="0 0 18 18"
-                          >
-                            <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
-                          </svg>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="TopBanner_list_contents">
-                  <div className="TopBanner_list_contents_Img_Container">
-                    <a href="#">
-                      <img
-                        className="TopBanner_list_contents_Img"
-                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1826%2F849c1703.jpg&w=1060&q=100"
-                        alt="롯데헬스케어에 세로들어와!"
-                      />
-                    </a>
-                  </div>
-                  <div className="TopBanner_list_contents_information">
-                    <h2>롯데헬스케어에 세로들어와!</h2>
-                    <h3>적극 채용 중인 포지션을 영상으로 확인하세요!</h3>
-                    <hr className="divider" />
-                    <div className="TopBanner_list_contents_link">
-                      <a href="#">
-                        <span>
-                          바로가기
-                          <svg
-                            className="TopBanner_list_contents_information_Svg"
-                            viewBox="0 0 18 18"
-                          >
-                            <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
-                          </svg>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="TopBanner_list_contents">
-                  <div className="TopBanner_list_contents_Img_Container">
-                    <a href="#">
-                      <img
-                        className="TopBanner_list_contents_Img"
-                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1825%2Fb93ecf4e.jpg&w=1060&q=100"
-                        alt="마키나락스에 세로들어와!"
-                      />
-                    </a>
-                  </div>
-                  <div className="TopBanner_list_contents_information">
-                    <h2>마키나락스에 세로들어와!</h2>
-                    <h3>적극 채용 중인 포지션을 영상으로 확인하세요!</h3>
-                    <hr className="divider" />
-                    <div className="TopBanner_list_contents_link">
-                      <a href="#">
-                        <span>
-                          바로가기
-                          <svg
-                            className="TopBanner_list_contents_information_Svg"
-                            viewBox="0 0 18 18"
-                          >
-                            <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
-                          </svg>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                  ))
+                }
               </div>
             </div>
           </div>
@@ -369,25 +175,11 @@ function Main() {
                   <div className="CareerContents_CategoryName">
                     라이프스타일
                   </div>
-                  <div className="CareerContents_CategoryName">회사생활</div>
-                  <div className="CareerContents_CategoryName">인간관계</div>
-                  <div className="CareerContents_CategoryName">커리어고민</div>
-                  <div className="CareerContents_CategoryName">조직문화</div>
-                  <div className="CareerContents_CategoryName">IT/기술</div>
-                  <div className="CareerContents_CategoryName">리더쉽</div>
-                  <div className="CareerContents_CategoryName">취업/이직</div>
-                  <div className="CareerContents_CategoryName">브랜딩</div>
-                  <div className="CareerContents_CategoryName">MD</div>
-                  <div className="CareerContents_CategoryName">UX/UI</div>
-                  <div className="CareerContents_CategoryName">경영/전략</div>
-                  <div className="CareerContents_CategoryName">데이터</div>
-                  <div className="CareerContents_CategoryName">HR</div>
-                  <div className="CareerContents_CategoryName">디자인</div>
-                  <div className="CareerContents_CategoryName">서비스기획</div>
-                  <div className="CareerContents_CategoryName">콘텐츠 제작</div>
-                  <div className="CareerContents_CategoryName">개발</div>
-                  <div className="CareerContents_CategoryName">노무</div>
-                  <div className="CareerContents_CategoryName">마케팅</div>
+                  {
+                    CareerCategory.map((i) => (
+                      <div className="CareerContents_CategoryName">{i.category}</div>
+                    ))
+                  }
                 </div>
               </div>
               <div className="CareerContents_List_Wrapper">
@@ -670,8 +462,8 @@ function Main() {
                 </span>
               </button>
               <div className="Article_Title">
-                <h2>3분만에 읽는 Wanted+ 아티클</h2>
-                <a href="#">아티클 전체보기 &rang;</a>
+                <h2>{SubTitle.find((i) => i.id === 1).subTitle}</h2>
+                <a href="#">{SubTitle.find((i) => i.id === 1).subTitleLink}</a>
               </div>
               <button>
                 <span>
@@ -762,8 +554,8 @@ function Main() {
                 </span>
               </button>
               <div className="VOD_Title">
-                <h2>직장인을 위한 Wanted+ VOD</h2>
-                <a href="#">VOD 전체보기 {">"}</a>
+                <h2>{SubTitle.find((i) => i.id === 2).subTitle}</h2>
+                <a href="#">{SubTitle.find((i) => i.id === 2).subTitleLink}</a>
               </div>
               <button>
                 <span>
@@ -873,8 +665,8 @@ function Main() {
                 </span>
               </button>
               <div className="Event_Title">
-                <h2>커리어 성장을 위한 맞춤 이벤트</h2>
-                <a href="#">이벤트 전체보기 {">"}</a>
+                <h2>{SubTitle.find((i) => i.id === 3).subTitle}</h2>
+                <a href="#">{SubTitle.find((i) => i.id === 3).subTitleLink}</a>
               </div>
               <button>
                 <span>
@@ -1044,90 +836,8 @@ function Main() {
             </div>
           </div>
         </div>
-
-        <div className="Footer">
-          <div className="Footer_rowClass">
-            <div className="Footer_navLinks">
-              <div className="Footer_navLinks_logo">
-                <img
-                  src={require("../images/footer/footerLogo.png")}
-                  alt="wanted"
-                />
-              </div>
-              <div className="Footer_navLinks_links">
-                <a href="#">기업소개</a>
-                <a href="#">이용약관</a>
-                <a href="#">개인정보 처리방침</a>
-                <a href="#">고객센터</a>
-              </div>
-            </div>
-            <div className="Footer_SocialLinks">
-              <a href="images/footer/instagram.png" alt="instagram">
-                <img src={require("../images/footer/instagram.png")} alt="" />
-              </a>
-              <a href="https://www.youtube.com/channel/UC0tGZ6MqieGG2m5lA5PeQsw">
-                <img
-                  src={require("../images/footer/youtube.png")}
-                  alt="youtube"
-                />
-              </a>
-              <a href="https://www.facebook.com/wantedkr">
-                <img
-                  src={require("../images/footer/facebook.png")}
-                  alt="facebook"
-                />
-              </a>
-              <a href="https://blog.naver.com/wantedlab">
-                <img src={require("../images/footer/nblog.png")} alt="blog" />
-              </a>
-              <a href="https://pf.kakao.com/_XqCIxl">
-                <img
-                  src={require("../images/footer/kakaotalk.png")}
-                  alt="kakao"
-                />
-              </a>
-              <a href="https://post.naver.com/my.nhn?memberNo=18284175">
-                <img src={require("../images/footer/npost.png")} alt="post" />
-              </a>
-              <a href="https://apps.apple.com/kr/app/id1074569961">
-                <img src={require("../images/footer/apple.png")} alt="apple" />
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.wanted.android.wanted">
-                <img
-                  src={require("../images/footer/android.png")}
-                  alt="google"
-                />
-              </a>
-            </div>
-          </div>
-          <div className="Footer_rowClass Footer_Boarder">
-            <p className="Footer_CompanyInfo_Text">
-              (주)원티드랩 (대표이사:이복기) | 서울특별시 송파구 올림픽로 300
-              롯데월드타워 35층 | 통신판매번호 : 2020-서울송파-3147
-              <br />
-              유료직업소개사업등록번호 : (국내) 제2020-3230259-14-5-00018호 |
-              (국외) 서울동부-유-2020-2 | 사업자등록번호 : 299-86-00021 |
-              02-539-7118
-              <br />© Wantedlab, Inc.
-            </p>
-            <div className="Footer_LocaleSelect">
-              <img
-                src="https://static.wanted.co.kr/images/userweb/ico_KR.svg"
-                alt="country flag KR"
-              />
-              <select className="Footer_LocaleSelect_box">
-                <option value="KR">한국 (한국어)</option>
-                <option value="JP">日本 (日本語)</option>
-                <option value="WW">Worldwide (English)</option>
-                <option value="SG">Singapore (English)</option>
-              </select>
-              <i className="Footer_LocaleSelect_arrow"></i>
-            </div>
-          </div>
-        </div>
+        <Footer />
       </div>
-
-      <script type="text/javascript" src="scripts/main.js"></script>
     </>
   );
 }

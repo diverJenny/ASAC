@@ -1,8 +1,10 @@
+import "../css/base_page.css";
 import "../css/recruit_detail_page.css";
 import Header from "../component/header";
 import LoginModal from "../component/loginModal";
+import Footer from "../component/footer";
 
-function RecruitDetailMain() {
+function RecruitDetail() {
   return (
     <>
       <LoginModal />
@@ -82,7 +84,7 @@ function RecruitDetailMain() {
               </div>
               <div className="JobDetail_Content_DescriptionWrapper">
                 <div className="JobDetail_Content_Description">
-                  <pre>
+                  <p>
                     ＜서비스 소개＞ ✓ Medmap – 메디컬 지도를 펼치세요! 메드맵은
                     의료진과 환자간 커뮤니케이션을 도와주는 솔루션입니다.
                     【블루비커는】 블루비커는 3D 메디컬 콘텐츠 플랫폼 ‘Medmap’을
@@ -214,7 +216,7 @@ function RecruitDetailMain() {
                     결정합니다. ✓ 블루비커에 관심을 갖고 지원해 주신 모든 분들의
                     서류를 정말 감사한 마음으로 읽어 보고 있습니다. 채용의 모든
                     전형에서 가능한 빠른 피드백을 드리고자 노력하겠습니다.
-                  </pre>
+                  </p>
                 </div>
                 <div className="JobDetail_Content_Description_Skill">
                   <h3>기술스택 ・ 툴</h3>
@@ -323,23 +325,7 @@ function RecruitDetailMain() {
             <div className="JobDetail_Process">
               <h3>채용보상금</h3>
               <button className="JobDetail_ShareBtn" type="button">
-                <svg
-                  xmlns="https://www.w3.org/2000/svg"
-                  //   xmlns:xlink="https://www.w3.org/1999/xlink"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 19 19"
-                >
-                  <defs>
-                    <path
-                      id="shareIcon"
-                      d="M5.336 7.75c-.551-.703-1.418-1.136-2.365-1.136C1.337 6.614 0 7.898 0 9.494c0 1.596 1.336 2.879 2.971 2.879.93 0 1.785-.419 2.338-1.102l8.495 4.482c.128.068.276.092.42.068l.025-.004c.213-.036.395-.173.489-.367.101-.21.249-.393.437-.54.673-.526 1.643-.407 2.168.266.526.673.407 1.643-.265 2.167-.673.526-1.643.407-2.168-.266-.226-.29-.644-.34-.933-.115-.29.226-.34.644-.115.933.977 1.251 2.783 1.473 4.034.496 1.25-.976 1.472-2.782.495-4.033-.977-1.251-2.783-1.473-4.033-.496-.169.132-.32.28-.454.442L5.478 9.858c-.322-.241-.816-.145-1 .255-.259.558-.844.93-1.507.93-.913 0-1.642-.7-1.642-1.55 0-.849.73-1.55 1.642-1.55.636 0 1.2.343 1.473.863.107.368.526.64.954.413l9.026-4.762.118-.079.029-.024c.233-.197.303-.527.169-.8-.104-.212-.158-.442-.158-.68 0-.853.692-1.545 1.544-1.545.853 0 1.545.692 1.545 1.544 0 .854-.691 1.545-1.545 1.545-.367 0-.664.297-.664.664 0 .367.297.665.664.665C17.714 5.747 19 4.46 19 2.873 19 1.287 17.713 0 16.126 0c-1.586 0-2.873 1.287-2.873 2.873 0 .224.026.445.076.66L5.336 7.748z"
-                    ></path>
-                  </defs>
-                  <g fill="none" fillRule="evenodd">
-                    {/* <use fill="#36F" xlink:href="#shareIcon"></use> */}
-                  </g>
-                </svg>
+                <img className="JobDetail_ShareBtn_Img" src={require("../images/share.png")} />
               </button>
               <div className="JobDetail_Reward">
                 <div className="JobDetail_Reward_Recommender">
@@ -672,89 +658,10 @@ function RecruitDetailMain() {
           </div>
         </div>
 
-        <div className="Footer">
-          <div className="Footer_rowClass">
-            <div className="Footer_navLinks">
-              <div className="Footer_navLinks_logo">
-                <img
-                  src={require("../images/footer/footerLogo.png")}
-                  alt="wanted"
-                />
-              </div>
-              <div className="Footer_navLinks_links">
-                <a href="#">기업소개</a>
-                <a href="#">이용약관</a>
-                <a href="#">개인정보 처리방침</a>
-                <a href="#">고객센터</a>
-              </div>
-            </div>
-            <div className="Footer_SocialLinks">
-              <a href="images/footer/instagram.png" alt="instagram">
-                <img src={require("../images/footer/instagram.png")} alt="" />
-              </a>
-              <a href="https://www.youtube.com/channel/UC0tGZ6MqieGG2m5lA5PeQsw">
-                <img
-                  src={require("../images/footer/youtube.png")}
-                  alt="youtube"
-                />
-              </a>
-              <a href="https://www.facebook.com/wantedkr">
-                <img
-                  src={require("../images/footer/facebook.png")}
-                  alt="facebook"
-                />
-              </a>
-              <a href="https://blog.naver.com/wantedlab">
-                <img src={require("../images/footer/nblog.png")} alt="blog" />
-              </a>
-              <a href="https://pf.kakao.com/_XqCIxl">
-                <img
-                  src={require("../images/footer/kakaotalk.png")}
-                  alt="kakao"
-                />
-              </a>
-              <a href="https://post.naver.com/my.nhn?memberNo=18284175">
-                <img src={require("../images/footer/npost.png")} alt="post" />
-              </a>
-              <a href="https://apps.apple.com/kr/app/id1074569961">
-                <img src={require("../images/footer/apple.png")} alt="apple" />
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.wanted.android.wanted">
-                <img
-                  src={require("../images/footer/android.png")}
-                  alt="google"
-                />
-              </a>
-            </div>
-          </div>
-          <div className="Footer_rowClass Footer_Boarder">
-            <p className="Footer_CompanyInfo_Text">
-              (주)원티드랩 (대표이사:이복기) | 서울특별시 송파구 올림픽로 300
-              롯데월드타워 35층 | 통신판매번호 : 2020-서울송파-3147
-              <br />
-              유료직업소개사업등록번호 : (국내) 제2020-3230259-14-5-00018호 |
-              (국외) 서울동부-유-2020-2 | 사업자등록번호 : 299-86-00021 |
-              02-539-7118
-              <br />© Wantedlab, Inc.
-            </p>
-            <div className="Footer_LocaleSelect">
-              <img
-                src="https://static.wanted.co.kr/images/userweb/ico_KR.svg"
-                alt="country flag KR"
-              />
-              <select className="Footer_LocaleSelect_box">
-                <option value="KR">한국 (한국어)</option>
-                <option value="JP">日本 (日本語)</option>
-                <option value="WW">Worldwide (English)</option>
-                <option value="SG">Singapore (English)</option>
-              </select>
-              <i className="Footer_LocaleSelect_arrow"></i>
-            </div>
-          </div>
-        </div>
+        <Footer />
       </div>
     </>
   );
 }
 
-export default RecruitDetailMain;
+export default RecruitDetail;

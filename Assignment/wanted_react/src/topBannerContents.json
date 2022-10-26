@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "imgSrc": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1791%2F19d8e5bf.jpg&w=1060&q=100",
+        "infoTitle": "우리 회사를 소개합니다.",
+        "infoSubTitle": "'회사'에 대한 정보, 원티드가 찾아드릴게요!"
+    },
+    {
+        "id": 2,
+        "imgSrc": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1835%2F487d8bb0.jpg&w=1060&q=100",
+        "infoTitle": "Startup Lead Group Coaching",
+        "infoSubTitle": "팀장을 위한 그룹코칭"
+    },
+    {
+        "id": 3,
+        "imgSrc": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1843%2F6e4ca95f.jpg&w=1060&q=100",
+        "infoTitle": "원티드긱스 <개발자의 달>",
+        "infoSubTitle": "프리랜서 개발자를 위한 이벤트"
+    },
+    {
+        "id": 4,
+        "imgSrc": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1844%2F3d999be3.jpg&w=1060&q=100",
+        "infoTitle": "[FREE] GDSC Job Fair Live",
+        "infoSubTitle": "국내 최고 스타트업 채용소식을 볼 수 있는 기회!"
+    },
+    {
+        "id": 5,
+        "imgSrc": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1852%2F41073f1a.jpg&w=1060&q=100",
+        "infoTitle": "단 4주! 백엔드 신입딱지 떼기",
+        "infoSubTitle": "프리온보딩 백엔드 코스" 
+    },
+    {
+        "id": 6,
+        "imgSrc": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1851%2F62d57330.jpg&w=1060&q=100",
+        "infoTitle": "기업이 원하는 프론트 개발자 되기",
+        "infoSubTitle": "프리온보딩 프론트엔드 코스" 
+    },
+    {
+        "id": 7,
+        "imgSrc": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1826%2F849c1703.jpg&w=1060&q=100",
+        "infoTitle": "롯데헬스케어에 세로들어와!",
+        "infoSubTitle": "적극 채용 중인 포지션을 영상으로 확인하세요!"
+    },
+    {
+        "id": 8,
+        "imgSrc": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1825%2Fb93ecf4e.jpg&w=1060&q=100",
+        "infoTitle": "마키나락스에 세로들어와!",
+        "infoSubTitle": "적극 채용 중인 포지션을 영상으로 확인하세요!"
+    }
+]

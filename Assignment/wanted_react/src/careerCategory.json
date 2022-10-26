@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "category": "회사생활" 
+    },
+    {
+        "id": 2,
+        "category": "인간관계" 
+    },
+    {
+        "id": 3,
+        "category": "커리어고민" 
+    },
+    {
+        "id": 4,
+        "category": "조직문화" 
+    },
+    {
+        "id": 5,
+        "category": "IT/기술" 
+    },
+    {
+        "id": 6,
+        "category": "리더쉽" 
+    },
+    {
+        "id": 7,
+        "category": "취업/이직"
+    },
+    {
+        "id": 8,
+        "category": "브랜딩" 
+    },
+    {
+        "id": 9,
+        "category": "MD" 
+    },
+    {
+        "id": 10,
+        "category": "UX/UI" 
+    },
+    {
+        "id": 11,
+        "category": "경영/전략" 
+    },
+    {
+        "id": 12,
+        "category": "데이터" 
+    },
+    {
+        "id": 13,
+        "category": "HR" 
+    },
+    {
+        "id": 14,
+        "category": "디자인" 
+    },
+    {
+        "id": 15,
+        "category": "서비스기획" 
+    },
+    {
+        "id": 16,
+        "category": "콘텐츠 제작" 
+    },
+    {
+        "id": 17,
+        "category": "개발" 
+    },
+    {
+        "id": 18,
+        "category": "노무" 
+    },
+    {
+        "id": 19,
+        "category": "마케팅" 
+    }
+]

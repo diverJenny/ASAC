@@ -1,12 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./pages/main";
 import DevRecruitMain from "./pages/dev_recruit_main";
-import RecruitDetailMain from "./pages/recruit_detail_page";
+import RecruitDetail from "./pages/recruit_detail_page";
 
 function App() {
   return (
     <>
-      <RecruitDetailMain />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main />}></Route>
+          <Route path="/DevRecruitMain" element={<DevRecruitMain />}></Route>
+          <Route path="/RecruitDetail" element={<RecruitDetail />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

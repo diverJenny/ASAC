@@ -1,0 +1,453 @@
+
+.LoginModalContainer,
+.SignUpModalContainer {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 900;
+}
+
+/* .SignUpModalContainer {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ececec;
+    z-index: 900;
+} */
+
+.LoginModal {
+    display: none;
+    width: 400px;
+    top: 9%;
+    left: 530px;
+    max-width: 500px;
+    max-height: calc(100vh - 100px);
+    z-index: 5;
+    border-radius: 5px;
+    background-color: #fff;
+    position: fixed;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+
+.ModalHeader {
+    text-align: center;
+    position: relative;
+    padding: 16px 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.ModalHeader>img {
+    vertical-align: middle;
+    width: 68px;
+    height: 17px;
+}
+
+.ModalHeader>button {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.ModalBody {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.TextContainer>h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.TextContainer>h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    margin: 0;
+}
+
+.InputWrapper {
+    margin-top: 30px;
+}
+
+.Input_EmailContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.Input_EmailContainer>span {
+    text-align: left;
+    color: #666;
+}
+
+#InputEmail {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #e1e2e3;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+.HowToLogin>button {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    margin-top: 25px;
+    color: #fff;
+    background-color: #36f;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0 27px; */
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.HowToLogin>button>svg {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.HowToLogin>span,
+.SocialLoginWrapper>span {
+    display: block;
+    color: #969696;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 13px auto;
+}
+
+.SocialLogin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.SocialLogin>div {
+    cursor: pointer;
+}
+
+.SocialLogin_Kakao_btn,
+.SocialLogin_Facebook_btn,
+.SocialLogin_Apple_btn  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    /* border: 1px solid black; */
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 8px;
+    border: 2px solid #fff;
+}
+
+.SocialLogin_Name {
+    /* font-size: 13px; */
+    /* font-weight: 500; */
+    color: #666;
+}
+
+.SocialLogin_Kakao_btn {
+    background-color: #fee500;
+}
+
+.SocialLogin_Facebook_btn>img {
+    width: 56px;
+    height: 56px;
+}
+
+.SocialLogin_Google_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 8px;
+    border: 2px solid #e1e2e3;
+}
+
+.SocialLogin_Apple_btn>img {
+    width: 56px;
+    height: 56px;
+}
+
+.SignUpModal {
+    box-sizing: border-box;
+    display: none;
+    display: block;
+    width: 400px;
+    height: 100%;
+    top: 9%;
+    left: 530px;
+    max-width: 500px;
+    max-height: calc(100vh - 100px);
+    z-index: 5;
+    border-radius: 5px;
+    background-color: #fff;
+    position: fixed;
+    overflow: hidden;
+    border: 1px solid #e1e2e3;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+    padding: 0 20px;
+}
+
+.SignUpModal_Header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding-top: 20px;
+}
+
+.SignUpModal::-webkit-scrollbar {
+    display: none;
+}
+
+.SignUpModal_Title {
+    display: flex;
+    width: auto;
+    align-items: center;
+    /* position: relative; */
+    /* top: 0px; */
+    height: 64px;
+}
+
+.SignUpModal_Title>h2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.SignUpModal_BackBtn {
+    min-width: 64px;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.SignUpModal_BackImg {
+    height: 20px;
+}
+
+.SignUp_Input_Wrapper {
+    width: 100%;
+    /* padding: 20px; */
+}
+
+.SignUp_Input_Item>h4 {
+    color: #888;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.0145em;
+    margin: 17px 0px 7px;
+}
+
+.SignUp_Input_Item>input:focus,
+.SignUp_InputPhoneNumber_Container>select:focus,
+.SignUp_InputPhoneNumber_Verification>input:focus {
+    outline: 1px solid #36f;
+}
+
+.SignUp_InputPhoneNumber_Verification {
+    display: flex;
+}
+
+.SignUp_Input_Item>input,
+.SignUp_InputPhoneNumber_Container>select,
+.SignUp_InputPhoneNumber_Verification>input {
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    padding: 0px 12px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #888;
+    border-radius: 5px;
+    border: 1px solid #e1e2e3;
+}
+
+.SignUp_Input_Item>input::placeholder,
+.SignUp_InputPhoneNumber_Verification>input::placeholder {
+    color: #ccc;
+}
+
+#SignUp_InputEmail::placeholder {
+    color: #969696;
+}
+
+#SignUp_InputEmail:focus {
+    outline: none;
+}
+
+#SignUp_InputEmail,
+.SignUp_InputPhoneNumber_Verification>input:last-child,
+#SignUp_InputPhoneNumber_Verification_Input {
+    background-color: #f2f4f7;
+}
+
+#SignUpInputName {
+    background-color: #fff;
+}
+
+.SignUp_InputPhoneNumber_Container>select {
+    color: #333;
+}
+
+.SignUp_InputPhoneNumber_Verification>button {
+    height: 50px;
+    min-height: 50px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 0 15px;
+    width: auto;
+    flex: 0 0 auto;
+    border-radius: 5px;
+    color: #ccc;
+    background-color: #f2f4f7;
+    border: 1px solid #f2f4f7;
+}
+
+.SignUp_InputPassword_Container>span {
+    color: #888;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.027em;
+    line-height: 18px;
+    margin-bottom: 10ox;
+}
+
+.SignUpModal_divider {
+    width: 100%;
+    border-top: 0.5px solid #e1e2e3;
+    margin: 8px auto;
+}
+
+.ConsentItems_Container {
+    width: 100%;
+    /* padding: 0 20px; */
+}
+
+.ConsentItem {
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 25px;
+    margin: 10px 0;
+}
+
+.ConsentItem>label>span {
+    display: flex;
+    color: #888;
+    position: absolute;
+    font-weight: 500;
+    letter-spacing: 0.0096em;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0 0 0 7px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.ConsentItem>a {
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 0.0096em;
+    font-size: 15px;
+    line-height: 22px;
+    position: absolute;
+    right: 0;
+    margin: 0;
+}
+
+.FullConsent>label>span {
+    position: absolute;
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.0096em;
+    line-height: 22px;
+    margin: 0 0 0 7px;
+    margin-left: 25px;
+}
+
+.ConsentChkBox[type="checkbox"] {
+    display: none;
+    margin: 0;
+}
+
+.ConsentChkBox[type="checkbox"] + label {
+    display: flex;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.ConsentChkBox[type="checkbox"] + label:hover {
+    background-color: #ececec;
+}
+
+.ConsentChkBox[type="checkbox"]:checked + label::after {
+    margin: auto;
+    content: '\2713';
+    color: #fff;
+    font-size: 16px;
+}
+
+.ConsentChkBox[type="checkbox"]:checked + label {
+    background: #36f;
+}
+
+.SignUp_Input_Submit {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding-bottom: 20px;
+}
+
+.SignUp_Input_SubmitBtn {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    color: #ccc;
+    background-color: #f2f4f7;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 30px;
+}
