@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "tagId": "JobList_Tag_Salary",
+    "tagName": "연봉이 최고의 복지",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
+  },
+  {
+    "id": 2,
+    "tagId": "JobList_Tag_WorkFromHome",
+    "tagName": "재택근무",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F5d873f3a-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
+  },
+  {
+    "id": 3,
+    "tagId": "JobList_Tag_ResignationRate",
+    "tagName": "퇴사율 10% 이하",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F7d3cdb3c-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
+  },
+  {
+    "id": 4,
+    "tagId": "JobList_Tag_FastGrowing",
+    "tagName": "급성장 중",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F37dacf86-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
+  },
+  {
+    "id": 5,
+    "tagId": "JobList_Tag_MilitaryServiceSpecial",
+    "tagName": "병역특례",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F6eda33d2-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
+  },
+  {
+    "id": 6,
+    "tagId": "JobList_Tag_FiftyPeopleOrLess",
+    "tagName": "50인 이하️",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F3a965d18-c524-11ec-901c-acde48001122.png&w=50&q=75"
+  },
+  {
+    "id": 7,
+    "tagId": "JobList_Tag_OverFiftyPeople",
+    "tagName": "50인 이상️",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F4cec3244-c524-11ec-901c-acde48001122.png&w=50&q=75"
+  },
+  {
+    "id": 8,
+    "tagId": "JobList_Tag_MoreThanFiveYears",
+    "tagName": "업력 5년 이상",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F45bb9794-c524-11ec-901c-acde48001122.png&w=50&q=75"
+  },
+  {
+    "id": 9,
+    "tagId": "JobList_Tag_FlexibleWork",
+    "tagName": "유연근무",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F827f6146-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
+  },
+  {
+    "id": 10,
+    "tagId": "JobList_Tag_FreeVacation",
+    "tagName": "자유로운 휴가",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F68dadb80-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
+  },
+  {
+    "id": 11,
+    "tagId": "JobList_Tag_RewardForWork",
+    "tagName": "일한만큼 받는 보상",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F472333e8-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
+  },
+  {
+    "id": 12,
+    "tagId": "JobList_Tag_HorizontalCulture",
+    "tagName": "수평적 문화",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F78563d98-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
+  },
+  {
+    "id": 13,
+    "tagId": "JobList_Tag_IndustryEmerging",
+    "tagName": "요즘 뜨는 산업",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F4e1b135a-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
+  },
+  {
+    "id": 14,
+    "tagId": "JobList_Tag_MealsAndSnacksProvided",
+    "tagName": "식사·간식 제공",
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F53ca893e-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
+  }
+]

@@ -1,3 +1,8 @@
+.divider {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 .JobList_Search_Wrapper {
   display: flex;
   flex-direction: column;
@@ -93,7 +98,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 25px;
   margin: 0 auto;
 }
 
@@ -316,6 +321,7 @@
   background-color: #fff;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .JobList_Tag_MoreBtn_Icon_svg {
@@ -480,6 +486,7 @@
   width: 250px;
   list-style: none;
   vertical-align: top;
+  margin-bottom: 20px;
 }
 
 .RecruitList_Content > a {

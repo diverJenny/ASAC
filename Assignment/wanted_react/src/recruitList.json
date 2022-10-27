@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31699%2F0dxtcoprgjpv9hwf__400_400.jpg&w=400&q=75",
+    "position": "iOS 개발자",
+    "company": "밴플",
+    "responseLevel": "응답률 매우 높음",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 2,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13294%2F9hn1fne7p3vl2qzy__400_400.jpg&w=400&q=75",
+    "position": "소프트웨어 개발자",
+    "company": "토모큐브",
+    "responseLevel": "응답률 매우 높음",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 3,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22152%2Fzfcvnwqkqwrddima__400_400.png&w=400&q=75",
+    "position": "머신러닝 엔지니어",
+    "company": "비팩토리(B Factory)",
+    "responseLevel": "응답률 매우 높음",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 4,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13152%2Fwmppturqz9kuz3ty__400_400.jpg&w=400&q=75",
+    "position": "[CB개발실] 웹 서비스 개발자(전문계약직)",
+    "company": "나이스평가정보",
+    "responseLevel": "응답률 매우 높음",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 5,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22504%2Ffjwzfbmvnplelloe__400_400.jpg&w=400&q=75",
+    "position": "Backend Engineer",
+    "company": "카카오브레인",
+    "responseLevel": "",
+    "city": "경기",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 6,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F324%2Fbip8i0czqz1cvid8__400_400.jpeg&w=400&q=75",
+    "position": "Game Platform Server Engineer",
+    "company": "라인플러스(LINE Plus)",
+    "responseLevel": "",
+    "city": "경기",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 7,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F20947%2Fizyvwevuqdjqkvwu__400_400.png&w=400&q=75",
+    "position": "서버 개발자",
+    "company": "카카오페이증권(kakaopay증권)",
+    "responseLevel": "",
+    "city": "경기",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 8,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F507%2Fjqsf97xt6jf1felq__400_400.jpg&w=400&q=75",
+    "position": "백엔드 시니어 개발자",
+    "company": "줌인터넷(ZUM)",
+    "responseLevel": "",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 9,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F179%2Ffgaf0txpsk21hoon__400_400.jpg&w=400&q=75",
+    "position": "Software Engineer, Backend",
+    "company": "버킷플레이스(오늘의집)",
+    "responseLevel": "",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 10,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F3801%2Fdkn0iudmk3tnbjvo__400_400.jpg&w=400&q=75",
+    "position": "[트리플] 서비스 백엔드 엔지니어",
+    "company": "인터파크",
+    "responseLevel": "",
+    "city": "경기",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 11,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F29128%2F77wqjrmm14diqegx__400_400.jpg&w=400&q=75",
+    "position": "배민서비스실 배민서비스개발팀 서버 개발자",
+    "company": "우아한형제들(배달의민족,Tech)",
+    "responseLevel": "",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 12,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F11743%2F7yxfhfzqmm0i0zqg__400_400.png&w=400&q=75",
+    "position": "프론트엔드 개발자",
+    "company": "구름",
+    "responseLevel": "응답율 매우 높음",
+    "city": "경기",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 13,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F166%2Foxpffvcrygkpgv2i__400_400.png&w=400&q=75",
+    "position": "소프트웨어 엔지니어(프론트, 풀스택) (2년 이상)",
+    "company": "퍼블리(PUBLY)",
+    "responseLevel": "응답율 매우 높음",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 14,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F24000%2Fwd8p4txpqkxefjgh__400_400.jpg&w=400&q=75",
+    "position": "Server Developer (Platform)",
+    "company": "토스뱅크",
+    "responseLevel": "",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 15,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F52%2F17418_2_0.abfaf8d8__400_400.jpg&w=400&q=75",
+    "position": "Back-end Engineer - Platform",
+    "company": "야놀자Tech(R&D)",
+    "responseLevel": "",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 16,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F700%2Fpx4vydsxjapo1hu6__400_400.jpg&w=400&q=75",
+    "position": "Node.js Engineer(Back-end)",
+    "company": "워시스왓(세탁특공대)",
+    "responseLevel": "",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 17,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2221%2Fqb3mjyiaeytoyc7x__400_400.png&w=400&q=75",
+    "position": "웹 백엔드 개발자",
+    "company": "넷마블",
+    "responseLevel": "",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 18,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F8953%2Fbcpmxxm8aokqpzsr__400_400.png&w=400&q=75",
+    "position": "백엔드 개발자(Java)",
+    "company": "의식주컴퍼니(런드리고)",
+    "responseLevel": "",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 19,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F3801%2Fdkn0iudmk3tnbjvo__400_400.jpg&w=400&q=75",
+    "position": "[항공서비스] Back-end (java)",
+    "company": "인터파크",
+    "responseLevel": "",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 20,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F20804%2Fekux6kdvc3kzyafe__400_400.jpg&w=400&q=75",
+    "position": "[야나두(플랫폼)] 백엔드 개발",
+    "company": "야나두",
+    "responseLevel": "",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  }
+]

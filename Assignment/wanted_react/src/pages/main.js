@@ -7,9 +7,9 @@ import CareerContents from "../careerContents.json";
 import Article from "../article.json";
 import VODContents from "../vodContents.json";
 
-const TopBennerContents = require("../topBannerContents.json");
-const SubTitle = require("../subTitle.json");
-const CareerCategory = require("../careerCategory.json");
+import TopBennerContents from "../topBannerContents.json";
+import SubTitle from "../subTitle.json";
+import CareerCategory from "../careerCategory.json";
 
 function Main() {
   console.log(SubTitle);

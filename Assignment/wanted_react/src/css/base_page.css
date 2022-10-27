@@ -1,61 +1,61 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333333;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 button {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: none;
-    cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
 }
 
 a {
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .Page {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    padding-top: 5px;
-    max-width: 1060px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 5px;
+  max-width: 1060px;
 }
 
 .Main div {
-    text-align: center;
+  text-align: center;
 }
 
 .divider {
-    text-align: center;
-    max-width: 1060px;
-    width: 100%;
-    height: 1px;
-    margin: auto;
-    border: none;
-    flex-shrink: 0;
-    background-color: #ececec;
+  text-align: center;
+  max-width: 1060px;
+  width: 100%;
+  height: 1px;
+  margin: auto;
+  border: none;
+  flex-shrink: 0;
+  background-color: #ececec;
 }
