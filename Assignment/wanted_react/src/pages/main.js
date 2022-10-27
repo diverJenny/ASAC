@@ -3,6 +3,9 @@ import "../css/main.css";
 import LoginModal from "../component/loginModal";
 import Header from "../component/header";
 import Footer from "../component/footer";
+import CareerContents from "../careerContents.json";
+import Article from "../article.json";
+import VODContents from "../vodContents.json";
 
 const TopBennerContents = require("../topBannerContents.json");
 const SubTitle = require("../subTitle.json");
@@ -33,41 +36,39 @@ function Main() {
             </button>
             <div className="TopBanner_list_wrapper">
               <div className="TopBanner_list_wrapper_container">
-                {
-                  TopBennerContents.map((i) => (
-                    <div className="TopBanner_list_contents">
-                      <div className="TopBanner_list_contents_Img_Container">
+                {TopBennerContents.map((i) => (
+                  <div className="TopBanner_list_contents">
+                    <div className="TopBanner_list_contents_Img_Container">
+                      <a href="#">
+                        <img
+                          className="TopBanner_list_contents_Img"
+                          src={i.imgSrc}
+                          alt={i.infoTitle}
+                        />
+                      </a>
+                    </div>
+                    <div className="TopBanner_list_contents_information">
+                      <h2 className="TopBanner_list_contents_information_h2">
+                        {i.infoTitle}
+                      </h2>
+                      <h3>{i.infoSubTitle}</h3>
+                      <hr className="divider" />
+                      <div className="TopBanner_list_contents_link">
                         <a href="#">
-                          <img
-                            className="TopBanner_list_contents_Img"
-                            src={i.imgSrc}
-                            alt={i.infoTitle}
-                          />
+                          <span>
+                            바로가기
+                            <svg
+                              className="TopBanner_list_contents_information_Svg"
+                              viewBox="0 0 18 18"
+                            >
+                              <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
+                            </svg>
+                          </span>
                         </a>
                       </div>
-                      <div className="TopBanner_list_contents_information">
-                        <h2 className="TopBanner_list_contents_information_h2">
-                          {i.infoTitle}
-                        </h2>
-                        <h3>{i.infoSubTitle}</h3>
-                        <hr className="divider" />
-                        <div className="TopBanner_list_contents_link">
-                          <a href="#">
-                            <span>
-                              바로가기
-                              <svg
-                                className="TopBanner_list_contents_information_Svg"
-                                viewBox="0 0 18 18"
-                              >
-                                <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
-                              </svg>
-                            </span>
-                          </a>
-                        </div>
-                      </div>
                     </div>
-                  ))
-                }
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -175,243 +176,41 @@ function Main() {
                   <div className="CareerContents_CategoryName">
                     라이프스타일
                   </div>
-                  {
-                    CareerCategory.map((i) => (
-                      <div className="CareerContents_CategoryName">{i.category}</div>
-                    ))
-                  }
+                  {CareerCategory.map((i) => (
+                    <div className="CareerContents_CategoryName">
+                      {i.category}
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className="CareerContents_List_Wrapper">
                 <ul className="CareerContents_List">
-                  <li className="CareerContentCard_CareerContentCard">
-                    <a href="#">
-                      <div className="CareerContentCard_CareerContentCard_Thumbnail">
-                        <img
-                          className="CareerContentCard_CareerContentCard_Thumbnail_Img"
-                          src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2Fpi7%2Fimage%2FOgGWYAYT_mxRAJw8Gm8gUMaPKGY.JPG&w=500&q=75"
-                          alt="고양이 손님이 매일 아침 노크하는 집"
-                        />
-                      </div>
-                      <p className="CareerContentCard_CareerContentCard_Title">
-                        고양이 손님이 매일 아침 노크하는 집
-                      </p>
-                      <p className="CareerContentCard_CareerContentCard_Text">
-                        1. 고양이란 무엇인가 대학생 시절 홀로 자취를 하는 친척형
-                        네 집에 놀러 간 적이 있다. 모란시장 근처에 살던 형네
-                        집에 놀러 가서 게임도 하고, 영화도 보자고 해서 신나는
-                        발걸음을 옮겼던 기억이 아직도 생생하다. 다세대 주택
-                        원룸에 살던 형이 친히 지하철역까지 마중을 나와 나를
-                        집까지 안내해주었다. 방문을 열자 지금껏 강아지만
-                        키워봤던 나에게 다소 낯
-                      </p>
-                      <div className="CareerContentCard_Info">
-                        <img
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fstatic%2Ficon%2Fios%2Ficon120.png&w=60&q=90"
-                          alt="brunch"
-                        />
-                        <p>Chanbin Park</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="CareerContentCard_CareerContentCard">
-                    <a href="#">
-                      <div className="CareerContentCard_CareerContentCard_Thumbnail">
-                        <img
-                          className="CareerContentCard_CareerContentCard_Thumbnail_Img"
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20220311%2F5%2F24292894.jpg&w=500&q=75"
-                          alt="바쁘다 바빠 현대 사회에서 정신없이 굴러가는 사이드 프로젝트 일대기"
-                        />
-                      </div>
-                      <p className="CareerContentCard_CareerContentCard_Title">
-                        바쁘다 바빠 현대 사회에서 정신없이 굴러가는 사이드
-                        프로젝트 일대기
-                      </p>
-                      <p className="CareerContentCard_CareerContentCard_Text">
-                        바쁘다 바빠 현대사회에서도 사이드 프로젝트로 시작해
-                        지금까지 큰 사랑을 받고 있는 길거리 음식 위치 공유
-                        서비스 가슴속 3천원. 사이드 프로젝트 가슴속 3천원은
-                        어떻게 태어나 지금까지 어떻게 자라왔는지 경험담을
-                        알려드립니다. 또한 서비스 운영 경험을 통해 느낀 사이드
-                        프로젝트를 할 때 유의할 점, 진행하는 방식들에 대해
-                        소개해 드립니다.
-                      </p>
-                      <div className="CareerContentCard_Info">
-                        <img
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90"
-                          alt="wanted"
-                        />
-                        <p>가슴속 3천원 / 프립, 유현식</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="CareerContentCard_CareerContentCard">
-                    <a href="#">
-                      <div className="CareerContentCard_CareerContentCard_Thumbnail">
-                        <img
-                          className="CareerContentCard_CareerContentCard_Thumbnail_Img"
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fi.ytimg.com%2Fvi%2FQguH1xrYr6g%2Fhqdefault.jpg%3Fsqp%3D-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg%3D%3D%26rs%3DAOn4CLCdFggJsOglUPj0yqROm4ELlkr9IQ&w=500&q=75"
-                          alt="?경제적자유 이루는 첫단계, 부의시스템 만드는법 부자되는법 - 김미경의 따독 '언니의 따끈따끈한 독설'"
-                        />
-                      </div>
-                      <p className="CareerContentCard_CareerContentCard_Title">
-                        경제적자유 이루는 첫단계, 부의시스템 만드는법 부자되는법
-                        - 김미경의 따독 '언니의 따끈따끈한 독설'
-                      </p>
-                      <div className="CareerContentCard_Info">
-                        <img
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted-public.s3.ap-northeast-2.amazonaws.com%2Fyoutube_opengraph.png&w=60&q=90"
-                          alt="youtube"
-                        />
-                        <p>MKTV 김미경TV</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="CareerContentCard_CareerContentCard">
-                    <a href="#">
-                      <div className="CareerContentCard_CareerContentCard_Thumbnail">
-                        <img
-                          className="CareerContentCard_CareerContentCard_Thumbnail_Img"
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20211013%2F12%2F86479127.jpg&w=500&q=75"
-                          alt="주니어 PM의 사이드 프로젝트로 성장기"
-                        />
-                      </div>
-                      <p className="CareerContentCard_CareerContentCard_Title">
-                        주니어 PM의 사이드 프로젝트로 성장기
-                      </p>
-                      <p className="CareerContentCard_CareerContentCard_Text">
-                        다른 사람들의 커리어 시작은 어땠을까? 글쓰기 사이드
-                        프로젝트를 하면서 PM의 커리어를 시작하게 된 정수현 님의
-                        경험담을 들려드립니다.
-                      </p>
-                      <div className="CareerContentCard_Info">
-                        <img
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90"
-                          alt="wanted"
-                        />
-                        <p>정수현</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="CareerContentCard_CareerContentCard">
-                    <a href="#">
-                      <div className="CareerContentCard_CareerContentCard_Thumbnail">
-                        <img
-                          className="CareerContentCard_CareerContentCard_Thumbnail_Img"
-                          src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2F38EK%2Fimage%2Fkxkwkcr0dhG5bCpRou18EGXnboU.jpg&w=500&q=75"
-                          alt="나는 나답게 살기로 했다"
-                        />
-                      </div>
-                      <p className="CareerContentCard_CareerContentCard_Title">
-                        나는 나답게 살기로 했다
-                      </p>
-                      <p className="CareerContentCard_CareerContentCard_Text">
-                        발전의 원동력인 열등감 "인간은 평생 동안 자신의 열등감을
-                        극복하여 자기 자신에게 보상하는 방향으로 살아간다.
-                        따라서 열등감은 보다 완전한 존재로 나아가게 하는
-                        에너지로 작용한다." 아들러의 이 말로 보면 열등감은 더
-                        나은 내가 될 수 있는 원동력인 셈이다. 열등감이
-                        느껴진다면 그건 부족함을 채우기 위한 확실한 신호다.
-                        거기서 얻어야 할 건 그 감정을 솔직
-                      </p>
-                      <div className="CareerContentCard_Info">
-                        <img
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fstatic%2Ficon%2Fios%2Ficon120.png&w=60&q=90"
-                          alt="brunch"
-                        />
-                        <p>Grace</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="CareerContentCard_CareerContentCard">
-                    <a href="#">
-                      <div className="CareerContentCard_CareerContentCard_Thumbnail">
-                        <img
-                          className="CareerContentCard_CareerContentCard_Thumbnail_Img"
-                          src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2F79q%2Fimage%2FqJPbzuhnXYFb7_OsOXe6FUymZD8.JPG&w=500&q=75"
-                          alt="어느 스타트업과 프리워커2인의 페르소나 마케팅"
-                        />
-                      </div>
-                      <p className="CareerContentCard_CareerContentCard_Title">
-                        어느 스타트업과 프리워커2인의 페르소나 마케팅
-                      </p>
-                      <p className="CareerContentCard_CareerContentCard_Text">
-                        7월 한 달간 집중했던 프로젝트가 끝났다. 프리워커로서
-                        수진이와 그리고 AI 홈트레이닝 서비스 윌로와 함께 진행한
-                        프로젝트 #아노아캔. 이 글은 프로젝트가 모두 마무리된
-                        시점에 쓰는 회고 글이다. 우리의 프로젝트가 누군가에게는
-                        좋은 레퍼런스가 되길! 윌로와의 만남 윌로와의 프로젝트는
-                        "우리가 만나면 어떤 일을 해볼 수 있을까?" 함께
-                        고민해보는데서 출발했
-                      </p>
-                      <div className="CareerContentCard_Info">
-                        <img
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fstatic%2Ficon%2Fios%2Ficon120.png&w=60&q=90"
-                          alt="brunch"
-                        />
-                        <p>알로하융</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="CareerContentCard_CareerContentCard">
-                    <a href="#">
-                      <div className="CareerContentCard_CareerContentCard_Thumbnail">
-                        <img
-                          className="CareerContentCard_CareerContentCard_Thumbnail_Img"
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20211020%2F7%2F05264548.jpg&w=500&q=75"
-                          alt="춤이 아니라 맞춤법으로 틱톡 채널을 키운 아나운서 - 유아나 유미라"
-                        />
-                      </div>
-                      <p className="CareerContentCard_CareerContentCard_Title">
-                        춤이 아니라 맞춤법으로 틱톡 채널을 키운 아나운서 -
-                        유아나 유미라
-                      </p>
-                      <p className="CareerContentCard_CareerContentCard_Text">
-                        # 유아나 채널 소개# 아나운서로서 틱톡을 시작하게 된
-                        계기와 과정 “왜 아나운서가 틱톡을 할까?”# 춤이 아니라
-                        맞춤법으로 틱톡을 성장시킬 수 있었던 비법은?# 퍼스널
-                        브랜딩, 틱톡으로 어떻게 가능한가?# 나의 업(Job)으로
-                        콘텐츠를 업(Up)하는 노하우 – 업과 콘텐츠를 일치시키기는
-                        비법 # 숏폼이 어렵다면, 가장 잘 아는 것부터 시작해보길
-                        권하는 이유# 숏폼 콘텐츠 기획에서 가장 중요한 한 가지를
-                        꼽는다면?
-                      </p>
-                      <div className="CareerContentCard_Info">
-                        <img
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90"
-                          alt="wanted"
-                        />
-                        <p>유아나</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="CareerContentCard_CareerContentCard">
-                    <a href="#">
-                      <div className="CareerContentCard_CareerContentCard_Thumbnail">
-                        <img
-                          className="CareerContentCard_CareerContentCard_Thumbnail_Img"
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20220705%2F0%2F90735534.jpg&w=500&q=75"
-                          alt="Talk: 당신이 꼭 들어야 할 소프트웨어 엔지니어 성장 스토리"
-                        />
-                      </div>
-                      <p className="CareerContentCard_CareerContentCard_Title">
-                        Talk: 당신이 꼭 들어야 할 소프트웨어 엔지니어 성장
-                        스토리
-                      </p>
-                      <p className="CareerContentCard_CareerContentCard_Text">
-                        소프트웨어 엔지니어의 커리어와 성장을 고민하는 분들을
-                        위해 구글 최초 한국인 엔지니어 이준영님을
-                        모셨습니다.여러분의 고민은 무엇인가요?
-                      </p>
-                      <div className="CareerContentCard_Info">
-                        <img
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90"
-                          alt="wanted"
-                        />
-                        <p>야놀자 이준영</p>
-                      </div>
-                    </a>
-                  </li>
+                  {CareerContents.map((i) => (
+                    <li className="CareerContentCard_CareerContentCard">
+                      <a href="#">
+                        <div className="CareerContentCard_CareerContentCard_Thumbnail">
+                          <img
+                            className="CareerContentCard_CareerContentCard_Thumbnail_Img"
+                            src={i.CareerContentImg}
+                            alt={i.CareerContentImgAlt}
+                          />
+                        </div>
+                        <p className="CareerContentCard_CareerContentCard_Title">
+                          {i.CareerContentTitle}
+                        </p>
+                        <p className="CareerContentCard_CareerContentCard_Text">
+                          {i.CareerContentTxt}
+                        </p>
+                        <div className="CareerContentCard_Info">
+                          <img
+                            src={i.CareerContentLinkImg}
+                            alt={i.CareerContentLinkImgAlt}
+                          />
+                          <p>{i.CareerContentWriter}</p>
+                        </div>
+                      </a>
+                    </li>
+                  ))}
                 </ul>
                 <div className="CareerContentList_More">
                   <button className="CareerContentList_More_Button">
@@ -475,70 +274,19 @@ function Main() {
             </div>
             <div className="Article_Contents_Wrapper">
               <ul className="Article_Contents_List">
-                <li className="Article_Contents_Card">
-                  <a href="#">
-                    <div>
-                      <img
-                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2430%2Fd892e109.jpg&w=800&q=75"
-                        alt="IP 확장 그리고 글로벌 진출로 세계 선구자가 되다"
-                      />
-                    </div>
-                    <div className="Article_Contents_Info">
-                      <p className="Article_Contents_Titlte">
-                        IP 확장 그리고 글로벌 진출로 세계 선구자가 되다
-                      </p>
-                      <p>#미디어 #콘텐츠 제작 회사생활</p>
-                    </div>
-                  </a>
-                </li>
-                <li className="Article_Contents_Card">
-                  <a href="#">
-                    <div>
-                      <img
-                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2429%2Ffca14c2b.jpg&w=800&q=75"
-                        alt="LG전자ㅣ애플에서 8년은 일하는 방법을 가르쳐 준 시간"
-                      />
-                    </div>
-                    <div className="Article_Contents_Info">
-                      <p className="Article_Contents_Titlte">
-                        LG전자ㅣ애플에서 8년은 일하는 방법을 가르쳐 준 시간
-                      </p>
-                      <p>#개발 #IT/기술 #데이터</p>
-                    </div>
-                  </a>
-                </li>
-                <li className="Article_Contents_Card">
-                  <a href="#">
-                    <div>
-                      <img
-                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2432%2Fbf1903f2.jpg&w=800&q=75"
-                        alt="선선한 가을 날씨에 어울릴 아티클 추천 리스트"
-                      />
-                    </div>
-                    <div className="Article_Contents_Info">
-                      <p className="Article_Contents_Titlte">
-                        선선한 가을 날씨에 어울릴 아티클 추천 리스트
-                      </p>
-                      <p>#마케팅∙광고 #커리어고민 #시리즈</p>
-                    </div>
-                  </a>
-                </li>
-                <li className="Article_Contents_Card">
-                  <a href="#">
-                    <div>
-                      <img
-                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2436%2F5a2f347a.jpg&w=800&q=75"
-                        alt="리걸 테크 산업을 이끌어 나가는 로앤컴퍼니 AI 팀"
-                      />
-                    </div>
-                    <div className="Article_Contents_Info">
-                      <p className="Article_Contents_Titlte">
-                        리걸 테크 산업을 이끌어 나가는 로앤컴퍼니 AI 팀
-                      </p>
-                      <p>#개발 #IT/기술 #취업/이직</p>
-                    </div>
-                  </a>
-                </li>
+                {Article.map((i) => (
+                  <li className="Article_Contents_Card">
+                    <a href="#">
+                      <div>
+                        <img src={i.img} alt={i.title} />
+                      </div>
+                      <div className="Article_Contents_Info">
+                        <p className="Article_Contents_Titlte">{i.title}</p>
+                        <p>{i.tag}</p>
+                      </div>
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -567,78 +315,20 @@ function Main() {
             </div>
             <div className="VOD_Contents_Wrapper">
               <ul className="VOD_Contents_List">
-                <li className="VOD_Contents_Card">
-                  <a href="#">
-                    <div>
-                      <img
-                        src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210413%2F2%2F39565343.jpg&w=800&q=75"
-                        alt="포트폴리오를 부탁해"
-                      />
-                    </div>
-                    <div className="VOD_Contents_Info">
-                      <p>전{")"}원티드랩 최보명</p>
-                      <p className="VOD_Contents_Title">포트폴리오를 부탁해</p>
-                      <p>[무료] 포트폴리오를 부탁해 by 원티드</p>
-                    </div>
-                  </a>
-                </li>
-                <li className="VOD_Contents_Card">
-                  <a href="#">
-                    <div>
-                      <img
-                        src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210224%2F8%2F90123633.jpg&w=800&q=75"
-                        alt="Wanted Talk Engineering #1: 테스트 코드와 배포 시스템 - 서버 배포 방식"
-                      />
-                    </div>
-                    <div className="VOD_Contents_Info">
-                      <p>
-                        Wanted Talk Engineering #1: 테스트 코드와 배포 시스템 -
-                        서버 배포 방식
-                      </p>
-                      <p className="VOD_Contents_Title">
-                        Wanted Talk Engineering #1: 테스트 코드와 배포 시스템 -
-                        서버 배포 방식
-                      </p>
-                      <p>
-                        (무료) 테스트 코드와 배포 시스템 : Wanted Talk
-                        Engineering #1
-                      </p>
-                    </div>
-                  </a>
-                </li>
-                <li className="VOD_Contents_Card">
-                  <a href="#">
-                    <div>
-                      <img
-                        src="https://image.wanted.co.kr/optimize?src=http%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210512%2F2%2F32385576.jpg&w=800&q=75"
-                        alt="선선한 가을 날씨에 어울릴 아티클 추천 리스트"
-                      />
-                    </div>
-                    <div className="VOD_Contents_Info">
-                      <p>애프터모멘트 박창선</p>
-                      <p className="VOD_Contents_Title">
-                        터지는 콘텐츠는 이렇게 만듭니다 Part 3 : 위트와
-                        무리수레벨 조절하기 - 박창선
-                      </p>
-                      <p>터지는 콘텐츠는 이렇게 만듭니다 : Wanted How To</p>
-                    </div>
-                  </a>
-                </li>
-                <li className="VOD_Contents_Card">
-                  <a href="#">
-                    <div>
-                      <img
-                        src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210618%2F2%2F34753914.jpg&w=800&q=75"
-                        alt="리걸 테크 산업을 이끌어 나가는 로앤컴퍼니 AI 팀"
-                      />
-                    </div>
-                    <div className="VOD_Contents_Info">
-                      <p>노무법인 예담HR컨설팅 장내석</p>
-                      <p className="VOD_Contents_Title">회사를 구하는 인사</p>
-                      <p>회사를 구하는 인사</p>
-                    </div>
-                  </a>
-                </li>
+                {VODContents.map((i) => (
+                  <li className="VOD_Contents_Card">
+                    <a href="#">
+                      <div>
+                        <img src={i.img} alt={i.title} />
+                      </div>
+                      <div className="VOD_Contents_Info">
+                        <p>{i.wirter}</p>
+                        <p className="VOD_Contents_Title">{i.title}</p>
+                        <p>{i.subTitle}</p>
+                      </div>
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

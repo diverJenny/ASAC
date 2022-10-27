@@ -3,6 +3,9 @@ import "../css/recruit_detail_page.css";
 import Header from "../component/header";
 import LoginModal from "../component/loginModal";
 import Footer from "../component/footer";
+import RecruitDetailTag from "../recruitDetailTag.json";
+import RecruitDetailPosition from "../recruitDetailPosition.json";
+import RecruitSkill from "../recruitDetail_SkillAndTool.json";
 
 function RecruitDetail() {
   return (
@@ -52,33 +55,11 @@ function RecruitDetail() {
                 </div>
                 <div className="JobDetail_Content_Tags">
                   <ul className="JobDetail_Content_Tags_List">
-                    <li>
-                      <a href="#">#인원급성장</a>
-                    </li>
-                    <li>
-                      <a href="#">#50명이하</a>
-                    </li>
-                    <li>
-                      <a href="#">#설립3년이하</a>
-                    </li>
-                    <li>
-                      <a href="#">#스톡옵션</a>
-                    </li>
-                    <li>
-                      <a href="#">#스타트업</a>
-                    </li>
-                    <li>
-                      <a href="#">#워크샵</a>
-                    </li>
-                    <li>
-                      <a href="#">#간식</a>
-                    </li>
-                    <li>
-                      <a href="#">#건강검진</a>
-                    </li>
-                    <li>
-                      <a href="#">#IT, 컨텐츠</a>
-                    </li>
+                    {RecruitDetailTag.map((i) => (
+                      <li>
+                        <a href="#">{i.tag}</a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -221,13 +202,9 @@ function RecruitDetail() {
                 <div className="JobDetail_Content_Description_Skill">
                   <h3>기술스택 ・ 툴</h3>
                   <ul className="JobDetail_Content_Description_Skill_List">
-                    <li>Git</li>
-                    <li>Azure</li>
-                    <li>React</li>
-                    <li>JavaScript</li>
-                    <li>TypeScript</li>
-                    <li>Redux</li>
-                    <li>Nest.js</li>
+                    {RecruitSkill.map((i) => (
+                      <li>{i.skill}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -325,7 +302,10 @@ function RecruitDetail() {
             <div className="JobDetail_Process">
               <h3>채용보상금</h3>
               <button className="JobDetail_ShareBtn" type="button">
-                <img className="JobDetail_ShareBtn_Img" src={require("../images/share.png")} />
+                <img
+                  className="JobDetail_ShareBtn_Img"
+                  src={require("../images/share.png")}
+                />
               </button>
               <div className="JobDetail_Reward">
                 <div className="JobDetail_Reward_Recommender">
@@ -406,253 +386,59 @@ function RecruitDetail() {
             <h3>이 포지션을 찾고 계셨나요?</h3>
             <div>
               <ul className="RecruitList">
-                <li>
-                  <div className="RecruitList_Content">
-                    <a href="#">
-                      <div className="RecruitList_Content_Img">
-                        <img
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31699%2F0dxtcoprgjpv9hwf__400_400.jpg&w=400&q=75"
-                          alt="밴플"
-                        />
-                        <svg
-                          width="22"
-                          height="22"
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="https://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
-                            fill="white"
-                          ></path>
-                          <path
-                            d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
-                            fill="black"
-                            fillOpacity="0.25"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div className="RecruitList_Content_Info">
-                        <span className="RecruitList_Content_Info_Position">
-                          iOS 개발자
-                        </span>
-                        <span className="RecruitList_Content_Info__CompanyName">
-                          밴플
-                        </span>
-                        <div className="RecruitList_Content_Info_ResponseLevelLabel">
-                          <span>응답률 매우 높음</span>
+                {RecruitDetailPosition.map((i) => (
+                  <li>
+                    <div className="RecruitList_Content">
+                      <a href="#">
+                        <div className="RecruitList_Content_Img">
+                          <img src={i.img} alt={i.company} />
+                          <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                            xmlns="https://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
+                              fill="white"
+                            ></path>
+                            <path
+                              d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
+                              fill="black"
+                              fillOpacity="0.25"
+                            ></path>
+                          </svg>
                         </div>
-                        <div className="RecruitList_Content_Info_Location">
-                          <span>서울</span>
-                          <span>·</span>
-                          <span>한국</span>
+                        <div className="RecruitList_Content_Info">
+                          <span className="RecruitList_Content_Info_Position">
+                            {i.position}
+                          </span>
+                          <span className="RecruitList_Content_Info__CompanyName">
+                            {i.company}
+                          </span>
+                          {i.responseLevel !== null ? (
+                            <div className="RecruitList_Content_Info_ResponseLevelLabel">
+                              <span>{i.responseLevel}</span>
+                            </div>
+                          ) : (
+                            ""
+                          )}
+                          <div className="RecruitList_Content_Info_Location">
+                            <span>{i.city}</span>
+                            <span>·</span>
+                            <span>{i.country}</span>
+                          </div>
+                          <span className="RecruitList_Content_Info_Reward">
+                            {i.reward}
+                          </span>
                         </div>
-                        <span className="RecruitList_Content_Info_Reward">
-                          채용보상금 1,000,000원
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div className="RecruitList_Content">
-                    <a href="#">
-                      <div className="RecruitList_Content_Img">
-                        <img
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13294%2F9hn1fne7p3vl2qzy__400_400.jpg&w=400&q=75"
-                          alt="토모큐브"
-                        />
-                        <svg
-                          width="22"
-                          height="22"
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="https://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
-                            fill="white"
-                          ></path>
-                          <path
-                            d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
-                            fill="black"
-                            fillOpacity="0.25"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div className="RecruitList_Content_Info">
-                        <span className="RecruitList_Content_Info_Position">
-                          소프트웨어 개발자
-                        </span>
-                        <span className="RecruitList_Content_Info__CompanyName">
-                          토모큐브
-                        </span>
-                        <span className="RecruitList_Content_Info_ResponseLevelLabel">
-                          응답률 매우 높음
-                        </span>
-                        <div className="RecruitList_Content_Info_Location">
-                          <span>서울</span>
-                          <span>·</span>
-                          <span>한국</span>
-                        </div>
-                        <span className="RecruitList_Content_Info_Reward">
-                          채용보상금 1,000,000원
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div className="RecruitList_Content">
-                    <a href="#">
-                      <div className="RecruitList_Content_Img">
-                        <img
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22152%2Fzfcvnwqkqwrddima__400_400.png&w=400&q=75"
-                          alt="비팩토리(B Factory)"
-                        />
-                        <svg
-                          width="22"
-                          height="22"
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="https://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
-                            fill="white"
-                          ></path>
-                          <path
-                            d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
-                            fill="black"
-                            fillOpacity="0.25"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div className="RecruitList_Content_Info">
-                        <span className="RecruitList_Content_Info_Position">
-                          머신러닝 엔지니어
-                        </span>
-                        <span className="RecruitList_Content_Info__CompanyName">
-                          비팩토리(B Factory)
-                        </span>
-                        <span className="RecruitList_Content_Info_ResponseLevelLabel">
-                          응답률 매우 높음
-                        </span>
-                        <div className="RecruitList_Content_Info_Location">
-                          <span>서울</span>
-                          <span>·</span>
-                          <span>한국</span>
-                        </div>
-                        <span className="RecruitList_Content_Info_Reward">
-                          채용보상금 1,000,000원
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div className="RecruitList_Content">
-                    <a href="#">
-                      <div className="RecruitList_Content_Img">
-                        <img
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13152%2Fwmppturqz9kuz3ty__400_400.jpg&w=400&q=75"
-                          alt=""
-                        />
-                        <svg
-                          width="22"
-                          height="22"
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="https://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
-                            fill="white"
-                          ></path>
-                          <path
-                            d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
-                            fill="black"
-                            fillOpacity="0.25"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div className="RecruitList_Content_Info">
-                        <span className="RecruitList_Content_Info_Position">
-                          [CB개발실] 웹 서비스 개발자(전문계약직)
-                        </span>
-                        <span className="RecruitList_Content_Info__CompanyName">
-                          나이스평가정보
-                        </span>
-                        <span className="RecruitList_Content_Info_ResponseLevelLabel">
-                          응답률 매우 높음
-                        </span>
-                        <div className="RecruitList_Content_Info_Location">
-                          <span>서울</span>
-                          <span>·</span>
-                          <span>한국</span>
-                        </div>
-                        <span className="RecruitList_Content_Info_Reward">
-                          채용보상금 1,000,000원
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div className="RecruitList_Content">
-                    <a href="#">
-                      <div className="RecruitList_Content_Img">
-                        <img
-                          src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22504%2Ffjwzfbmvnplelloe__400_400.jpg&w=400&q=75"
-                          alt=""
-                        />
-                        <svg
-                          width="22"
-                          height="22"
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="https://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
-                            fill="white"
-                          ></path>
-                          <path
-                            d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
-                            fill="black"
-                            fillOpacity="0.25"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div className="RecruitList_Content_Info">
-                        <span className="RecruitList_Content_Info_Position">
-                          Backend Engineer
-                        </span>
-                        <span className="RecruitList_Content_Info__CompanyName">
-                          카카오브레인
-                        </span>
-                        <div className="RecruitList_Content_Info_Location">
-                          <span>경기</span>
-                          <span>·</span>
-                          <span>한국</span>
-                        </div>
-                        <span className="RecruitList_Content_Info_Reward">
-                          채용보상금 1,000,000원
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-                </li>
+                      </a>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

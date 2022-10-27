@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F31699%2F0dxtcoprgjpv9hwf__400_400.jpg&w=400&q=75",
+    "position": "iOS 개발자",
+    "company": "밴플",
+    "responseLevel": "응답률 매우 높음",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 2,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13294%2F9hn1fne7p3vl2qzy__400_400.jpg&w=400&q=75",
+    "position": "소프트웨어 개발자",
+    "company": "토모큐브",
+    "responseLevel": "응답률 매우 높음",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 3,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22152%2Fzfcvnwqkqwrddima__400_400.png&w=400&q=75",
+    "position": "머신러닝 엔지니어",
+    "company": "비팩토리(B Factory)",
+    "responseLevel": "응답률 매우 높음",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 4,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F13152%2Fwmppturqz9kuz3ty__400_400.jpg&w=400&q=75",
+    "position": "[CB개발실] 웹 서비스 개발자(전문계약직)",
+    "company": "나이스평가정보",
+    "responseLevel": "응답률 매우 높음",
+    "city": "서울",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  },
+  {
+    "id": 5,
+    "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22504%2Ffjwzfbmvnplelloe__400_400.jpg&w=400&q=75",
+    "position": "Backend Engineer",
+    "company": "카카오브레인",
+    "responseLevel": null,
+    "city": "경기",
+    "country": "한국",
+    "reward": "채용보상금 1,000,000원"
+  }
+]
