@@ -5,8 +5,16 @@ import LoginModal from "../component/loginModal";
 import JobListTag from "../jobListTag.json";
 import CompanyHiringList from "../company_HiringList.json";
 import recruitList from "../recruitList.json";
+import { Link, useNavigate } from "react-router-dom";
+// import RecruitDetail from "./recruit_detail_page";
 
 function DevRecruitMain() {
+  const navigate = useNavigate();
+
+  const onClickRecruitDetail = () => {
+    navigate("/RecruitDetail");
+  };
+
   return (
     <>
       <LoginModal />
@@ -184,7 +192,11 @@ function DevRecruitMain() {
             <div className="CompaniesActivelyHiring_List">
               {CompanyHiringList.map((i) => (
                 <div>
-                  <a href="#">
+                  <Link
+                    to={"/RecruitDetail/" + i.id}
+                    onClick={onClickRecruitDetail}
+                  >
+                    {/* <a href="#"> */}
                     <div className="CompaniesActivelyHiring_Company_Img">
                       <img src={i.img} alt="" />
                     </div>
@@ -193,7 +205,8 @@ function DevRecruitMain() {
                       <span>{i.company}</span>
                       <span>{i.recruitPosition}개 포지션</span>
                     </div>
-                  </a>
+                    {/* </a> */}
+                  </Link>
                 </div>
               ))}
             </div>

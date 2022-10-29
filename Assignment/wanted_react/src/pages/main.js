@@ -1,6 +1,5 @@
 import "../css/base_page.css";
 import "../css/main.css";
-import LoginModal from "../component/loginModal";
 import Header from "../component/header";
 import Footer from "../component/footer";
 import CareerContents from "../careerContents.json";
@@ -12,10 +11,9 @@ import SubTitle from "../subTitle.json";
 import CareerCategory from "../careerCategory.json";
 
 function Main() {
-  console.log(SubTitle);
   return (
     <>
-      <LoginModal />
+      {/* <LoginModal /> */}
       <div className="Page">
         <Header />
         <div className="TopBanner">

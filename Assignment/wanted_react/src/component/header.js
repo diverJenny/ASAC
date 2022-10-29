@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import "../css/header.css";
+// import LoginModal from "../component/loginModal";
 
 function Header() {
   return (
@@ -14,17 +16,21 @@ function Header() {
                   alt="hamberger menu"
                 />
               </button>
-              <a href="/">
-                <img
-                  id="MainBar_nav_top_logo"
-                  src="https://www.wantedlab.com/img/logo.png"
-                />
-              </a>
+              <Link to="/">
+                <a href="/">
+                  <img
+                    id="MainBar_nav_top_logo"
+                    src="https://www.wantedlab.com/img/logo.png"
+                  />
+                </a>
+              </Link>
             </div>
             <ul className="MainBar_nav_menuBar">
-              <li>
-                <a href="#">채용</a>
-              </li>
+              <Link to="/DevRecruitMain">
+                <li>
+                  <a href="#">채용</a>
+                </li>
+              </Link>
               <li>
                 <a href="">이벤트</a>
               </li>
@@ -50,7 +56,7 @@ function Header() {
                 <button className="MainBar_nav_search_button">
                   <img
                     className="SearchIcon"
-                    src={require('../images/search.png')}
+                    src={require("../images/search.png")}
                     alt="search"
                   />
                 </button>
@@ -67,6 +73,11 @@ function Header() {
       </div>
     </>
   );
+}
+
+// LoginModal
+function loginModalOn() {
+  alert("click");
 }
 
 export default Header;

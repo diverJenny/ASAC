@@ -1,3 +1,4 @@
+import React from "react";
 import "../css/loginModal.css";
 
 function LoginModal() {
