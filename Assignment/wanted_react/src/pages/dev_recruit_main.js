@@ -6,7 +6,7 @@ import JobListTag from "../jobListTag.json";
 import CompanyHiringList from "../company_HiringList.json";
 import recruitList from "../recruitList.json";
 import { Link, useNavigate } from "react-router-dom";
-// import RecruitDetail from "./recruit_detail_page";
+import RecruitDetail from "./recruit_detail_page";
 
 function DevRecruitMain() {
   const navigate = useNavigate();
@@ -194,7 +194,7 @@ function DevRecruitMain() {
                 <div>
                   <Link
                     to={"/RecruitDetail/" + i.id}
-                    onClick={onClickRecruitDetail}
+                    element={<RecruitDetail />}
                   >
                     {/* <a href="#"> */}
                     <div className="CompaniesActivelyHiring_Company_Img">
