@@ -192,11 +192,8 @@ function DevRecruitMain() {
             <div className="CompaniesActivelyHiring_List">
               {CompanyHiringList.map((i) => (
                 <div>
-                  <Link
-                    to={"/RecruitDetail/" + i.id}
-                    onClick={onClickRecruitDetail}
-                  >
-                    {/* <a href="#"> */}
+                  {/* <Link to={"/RecruitDetail/" + i.id}> 아래 코드와 동일 */}
+                  <Link to={`/RecruitDetail/${i.id}`}>
                     <div className="CompaniesActivelyHiring_Company_Img">
                       <img src={i.img} alt="" />
                     </div>
@@ -205,7 +202,6 @@ function DevRecruitMain() {
                       <span>{i.company}</span>
                       <span>{i.recruitPosition}개 포지션</span>
                     </div>
-                    {/* </a> */}
                   </Link>
                 </div>
               ))}
@@ -216,6 +212,7 @@ function DevRecruitMain() {
             <ul className="RecruitList">
               {recruitList.map((i) => (
                 <li>
+                <Link to={"/RecruitDetail/" + i.id}>
                   <div className="RecruitList_Content">
                     <a href="#">
                       <div className="RecruitList_Content_Img">
@@ -265,6 +262,7 @@ function DevRecruitMain() {
                       </div>
                     </a>
                   </div>
+                </Link>
                 </li>
               ))}
             </ul>

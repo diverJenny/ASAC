@@ -17,20 +17,18 @@ function Header() {
                 />
               </button>
               <Link to="/">
-                <a href="/">
                   <img
                     id="MainBar_nav_top_logo"
                     src="https://www.wantedlab.com/img/logo.png"
                   />
-                </a>
               </Link>
             </div>
             <ul className="MainBar_nav_menuBar">
-              <Link to="/DevRecruitMain">
                 <li>
-                  <a href="#">채용</a>
+                  <Link to="/DevRecruitMain">
+                      채용
+                  </Link>
                 </li>
-              </Link>
               <li>
                 <a href="">이벤트</a>
               </li>
