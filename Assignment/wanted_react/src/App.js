@@ -11,6 +11,7 @@ function App() {
           <Route path="/" element={<Main />}></Route>
           <Route path="/DevRecruitMain" element={<DevRecruitMain />}></Route>
           <Route path="/RecruitDetail" element={<RecruitDetail />}></Route>
+          <Route path="/RecruitDetail/:id" element={<RecruitDetail />}></Route>
         </Routes>
       </BrowserRouter>
     </>

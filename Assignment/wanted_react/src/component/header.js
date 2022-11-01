@@ -26,11 +26,9 @@ function Header() {
               </Link>
             </div>
             <ul className="MainBar_nav_menuBar">
-              <Link to="/DevRecruitMain">
-                <li>
-                  <a href="#">채용</a>
-                </li>
-              </Link>
+              <li>
+                <Link to="/DevRecruitMain">채용</Link>
+              </li>
               <li>
                 <a href="">이벤트</a>
               </li>
