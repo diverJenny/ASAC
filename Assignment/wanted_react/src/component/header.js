@@ -17,12 +17,10 @@ function Header() {
                 />
               </button>
               <Link to="/">
-                <a href="/">
-                  <img
-                    id="MainBar_nav_top_logo"
-                    src="https://www.wantedlab.com/img/logo.png"
-                  />
-                </a>
+                <img
+                  id="MainBar_nav_top_logo"
+                  src="https://www.wantedlab.com/img/logo.png"
+                />
               </Link>
             </div>
             <ul className="MainBar_nav_menuBar">
