@@ -310,11 +310,17 @@ function RecruitDetail() {
               <div className="JobDetail_Reward">
                 <div className="JobDetail_Reward_Recommender">
                   <h3>추천인</h3>
-                  <span>500,000원</span>
+                  <span>
+                    {[500000].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                    원
+                  </span>
                 </div>
                 <div className="JobDetail_Reward_Applicant">
                   <h3>지원자</h3>
-                  <span>500,000원</span>
+                  <span>
+                    {[500000].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                    원
+                  </span>
                 </div>
               </div>
               <button className="JobDetail_BookMarkBtn">

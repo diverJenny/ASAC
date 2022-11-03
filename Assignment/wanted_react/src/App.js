@@ -17,7 +17,6 @@ function App() {
           <Route path="/RecruitDetail/:id" element={<RecruitDetail />}></Route>
           <Route path="/SearchBar" element={<SearchBar />}></Route>
           <Route path="/SearchResult" element={<SearchResult />}></Route>
-          <Route path="/Ss" element={<LoginModal />}></Route>
         </Routes>
       </BrowserRouter>
     </>

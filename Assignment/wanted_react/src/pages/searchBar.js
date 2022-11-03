@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import "../css/searchBar.css";
 import SearchTags from "../searchTags.json";
 
-function SearchBar({SetSearchBarOn}) {
+function SearchBar({ SetSearchBarOn }) {
   const [SearchItem, SetSearchItem] = useState("");
 
   const searchHandler = (e) => {
-    SetSearchItem(e.currentTatget.value);
-    PaymentResponse.refreshFunction(e.currentTatget.value);
+    console.log(e.currentTatget.value);
+    // PaymentResponse.refreshFunction(e.currentTatget.value);
   };
 
   function enterKey() {
@@ -23,7 +23,7 @@ function SearchBar({SetSearchBarOn}) {
   }
 
   function OutSideClick(e) {
-    if(e.target.className === "SearchBar") SearchBarOff();
+    if (e.target.className === "SearchBar") SearchBarOff();
   }
 
   return (
