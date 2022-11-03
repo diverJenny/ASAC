@@ -1,21 +1,41 @@
 import React, { useEffect, useState } from "react";
 import "../css/loginModal.css";
 
-function LoginModal({SetModalOn}) {
+function LoginModal({SetLoginModalOn, LoginModalOn}) {
   function LoginModalOff() {
-    SetModalOn(false);
+    SetLoginModalOn(0);
+  }
+
+  const [EmailInput, SetEmailInput] = useState("");
+  const EmailOnChange = (e) => {
+    SetEmailInput(e.target.value);
   }
 
   function SignUpModalOn() {
-    
+    if(EmailInput != "") SetLoginModalOn(2);
+    else alert("이메일을 입력하세요.");
+  }
+
+  function GoBackSignUp() {
+    SetLoginModalOn(1);
   }
 
   function OutSideClick(e) {
     if(e.target.className === "LoginModalContainer") LoginModalOff();
   }
 
+  function SignUpModalOutSideClick(e) {
+    if(e.target.className === "SignUpModalContainer") LoginModalOff();
+  }
+  
+  // const ConfirmEmailInput = (e) => {
+  //   console.log(e.target.value);
+  //   if(e.target.value == "") alert("이메일을 입력해주세요!");
+  // }
+
   return (
     <>
+      {LoginModalOn==1&&
       <div id="LoginModalContainer" className="LoginModalContainer" onClick={OutSideClick}>
         <div id="LoginModal" className="LoginModal">
           <div className="ModalHeader">
@@ -50,6 +70,7 @@ function LoginModal({SetModalOn}) {
                   id="InputEmail"
                   type="email"
                   placeholder="이메일을 입력해 주세요."
+                  onChange={EmailOnChange}
                 />
               </div>
               <div className="HowToLogin">
@@ -155,12 +176,12 @@ function LoginModal({SetModalOn}) {
             </div>
           </div>
         </div>
-      </div>
+      </div>}
 
-      <div className="SignUpModalContainer">
+      {LoginModalOn==2&&<div className="SignUpModalContainer" onClick={SignUpModalOutSideClick}>
         <div className="SignUpModal">
           <div className="SignUpModal_Header">
-            <button className="SignUpModal_BackBtn">
+            <button className="SignUpModal_BackBtn" onClick={GoBackSignUp}>
               <img
                 className="SignUpModal_BackImg"
                 src={require("../images/chevron-left.png")}
@@ -176,7 +197,7 @@ function LoginModal({SetModalOn}) {
               <input
                 id="SignUp_InputEmail"
                 type="text"
-                placeholder=""
+                placeholder={EmailInput}
                 readOnly
               />
             </div>
@@ -442,7 +463,7 @@ function LoginModal({SetModalOn}) {
             </button>
           </div>
         </div>
-      </div>
+      </div>}
     </>
   );
 }

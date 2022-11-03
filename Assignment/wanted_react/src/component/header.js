@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import "../css/header.css";
 // import LoginModal from "../component/loginModal";
 
-function Header({SetModalOn, SetSearchBarOn}) {
+function Header({SetLoginModalOn, SetSearchBarOn}) {
   function LoginModalOn() {
-    SetModalOn(true);
+    SetLoginModalOn(1);
   }
 
   function SearchBarOn() {
