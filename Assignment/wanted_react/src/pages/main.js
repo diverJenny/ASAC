@@ -1,5 +1,6 @@
 import "../css/base_page.css";
 import "../css/main.css";
+import { useState } from "react";
 import Header from "../component/header";
 import Footer from "../component/footer";
 import CareerContents from "../careerContents.json";
@@ -9,13 +10,19 @@ import VODContents from "../vodContents.json";
 import TopBennerContents from "../topBannerContents.json";
 import SubTitle from "../subTitle.json";
 import CareerCategory from "../careerCategory.json";
+import LoginModal from "../component/loginModal";
+import SearchBar from "../pages/searchBar";
 
 function Main() {
+  const [LoginModalOn, SetModalOn] = useState(false);
+  const [SearchBarOn, SetSearchBarOn] = useState(false);
+
   return (
     <>
-      {/* <LoginModal /> */}
+      {LoginModalOn&&<LoginModal SetModalOn={SetModalOn}/>}
+      {SearchBarOn&&<SearchBar SetSearchBarOn={SetSearchBarOn}/>}
       <div className="Page">
-        <Header />
+        <Header SetModalOn={SetModalOn} SetSearchBarOn={SetSearchBarOn}/>
         <div className="TopBanner">
           <div className="TopBanner_slider">
             <button className="TopBanner_arrow Left_arrow">

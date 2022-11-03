@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../css/searchBar.css";
 import SearchTags from "../searchTags.json";
 
-function SearchBar() {
+function SearchBar({SetSearchBarOn}) {
   const [SearchItem, SetSearchItem] = useState("");
 
   const searchHandler = (e) => {
@@ -18,9 +18,17 @@ function SearchBar() {
     }
   }
 
+  function SearchBarOff() {
+    SetSearchBarOn(false);
+  }
+
+  function OutSideClick(e) {
+    if(e.target.className === "SearchBar") SearchBarOff();
+  }
+
   return (
     <>
-      <div className="SearchBar">
+      <div className="SearchBar" onClick={OutSideClick}>
         <div className="SearchBar_Container">
           <div className="SearchBy_Input_Container">
             <img

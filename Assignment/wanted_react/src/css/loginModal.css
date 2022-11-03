@@ -1,6 +1,5 @@
-.LoginModalContainer,
-.SignUpModalContainer {
-  display: none;
+.LoginModalContainer {
+  /* display: none; */
   position: fixed;
   justify-content: center;
   align-items: center;
@@ -14,14 +13,29 @@
   z-index: 900;
 }
 
-.LoginModal {
+.SignUpModalContainer {
   display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 800;
+}
+
+.LoginModal {
+  /* display: none; */
   width: 400px;
   top: 9%;
   left: 530px;
   max-width: 500px;
   max-height: calc(100vh - 100px);
-  z-index: 5;
+  z-index: 1000;
   border-radius: 5px;
   background-color: #fff;
   position: fixed;
@@ -186,7 +200,7 @@
 .SignUpModal {
   box-sizing: border-box;
   display: none;
-  display: block;
+  /* display: block; */
   width: 400px;
   height: 100%;
   top: 9%;

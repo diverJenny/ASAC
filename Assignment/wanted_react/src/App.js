@@ -4,6 +4,7 @@ import DevRecruitMain from "./pages/dev_recruit_main";
 import RecruitDetail from "./pages/recruit_detail_page";
 import SearchBar from "./pages/searchBar";
 import SearchResult from "./pages/searchResult";
+import LoginModal from "./component/loginModal";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/RecruitDetail/:id" element={<RecruitDetail />}></Route>
           <Route path="/SearchBar" element={<SearchBar />}></Route>
           <Route path="/SearchResult" element={<SearchResult />}></Route>
+          <Route path="/Ss" element={<LoginModal />}></Route>
         </Routes>
       </BrowserRouter>
     </>

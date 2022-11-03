@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../css/loginModal.css";
 
-function LoginModal() {
+function LoginModal({SetModalOn}) {
+  function LoginModalOff() {
+    SetModalOn(false);
+  }
+
+  function SignUpModalOn() {
+    
+  }
+
+  function OutSideClick(e) {
+    if(e.target.className === "LoginModalContainer") LoginModalOff();
+  }
+
   return (
     <>
-      <div id="LoginModalContainer" className="LoginModalContainer">
+      <div id="LoginModalContainer" className="LoginModalContainer" onClick={OutSideClick}>
         <div id="LoginModal" className="LoginModal">
           <div className="ModalHeader">
             <img src="https://www.wantedlab.com/img/logo.png" alt="wanted" />
-            <button className="LoginModal_CloseBtn">
+            <button className="LoginModal_CloseBtn" onClick={LoginModalOff}>
               <svg width="24" height="24" viewBox="0 0 24 24" color="#999">
                 <path
                   fill="currentColor"
@@ -41,7 +53,7 @@ function LoginModal() {
                 />
               </div>
               <div className="HowToLogin">
-                <button className="EmailLoginBtn">
+                <button className="EmailLoginBtn" onClick={SignUpModalOn}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -91,7 +103,7 @@ function LoginModal() {
                     <div className="SocialLogin_Facebook">
                       <div className="SocialLogin_Facebook_btn">
                         <img
-                          src="images/socialLogin/facebook.png"
+                          src={require("../images/socialLogin/facebook.png")}
                           alt="facebook"
                         />
                       </div>
@@ -131,7 +143,7 @@ function LoginModal() {
                     <div className="SocialLogin_Apple">
                       <div className="SocialLogin_Apple_btn">
                         <img
-                          src="images/socialLogin/Apple-Logo2.png"
+                          src={require("../images/socialLogin/Apple-Logo2.png")}
                           alt="apple"
                         />
                       </div>
@@ -151,7 +163,7 @@ function LoginModal() {
             <button className="SignUpModal_BackBtn">
               <img
                 className="SignUpModal_BackImg"
-                src="images/chevron-left.png"
+                src={require("../images/chevron-left.png")}
               />
             </button>
             <div className="SignUpModal_Title">

@@ -1,10 +1,330 @@
 [
     {
-        "id": ,
-        "company": ,
-        "companyImg": ,
-        "tags": [{
-            
-        }] ,
+        "id": 1,
+        "company": "화이인베스트먼트(Huayi Investment)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5_fa701c4e-10c8-4920-9134-62d17fe3ce95.jpg",
+        "tags": [
+            "교육비", "의료비", "설립3년이하","50명이하", "교육비", "금융"
+        ]
+    },
+    {
+        "id": 2,
+        "company": "나오스코리아",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5_ccafb29e-c473-4ae5-9e00-41a807477487.jpg",
+        "tags": [
+            "단체보험", "설립4~9년", "51~300명","퇴사율 6~10%", "인원급성장", "연봉상위2~5%", "제조"
+        ]
+    },
+    {
+        "id": 3,
+        "company": "퀀텀앤파트너스",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5_31d1cc98-8a18-4eae-ac6f-5e2795c4bed4.jpg",
+        "tags": [
+            "택시비", "간식", "커피","설립4~9년", "50명이하", "퇴사율5%이하", "연봉상위2~5%", "사업지원"
+        ]
+    },
+    {
+        "id": 4,
+        "company": "멜리펀트",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5_2c94c7be-c595-4ee5-ab92-60f0ff7f425f.jpg",
+        "tags": [
+            "핀테크", "교육비", "간식","석식제공", "스타트업", "수평적조직", "설립4~9년", "50명이하", "퇴사율5%이하", "연봉상위2~5%", "IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 5,
+        "company": "넷마블",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.c2f82a4e.jpg",
+        "tags": [
+            "복지포인트", "의료비", "#설립10년이상","#301~1,000명", "#퇴사율 6~10%", "#인원급성장", "#누적투자100억이상", "#연봉상위1%", "IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 6,
+        "company": "카카오엔터테인먼트",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.d6e35522.png",
+        "tags": [
+            "의료비", "단체보험", "대출지원","간식", "음료", "리프레시휴가", "설립10년이상", "301~1,000명", "인원급성장", "누적투자100억이상", "연봉상위6~10%", "IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 7,
+        "company": "트리플",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.c3f7e42f.jpg",
+        "tags": [
+            "#연봉상위11~20%", "#복지포인트", "#동호회","#건강검진", "#원격근무", "#간식", "#스타트업", "#상여금", "#설립4~9년", "#51~300명", "#인원급성장", "#누적투자100억이상", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 8,
+        "company": "카카오페이(kakaopay)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.a10206f5.jpg",
+        "tags": [
+            "#건강검진", "#대출지원", "#어린이집","#주차", "#사내카페", "#워크샵", "#설립4~9년", "#1,001~10,000명", "#퇴사율 6~10%", "#인원급성장", "#누적투자100억이상", "#연봉상위1%", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 9,
+        "company": "버킷플레이스(오늘의집)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.2570f631.jpg",
+        "tags": [
+            "#재택근무", "#단체보험", "#건강검진","#사내카페", "#스타트업", "#스톡옵션", "#리프레시휴가", "#설립4~9년", "#301~1,000명", "#인원급성장", "#누적투자100억이상", "#연봉업계평균이상", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 10,
+        "company": "야놀자",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.656041f9.jpg",
+        "tags": [
+            "교육비", "#건강검진", "#원격근무","#식비", "#스타트업", "#상여금", "#설립10년이상", "#1,001~10,000명", "#인원급성장", "#누적투자100억이상", "#연봉상위1%", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 11,
+        "company": "브랜디(Brandi)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.66ad4038.jpg",
+        "tags": [
+            "#연봉상위11~20%", "#통신비", "#노트북","#안마의자", "#휴게실", "#와인", "#스타트업", "#설립4~9년", "#301~1,000명", "#퇴사율5%이하", "#인원급성장", "#누적투자100억이상", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 12,
+        "company": "하이브(HYBE)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.7730b243.jpg",
+        "tags": [
+            "#재택근무", "#연봉상위11~20%", "#통신비","#사내식당", "#음료", "#식비", "#출산휴가", "#육아휴직", "#설립10년이상", "#301~1,000명", "#퇴사율5%이하", "#누적투자100억이상", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 13,
+        "company": "우아한형제들(배달의민족)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.8f75d757.jpg",
+        "tags": [
+            "#재택근무", "#복지포인트", "#단체보험","#어린이집", "#설립10년이상", "#1,001~10,000명", "#인원급성장", "#누적투자100억이상", "#연봉상위6~10%", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 14,
+        "company": "당근마켓",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.99592af2.jpg",
+        "tags": [
+            "#설립4~9년", "#301~1,000명", "#인원급성장","#누적투자100억이상", "#연봉상위6~10%", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 15,
+        "company": "샌드박스네트워크(Sandbox)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.c97f43ba.jpg",
+        "tags": [
+            "#재택근무", "#연봉상위11~20%", "#교육비","#동호회", "#단체보험", "#건강검진", "#커피", "#음료", "#식비", "#설립4~9년", "#설립4~9년", "#인원급성장", "#누적투자100억이상", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 16,
+        "company": "LG생활건강(엘지생활건강)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.f21cc611.jpg",
+        "tags": [
+            "#의료비", "#건강검진", "#대출지원","#음료", "#수평적조직", "#리프레시휴가", "#유연근무", "#설립10년이상", "#1,001~10,000명", "#퇴사율5%이하", "#연봉상위1%", "#제조"
+        ]
+    },
+    {
+        "id": 17,
+        "company": "에스케이씨앤씨",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.d996f774.jpg",
+        "tags": [
+            "#인공지능", "#교육비", "#의료비","#어린이집", "#수유실", "#식비", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 18,
+        "company": "카카오뱅크(kakaobank)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.c4add0db.jpg",
+        "tags": [
+            "#재택근무", "#핀테크", "#교육비","#의료비", "#건강검진", "#어린이집", "#사내카페", "#유연근무", "#설립4~9년", "#301~1,000명", "#인원급성장", "#연봉상위1%", "#금융"
+        ]
+    },
+    {
+        "id": 19,
+        "company": "엔테크서비스(N Tech Service)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.b2f74d19.jpg",
+        "tags": [
+            "#연봉상위11~20%", "#건강검진", "#어린이집","#설립10년이상", "#301~1,000명", "#퇴사율5%이하", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 20,
+        "company": "유라클(Uracle)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5_07dc71a4-3088-49e9-8a76-aa513dd82b2f.jpg",
+        "tags": [
+            "교육비", "#복지포인트", "#동호회","#건강검진", "#안마의자", "#커피", "#시리얼", "#조식제공", "#설립10년이상", "#51~300명", "#인원급성장", "#연봉상위6~10%", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 21,
+        "company": "신세계인터내셔날",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5_206618f2-5584-4951-87bd-2b96ab3c9135.jpg",
+        "tags": [
+             "의료비", "#건강검진","#주35시간", "#설립10년이상", "#1,001~10,000명", "#퇴사율5%이하", "#연봉상위1%", "#판매, 유통"
+        ]
+    },
+    {
+        "id": 22,
+        "company": "페이스북코리아(Facebook)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5_1190b98d-679b-4c61-a1c2-3d03a430aa6f.jpg",
+        "tags": [
+            "#설립10년이상", "#51~300명", "퇴사율 6~10%","#인원급성장", "#연봉상위1%", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 23,
+        "company": "카카오(KAKAO)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5_07f9ab81-e91a-47d0-8bd7-1b09a98c41dd.jpg",
+        "tags": [
+            "#설립10년이상", "#1,001~10,000명", "#인원급성장","#연봉상위1%", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 24,
+        "company": "스마일게이트홀딩스",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.df5da6bb.jpg",
+        "tags": [
+            "#복지포인트", "#동호회", "#건강검진","#셔틀버스", "#어린이집", "#워크샵", "#설립10년이상", "#51~300명", "#퇴사율5%이하", "#연봉상위6~10%", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 25,
+        "company": "씨제이올리브네트웍스",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.eeda0d5f.jpg",
+        "tags": [
+            "#재택근무", "#인공지능", "#의료비","#건강검진", "#유연근무", "#설립10년이상", "#1,001~10,000명", "#인원급성장", "#연봉상위6~10%", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 26,
+        "company": "라인플러스",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.cde4e1d7.png",
+        "tags": [
+            "#설립10년이상", "#51~300명", "#퇴사율 6~10%","#인원급성장", "#연봉업계평균이상", "#제조"
+        ]
+    },
+    {
+        "id": 27,
+        "company": "삼성전자",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.bdd4d11f.jpg",
+        "tags": [
+            "#설립10년이상", "#10,001명이상", "#퇴사율5%이하","#인원성장", "#연봉상위1%", "#제조"
+        ]
+    },
+    {
+        "id": 28,
+        "company": "LG전자(엘지전자)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.a2f69392.jpg",
+        "tags": [
+            "의료비", "#중식제공", "#설립10년이상","#10,001명이상", "#퇴사율5%이하", "#연봉상위1%", "#제조"
+        ]
+    },
+    {
+        "id": 29,
+        "company": "라인게임즈",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.8c758271.jpg",
+        "tags": [
+            "교육비", "#건강검진", "#결혼기념일","#사내카페", "#식비", "#워크샵", "#설립10년이상", "#51~300명", "#퇴사율5%이하", "#연봉업계평균이상", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 30,
+        "company": "교보정보통신",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.78c3c6df.png",
+        "tags": [
+            "#건강검진", "#설립10년이상", "#301~1,000명","#퇴사율 6~10%", "#인원급성장", "#연봉상위6~10%", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 31,
+        "company": "씨제이이엔엠(CJ ENM)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.6e8f5df8.jpg",
+        "tags": [
+            "#인공지능", "#설립10년이상", "#1,001~10,000명","#퇴사율 6~10%", "#인원급성장", "#연봉상위1%", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 32,
+        "company": "한섬",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.534ca534.jpg",
+        "tags": [
+            "#설립10년이상", "#1,001~10,000명", "#퇴사율5%이하","#인원급성장", "#제조"
+        ]
+    },
+    {
+        "id": 33,
+        "company": "현대자동차",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.2b5dbb5f.jpg",
+        "tags": [
+            "#재택근무", "#인공지능", "#설립10년이상","#10,001명이상", "#퇴사율5%이하", "#연봉상위1%", "#제조"
+        ]
+    },
+    {
+        "id": 34,
+        "company": "LG유플러스(엘지유플러스)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_5.21e157ec.jpg",
+        "tags": [
+            "#노트북", "#복지포인트", "#동호회","#의료비", "#건강검진", "#어린이집", "#주차", "#육아휴직", "#유연근무", "#설립10년이상", "#10,001명이상", "#퇴사율5%이하", "#인원성장", "#연봉상위1%", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 35,
+        "company": "네이버(NAVER Corp)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_4_465f0a8c-3b5b-4004-be0b-13f3c1c08200.jpg",
+        "tags": [
+            "연봉상위1%", "인원급성장", "#1,001~10,000명","#설립10년이상", "#리프레시휴가", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 36,
+        "company": "라인플러스(LINE Plus)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_4.c52b0714.jpeg",
+        "tags": [
+            "#연봉상위6~10%", "#인원급성장", "#1,001~10,000명","#설립4~9년", "#워크샵", "#사내카페", "#안마의자", "#보육시설", "#건강검진", "#자기계발", "#통신비", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 37,
+        "company": "마이다스아이티",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_4.2bc1eb38.png",
+        "tags": [
+            "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 37,
+        "company": "마이다스아이티",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_4.2bc1eb38.png",
+        "tags": [
+            "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 38,
+        "company": "몰로코",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_4.604314df.jpg",
+        "tags": [
+            "#연봉업계평균이상", "#인원급성장", "#50명이하", "#설립4~9년", "#자기계발", "#IT, 컨텐츠"
+        ]
+    },
+    {
+        "id": 39,
+        "company": "두나무(업비트/증권플러스)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_4.80b5a29e.jpg",
+        "tags": [
+            "#연봉상위1%", "#인원급성장", "#301~1,000명", "#설립10년이상", "#식비", "#음료", "#대출지원", "#택시비", "#건강검진", "#핀테크", "#통신비", "#금융"
+        ]
+    },
+    {
+        "id": 40,
+        "company": "Sendbird(센드버드)",
+        "companyImg": "https://static.wanted.co.kr/images/wdes/0_4.a7ddbf73.png",
+        "tags": [
+            "#유연근무", "#출산휴가", "#스타트업", "#식비", "#주차", "#건강검진", "#단체보험", "#재택근무", "#IT, 컨텐츠"
+        ]
     }
 ]

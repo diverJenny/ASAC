@@ -2,7 +2,15 @@ import { Link } from "react-router-dom";
 import "../css/header.css";
 // import LoginModal from "../component/loginModal";
 
-function Header() {
+function Header({SetModalOn, SetSearchBarOn}) {
+  function LoginModalOn() {
+    SetModalOn(true);
+  }
+
+  function SearchBarOn() {
+    SetSearchBarOn(true);
+  }
+
   return (
     <>
       <div className="Header">
@@ -49,7 +57,7 @@ function Header() {
             </ul>
             <ul className="MainBar_nav_aside">
               <li>
-                <button className="MainBar_nav_search_button">
+                <button className="MainBar_nav_search_button" onClick={SearchBarOn}>
                   <img
                     className="SearchIcon"
                     src={require("../images/search.png")}
@@ -57,7 +65,7 @@ function Header() {
                   />
                 </button>
               </li>
-              <li id="LoginBtn" className="Login">
+              <li id="LoginBtn" className="Login" onClick={LoginModalOn}>
                 <a className="LoginLink">회원가입/로그인</a>
               </li>
               <li className="PoratService_button">
