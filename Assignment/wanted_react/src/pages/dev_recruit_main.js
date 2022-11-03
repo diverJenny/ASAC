@@ -5,16 +5,9 @@ import LoginModal from "../component/loginModal";
 import JobListTag from "../jobListTag.json";
 import CompanyHiringList from "../company_HiringList.json";
 import recruitList from "../recruitList.json";
-import { Link, useNavigate } from "react-router-dom";
-// import RecruitDetail from "./recruit_detail_page";
+import { Link } from "react-router-dom";
 
 function DevRecruitMain() {
-  const navigate = useNavigate();
-
-  const onClickRecruitDetail = () => {
-    navigate("/RecruitDetail");
-  };
-
   return (
     <>
       <LoginModal />
@@ -214,7 +207,9 @@ function DevRecruitMain() {
                 <li>
                 <Link to={"/RecruitDetail/" + i.id}>
                   <div className="RecruitList_Content">
-                    <a href="#">
+                    {/* <Link to={"/RecruitDetail/" + i.id}> */}
+                    {/* 탬플릿 리터럴을 사용한 아래 코드와 동일 */}
+                    <Link to={`/RecruitDetail/${i.id}`}>
                       <div className="RecruitList_Content_Img">
                         <img src={i.img} alt={i.company} />
                         <svg
@@ -260,7 +255,7 @@ function DevRecruitMain() {
                           {i.reward}
                         </span>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </Link>
                 </li>

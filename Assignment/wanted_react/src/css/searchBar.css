@@ -1,41 +1,120 @@
 .SearchBar {
-    left: 0;
-    top: 0;
-    width: 100%;
-    position: absolute;
-    background: #fff;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+  /* border: 1px solid red; */
 }
 
 .SearchBar_Container {
-    width: 100%;
-    max-width: 1060px;
-    margin: 0 auto;
-    padding: 30px 0 140px;
-    position: relative;
-    background-color: #fff;
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding-top: 30px;
+  position: relative;
+}
+
+.SearchBy_Input_Container {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .SearchInput {
-    height: 50px;
-    line-height: 50px;
-    width: 100%;
-    margin: 0;
-    padding: 0 36px 0 60px;
-    border: 1px solid #f2f4f7;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 400;
-    color: #767676;
-    background-color: #f2f4f7;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  margin: 0;
+  padding: 0 36px 0 60px;
+  border: 1px solid #f2f4f7;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #767676;
+  background-color: #f2f4f7;
 }
 
-.SearchTagContainer {
-    position: sticky;
-    left: 0;
-    right: 0;
-    top: 80px;
-    background-color: #fff;
+.SearchBy_Input_Icon {
+  /* display: inline-block; */
+  position: absolute;
+  left: 25px;
+  width: 17px;
+  filter: invert(50%);
+}
+
+.SearchBy_Tags {
+  padding: 50px 0 0;
+}
+
+.SearchBy_SuggestedTags_Title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.SearchBy_SuggestedTags_Title h4 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.SearchBy_SuggestedTags_Title a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #767676;
+}
+
+/* .SearchBy_SuggestedTags_Title a img {
+  width: 10px;
+  filter: invert(50%);
+} */
+
+.SearchBy_Tags_List {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0 50px;
+  margin: 0;
+}
+
+.Search_TagItem {
+  width: auto;
+  display: block;
+}
+
+.Search_TagItem_Btn {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
+  padding: 0 26px;
+  border-radius: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.ResignationRateLessThan5Percent {
+  background: #f0f8f8;
+}
+
+.Top2_5PercentOfAnnualSalary {
+  background: #eeedf4;
+}
+
+.SelfDevelopment {
+  background: #e8edf3;
+}
+
+.Top6_10PercentOfAnnualSalary {
+  background: #e9f4fb;
+}
+
+.RefreshVacation {
+  background: #effbf3;
 }
