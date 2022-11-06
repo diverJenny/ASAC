@@ -12,7 +12,6 @@ function RecruitDetail() {
     <>
       <LoginModal />
       <div className="Page">
-        <Header />
         <div className="Main">
           <div className="JobDetail_Wrapper">
             <div className="JobDetail_Content">

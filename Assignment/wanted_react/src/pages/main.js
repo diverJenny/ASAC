@@ -1,7 +1,6 @@
 import "../css/base_page.css";
 import "../css/main.css";
 import { useState } from "react";
-import Header from "../component/header";
 import Footer from "../component/footer";
 import CareerContents from "../careerContents.json";
 import Article from "../article.json";
@@ -14,17 +13,24 @@ import LoginModal from "../component/loginModal";
 import SearchBar from "../pages/searchBar";
 
 function Main() {
-  const [LoginModalOn, SetLoginModalOn] = useState(0);
-  const [SearchBarOn, SetSearchBarOn] = useState(false);
+  // const [LoginModalOn, SetLoginModalOn] = useState(0);
+  // const [SearchBarOn, SetSearchBarOn] = useState(false);
 
   return (
     <>
-      {!LoginModalOn==0&&<LoginModal LoginModalOn={LoginModalOn} SetLoginModalOn={SetLoginModalOn}/>}
-      {console.log("LoginModalOn: "+ LoginModalOn)}
+      {/* {!LoginModalOn === 0 && (
+        <LoginModal
+          LoginModalOn={LoginModalOn}
+          SetLoginModalOn={SetLoginModalOn}
+        />
+      )} */}
       {/* {LoginModalOn==2&&<LoginModal LoginModalOn={LoginModalOn} SetLoginModalOn={SetLoginModalOn}/>} */}
-      {SearchBarOn&&<SearchBar SetSearchBarOn={SetSearchBarOn}/>}
+      {/* {SearchBarOn && <SearchBar SetSearchBarOn={SetSearchBarOn} />} */}
       <div className="Page">
-        <Header SetLoginModalOn={SetLoginModalOn} SetSearchBarOn={SetSearchBarOn}/>
+        {/* <Header
+          SetLoginModalOn={SetLoginModalOn}
+          SetSearchBarOn={SetSearchBarOn}
+        /> */}
         <div className="TopBanner">
           <div className="TopBanner_slider">
             <button className="TopBanner_arrow Left_arrow">

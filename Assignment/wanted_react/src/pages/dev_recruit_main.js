@@ -1,6 +1,5 @@
 import "../css/base_page.css";
 import "../css/dev_recruit_main.css";
-import Header from "../component/header";
 import LoginModal from "../component/loginModal";
 import JobListTag from "../jobListTag.json";
 import CompanyHiringList from "../company_HiringList.json";
@@ -12,7 +11,6 @@ function DevRecruitMain() {
     <>
       <LoginModal />
       <div className="Page">
-        <Header />
         <div className="JobList_Search_Wrapper">
           <div className="JobList_Search_Navigation">
             <div className="JobGroup_btn_container">

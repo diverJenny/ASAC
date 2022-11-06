@@ -4,7 +4,7 @@ import "../css/searchBar.css";
 import SearchTags from "../searchTags.json";
 
 function SearchBar({ SetSearchBarOn }) {
-  const [SearchItem, SetSearchItem] = useState("");
+  //   const [SearchItem, SetSearchItem] = useState("");
 
   const searchHandler = (e) => {
     console.log(e.currentTatget.value);
@@ -12,7 +12,7 @@ function SearchBar({ SetSearchBarOn }) {
   };
 
   function enterKey() {
-    if (window.event.keyCode == 13) {
+    if (window.event.keyCode === 13) {
       searchHandler();
       //   alert("enter");
     }

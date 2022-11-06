@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import "../css/header.css";
-// import LoginModal from "../component/loginModal";
 
-function Header({SetLoginModalOn, SetSearchBarOn}) {
-  function LoginModalOn() {
+function Header({ LoginModalOn, SetLoginModalOn, SetSearchBarOn }) {
+  function ShowLoginModal() {
     SetLoginModalOn(1);
+    console.log(LoginModalOn);
   }
 
   function SearchBarOn() {
@@ -57,7 +57,10 @@ function Header({SetLoginModalOn, SetSearchBarOn}) {
             </ul>
             <ul className="MainBar_nav_aside">
               <li>
-                <button className="MainBar_nav_search_button" onClick={SearchBarOn}>
+                <button
+                  className="MainBar_nav_search_button"
+                  onClick={SearchBarOn}
+                >
                   <img
                     className="SearchIcon"
                     src={require("../images/search.png")}
@@ -65,8 +68,10 @@ function Header({SetLoginModalOn, SetSearchBarOn}) {
                   />
                 </button>
               </li>
-              <li id="LoginBtn" className="Login" onClick={LoginModalOn}>
-                <a className="LoginLink">회원가입/로그인</a>
+              <li id="LoginBtn" className="Login">
+                <button className="LoginLink" onClick={ShowLoginModal}>
+                  회원가입/로그인
+                </button>
               </li>
               <li className="PoratService_button">
                 <a id="MainBar_nav_corporatService_button">기업 서비스</a>
@@ -77,11 +82,6 @@ function Header({SetLoginModalOn, SetSearchBarOn}) {
       </div>
     </>
   );
-}
-
-// LoginModal
-function loginModalOn() {
-  alert("click");
 }
 
 export default Header;
