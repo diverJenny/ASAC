@@ -1,24 +1,91 @@
 import React, { useEffect, useState } from "react";
 import "../css/loginModal.css";
+import {isValidEmail} from "../utils/emailFormating";
+import {isSamePassword, isValidPassword} from "../utils/passwordFormating";
+import {isAllConsentChk} from "../utils/consentChk";
+import consentList from "../consent.json";
 
 function LoginModal({ LoginModalOn, SetLoginModalOn }) {
   function LoginModalOff() {
-    console.log("LoginModalOff : " + LoginModalOn);
+    // console.log("LoginModalOff : " + LoginModalOn);
     // console.log("SetLoginModalOn" + SetLoginModalOn);
     SetLoginModalOn(0);
-    console.log("LoginModalOffAf : " + LoginModalOn);
+    // console.log("LoginModalOff : " + LoginModalOn);
   }
 
   const [EmailInput, SetEmailInput] = useState("");
+  const [emailChk, setEmailChk] = useState("");
   const EmailOnChange = (e) => {
+    // console.log("EmailOnchange: " + EmailInput)
     SetEmailInput(e.target.value);
+    // console.log("EmailOnChangeChk: " + emailChk);
   };
+  useEffect(() => {
+    setEmailChk(isValidEmail(EmailInput));
+    if(EmailInput === "") setEmailChk(true);
+  }, [EmailInput]);
+
+  // EmailInput의 setState 기본값을 true로 지정
+/*   useEffect(() => {
+    setEmailChk(true)
+  }, []); */
 
   function SignUpModalOn() {
-    if (EmailInput !== "") SetLoginModalOn(2);
-    else alert("이메일을 입력하세요.");
+    // console.log("EmailInput : " + EmailInput)
+    if (isValidEmail(EmailInput)) SetLoginModalOn(2);
   }
 
+  const [passwordInput, setPasswordInput] = useState("");
+  const [passwordConfirmInput, setPasswordConfirmInput] = useState("");
+  const [passwordChk, setPasswordChk] = useState("");
+  const [passwordConfirmChk, setPasswordConfirmChk] = useState("");
+  const passWordOnChange = (e) => {
+    setPasswordInput(e.target.value);
+  }
+
+  useEffect(() => {
+    setPasswordChk(isValidPassword(passwordInput));
+    // console.log(passwordInput);
+    // console.log("passwordChk : " + isValidPassword(passwordInput));
+    if(passwordInput === "") {
+      setPasswordChk(true);
+    }
+  }, [passwordInput]);
+
+  const passwordConfirmOnChange =(e) => {
+    setPasswordConfirmInput(e.target.value);
+  }
+
+  useEffect(() => {
+    setPasswordConfirmChk(isSamePassword(passwordInput, passwordConfirmInput));
+    if(passwordConfirmInput === "") {
+      setPasswordConfirmChk(true);
+    }
+  }, [passwordConfirmInput]);
+
+  const [allConsent, setAllConsent] = useState("");
+  const [isCheckedConsent, setIsCheckedConsent] = useState([]);
+
+  const changeAllConsentChk = (e) => {
+    if(e.target.checked) {
+      setAllConsent(true);
+
+    } else {
+      setAllConsent(false);
+      setIsCheckedConsent([]);
+    }
+  }
+
+  const changeConsentChk = (checked, id) => {
+    if(checked) {
+      setIsCheckedConsent(prev => [...prev, id]);
+    } else {
+      setIsCheckedConsent(isCheckedConsent.filter((el) => el !== id));
+    }
+  }
+
+
+  // 회원가입 모달에서 뒤로가기
   function GoBackSignUp() {
     SetLoginModalOn(1);
   }
@@ -33,7 +100,7 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
 
   return (
     <>
-      {console.log("LoginModalOn : " + LoginModalOn)}
+      {/* {console.log("LoginModalOn : " + LoginModalOn)} */}
       {LoginModalOn === 1 && (
         <div
           id="LoginModalContainer"
@@ -75,6 +142,9 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
                     placeholder="이메일을 입력해 주세요."
                     onChange={EmailOnChange}
                   />
+                  {!emailChk && 
+                  <span className="EmailChkMessage">올바른 이메일을 입력해주세요.</span>
+                }
                 </div>
                 <div className="HowToLogin">
                   <button className="EmailLoginBtn" onClick={SignUpModalOn}>
@@ -405,11 +475,16 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
               </div>
               <div className="SignUp_Input_Item SignUp_InputPassword_Container">
                 <h4>비밀번호</h4>
-                <input type="text" placeholder="비밀번호를 입력해주세요." />
-                <input
+                <input className="signUpPw" type="text" placeholder="비밀번호를 입력해주세요." onChange={passWordOnChange} />
+                {!passwordChk && 
+                <span>올바르지 않은 비밀번호입니다.</span>}
+                <input className="signUpPwConfirm"
                   type="text"
-                  placeholder="비밀번호를 다시 한번 입력해주세요."
+                  placeholder="비밀번호를 다시 한번 입력해주세요." onChange={passwordConfirmOnChange}
                 />
+                {!passwordConfirmChk && 
+                <span>비밀번호가 서로 일치하지 않습니다.</span>
+                }
                 <span>
                   영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합해 8자 이상
                   16자 이하로 입력해주세요.
@@ -421,45 +496,30 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
                 <input
                   type="checkbox"
                   className="ConsentChkBox"
-                  id="FullConsentChkBox"
+                  id="FullConsentChkBox" checked={true} onChange={changeAllConsentChk}
                 />
                 <label htmlFor="FullConsentChkBox">
                   <span>전체 동의</span>
                 </label>
               </div>
               <hr className="SignUpModal_divider" />
-              <div className="ConsentItem">
-                <input
-                  type="checkbox"
-                  className="ConsentChkBox"
-                  id="ConsentItem_Over14ChkBox"
-                />
-                <label htmlFor="ConsentItem_Over14ChkBox">
-                  <span>만 14세 이상입니다. (필수)</span>
-                </label>
-              </div>
-              <div className="ConsentItem">
-                <input
-                  type="checkbox"
-                  className="ConsentChkBox"
-                  id="ConsentItem_TermsOfService"
-                />
-                <label htmlFor="ConsentItem_TermsOfService">
-                  <span>oneID 이용약관 동의 (필수)</span>
-                </label>
-                <a>자세히</a>
-              </div>
-              <div className="ConsentItem">
-                <input
-                  type="checkbox"
-                  className="ConsentChkBox"
-                  id="ConsentItem_PersonalInformation"
-                />
-                <label htmlFor="ConsentItem_PersonalInformation">
-                  <span>개인정보 수집 및 이용 동의 (필수)</span>
-                </label>
-                <a>자세히</a>
-              </div>
+              {
+                consentList.map((i) => (
+                    <div className="ConsentItem">
+                    <input
+                      type="checkbox"
+                      className="ConsentChkBox"
+                      onChange={changeConsentChk}
+                      checked={true}
+                    />
+                    <label>
+                      <span>{i.content}{i.required === "Y" ? <span>&nbsp;(필수)</span> : ""}</span>
+                    </label>
+                    {i.detail === "Y" ?                 <a>자세히</a> : ""}
+                    </div>
+                  )
+                )
+              }
             </div>
             <div className="SignUp_Input_Submit">
               <div></div>

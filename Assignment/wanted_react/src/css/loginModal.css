@@ -92,7 +92,7 @@
   flex-direction: column;
 }
 
-.Input_EmailContainer > span {
+.Input_EmailContainer > span:first-child {
   text-align: left;
   color: #666;
 }
@@ -107,6 +107,12 @@
   border: 1px solid #e1e2e3;
   background-color: #fff;
   font-size: 15px;
+}
+
+.EmailChkMessage {
+  text-align: left;
+  font-size: 12px;
+  color: red;
 }
 
 .EmailLoginBtn {
@@ -422,7 +428,7 @@
 }
 
 .ConsentChkBox[type="checkbox"]:checked + label::after {
-  margin: auto;
+  margin-left: 2px;
   content: "\2713";
   color: #fff;
   font-size: 16px;

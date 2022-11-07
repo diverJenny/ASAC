@@ -5,6 +5,7 @@ import JobListTag from "../jobListTag.json";
 import CompanyHiringList from "../company_HiringList.json";
 import recruitList from "../recruitList.json";
 import { Link } from "react-router-dom";
+import {priceFormat} from "../utils/numberFormating"
 
 function DevRecruitMain() {
   return (
@@ -250,9 +251,7 @@ function DevRecruitMain() {
                             <span>{i.company}</span>
                           </div>
                           <span className="RecruitList_Content_Info_Reward">
-                            {`채용보상금 ${[i.reward]
-                              .toString()
-                              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원`}
+                            채용보상금 {priceFormat(i.reward)}원
                           </span>
                         </div>
                       </Link>

@@ -4,7 +4,7 @@ import "../css/header.css";
 function Header({ LoginModalOn, SetLoginModalOn, SetSearchBarOn }) {
   function ShowLoginModal() {
     SetLoginModalOn(1);
-    console.log(LoginModalOn);
+    // console.log(LoginModalOn);
   }
 
   function SearchBarOn() {
