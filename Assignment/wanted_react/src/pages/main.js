@@ -1,6 +1,5 @@
 import "../css/base_page.css";
 import "../css/main.css";
-import { useState } from "react";
 import Footer from "../component/footer";
 import CareerContents from "../careerContents.json";
 import Article from "../article.json";
@@ -9,28 +8,11 @@ import VODContents from "../vodContents.json";
 import TopBennerContents from "../topBannerContents.json";
 import SubTitle from "../subTitle.json";
 import CareerCategory from "../careerCategory.json";
-import LoginModal from "../component/loginModal";
-import SearchBar from "../pages/searchBar";
 
 function Main() {
-  // const [LoginModalOn, SetLoginModalOn] = useState(0);
-  // const [SearchBarOn, SetSearchBarOn] = useState(false);
-
   return (
     <>
-      {/* {!LoginModalOn === 0 && (
-        <LoginModal
-          LoginModalOn={LoginModalOn}
-          SetLoginModalOn={SetLoginModalOn}
-        />
-      )} */}
-      {/* {LoginModalOn==2&&<LoginModal LoginModalOn={LoginModalOn} SetLoginModalOn={SetLoginModalOn}/>} */}
-      {/* {SearchBarOn && <SearchBar SetSearchBarOn={SetSearchBarOn} />} */}
       <div className="Page">
-        {/* <Header
-          SetLoginModalOn={SetLoginModalOn}
-          SetSearchBarOn={SetSearchBarOn}
-        /> */}
         <div className="TopBanner">
           <div className="TopBanner_slider">
             <button className="TopBanner_arrow Left_arrow">
@@ -65,7 +47,7 @@ function Main() {
                         {i.infoTitle}
                       </h2>
                       <h3>{i.infoSubTitle}</h3>
-                      <hr className="divider" />
+                      <hr className="divider TopBannerDivider" />
                       <div className="TopBanner_list_contents_link">
                         <a href="#">
                           <span>

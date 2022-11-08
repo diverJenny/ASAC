@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../css/loginModal.css";
-import {isValidEmail} from "../utils/emailFormating";
-import {isSamePassword, isValidPassword} from "../utils/passwordFormating";
-import {isAllConsentChk} from "../utils/consentChk";
-import consentList from "../consent.json";
+import { isValidEmail } from "../utils/emailFormating";
+import { isSamePassword, isValidPassword } from "../utils/passwordFormating";
+import ConsentList from "../consent.json";
 
 function LoginModal({ LoginModalOn, SetLoginModalOn }) {
   function LoginModalOff() {
@@ -22,11 +22,11 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
   };
   useEffect(() => {
     setEmailChk(isValidEmail(EmailInput));
-    if(EmailInput === "") setEmailChk(true);
+    if (EmailInput === "") setEmailChk(true);
   }, [EmailInput]);
 
   // EmailInput의 setState 기본값을 true로 지정
-/*   useEffect(() => {
+  /*   useEffect(() => {
     setEmailChk(true)
   }, []); */
 
@@ -41,49 +41,55 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
   const [passwordConfirmChk, setPasswordConfirmChk] = useState("");
   const passWordOnChange = (e) => {
     setPasswordInput(e.target.value);
-  }
+  };
 
   useEffect(() => {
     setPasswordChk(isValidPassword(passwordInput));
     // console.log(passwordInput);
     // console.log("passwordChk : " + isValidPassword(passwordInput));
-    if(passwordInput === "") {
+    if (passwordInput === "") {
       setPasswordChk(true);
     }
   }, [passwordInput]);
 
-  const passwordConfirmOnChange =(e) => {
+  const passwordConfirmOnChange = (e) => {
     setPasswordConfirmInput(e.target.value);
-  }
+  };
 
   useEffect(() => {
     setPasswordConfirmChk(isSamePassword(passwordInput, passwordConfirmInput));
-    if(passwordConfirmInput === "") {
+    if (passwordConfirmInput === "") {
       setPasswordConfirmChk(true);
     }
   }, [passwordConfirmInput]);
 
-  const [allConsent, setAllConsent] = useState("");
-  const [isCheckedConsent, setIsCheckedConsent] = useState([]);
+  /* ----- 회원가입 동의 체크 박스 ----- */
+  // 체크된 아이템을 담는 배열
+  const [checkedConsent, setCheckedConsent] = useState([]);
 
-  const changeAllConsentChk = (e) => {
-    if(e.target.checked) {
-      setAllConsent(true);
-
+  // 체크박스 단일 선택
+  const handleSingleCheck = (checked, id) => {
+    if (checked) {
+      // 단일 선택 시 체크된 아이템 배열에 추가
+      setCheckedConsent((prev) => [...prev, id]);
     } else {
-      setAllConsent(false);
-      setIsCheckedConsent([]);
+      // 단일 선택 해제 시 체크된 아이템을 제외한 배열
+      setCheckedConsent(checkedConsent.filter((element) => element !== id));
     }
-  }
+  };
 
-  const changeConsentChk = (checked, id) => {
-    if(checked) {
-      setIsCheckedConsent(prev => [...prev, id]);
+  // 체크박스 전체 선택
+  const handleAllCheck = (checked) => {
+    if (checked) {
+      // 전체 선택 시 모든 아이템의 id를 담을 배열
+      const idArray = [];
+      ConsentList.forEach((element) => idArray.push(element.id));
+      setCheckedConsent(idArray);
     } else {
-      setIsCheckedConsent(isCheckedConsent.filter((el) => el !== id));
+      // 전체 선택 해제 시 isCheckedConsent를 빈 배열로 상태 업데이트
+      setCheckedConsent([]);
     }
-  }
-
+  };
 
   // 회원가입 모달에서 뒤로가기
   function GoBackSignUp() {
@@ -142,9 +148,11 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
                     placeholder="이메일을 입력해 주세요."
                     onChange={EmailOnChange}
                   />
-                  {!emailChk && 
-                  <span className="EmailChkMessage">올바른 이메일을 입력해주세요.</span>
-                }
+                  {!emailChk && (
+                    <span className="EmailChkMessage">
+                      올바른 이메일을 입력해주세요.
+                    </span>
+                  )}
                 </div>
                 <div className="HowToLogin">
                   <button className="EmailLoginBtn" onClick={SignUpModalOn}>
@@ -260,6 +268,7 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
                 <img
                   className="SignUpModal_BackImg"
                   src={require("../images/chevron-left.png")}
+                  alt=""
                 />
               </button>
               <div className="SignUpModal_Title">
@@ -475,16 +484,22 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
               </div>
               <div className="SignUp_Input_Item SignUp_InputPassword_Container">
                 <h4>비밀번호</h4>
-                <input className="signUpPw" type="text" placeholder="비밀번호를 입력해주세요." onChange={passWordOnChange} />
-                {!passwordChk && 
-                <span>올바르지 않은 비밀번호입니다.</span>}
-                <input className="signUpPwConfirm"
-                  type="text"
-                  placeholder="비밀번호를 다시 한번 입력해주세요." onChange={passwordConfirmOnChange}
+                <input
+                  className="signUpPw"
+                  type="password"
+                  placeholder="비밀번호를 입력해주세요."
+                  onChange={passWordOnChange}
                 />
-                {!passwordConfirmChk && 
-                <span>비밀번호가 서로 일치하지 않습니다.</span>
-                }
+                {!passwordChk && <span>올바르지 않은 비밀번호입니다.</span>}
+                <input
+                  className="signUpPwConfirm"
+                  type="password"
+                  placeholder="비밀번호를 다시 한번 입력해주세요."
+                  onChange={passwordConfirmOnChange}
+                />
+                {!passwordConfirmChk && (
+                  <span>비밀번호가 서로 일치하지 않습니다.</span>
+                )}
                 <span>
                   영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합해 8자 이상
                   16자 이하로 입력해주세요.
@@ -496,30 +511,35 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
                 <input
                   type="checkbox"
                   className="ConsentChkBox"
-                  id="FullConsentChkBox" checked={true} onChange={changeAllConsentChk}
+                  id="FullConsentChkBox"
+                  onChange={(e) => handleAllCheck(e.target.checked)}
+                  checked={
+                    checkedConsent.length === ConsentList.length ? true : false
+                  }
                 />
-                <label htmlFor="FullConsentChkBox">
+                <label for="FullConsentChkBox">
                   <span>전체 동의</span>
                 </label>
               </div>
               <hr className="SignUpModal_divider" />
-              {
-                consentList.map((i) => (
-                    <div className="ConsentItem">
-                    <input
-                      type="checkbox"
-                      className="ConsentChkBox"
-                      onChange={changeConsentChk}
-                      checked={true}
-                    />
-                    <label>
-                      <span>{i.content}{i.required === "Y" ? <span>&nbsp;(필수)</span> : ""}</span>
-                    </label>
-                    {i.detail === "Y" ?                 <a>자세히</a> : ""}
-                    </div>
-                  )
-                )
-              }
+              {ConsentList?.map((i, key) => (
+                <div className="ConsentItem" key={key}>
+                  <input
+                    type="checkbox"
+                    className="ConsentChkBox"
+                    id={i.name}
+                    onChange={(e) => handleSingleCheck(e.target.checked, i.id)}
+                    checked={checkedConsent.includes(i.id) ? true : false}
+                  />
+                  <label htmlFor={i.name}>
+                    <span>
+                      {i.content}
+                      {i.required === "Y" ? <span>&nbsp;(필수)</span> : ""}
+                    </span>
+                  </label>
+                  {i.detail === "Y" ? <Link>자세히</Link> : ""}
+                </div>
+              ))}
             </div>
             <div className="SignUp_Input_Submit">
               <div></div>

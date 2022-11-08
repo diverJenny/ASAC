@@ -408,13 +408,12 @@
   margin-left: 25px;
 }
 
-.ConsentChkBox[type="checkbox"] {
+.ConsentChkBox {
   display: none;
-  margin: 0;
 }
 
-.ConsentChkBox[type="checkbox"] + label {
-  display: flex;
+.ConsentChkBox + label {
+  display: inline-block;
   align-items: center;
   width: 18px;
   height: 18px;
@@ -423,18 +422,18 @@
   cursor: pointer;
 }
 
-.ConsentChkBox[type="checkbox"] + label:hover {
+.ConsentChkBox + label:hover {
   background-color: #ececec;
 }
 
-.ConsentChkBox[type="checkbox"]:checked + label::after {
+.ConsentChkBox:checked + label::after {
   margin-left: 2px;
   content: "\2713";
   color: #fff;
   font-size: 16px;
 }
 
-.ConsentChkBox[type="checkbox"]:checked + label {
+.ConsentChkBox:checked + label {
   background: #36f;
 }
 
