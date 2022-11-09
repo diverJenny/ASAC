@@ -345,13 +345,20 @@
   border: 1px solid #f2f4f7;
 }
 
-.SignUp_InputPassword_Container > span {
+.SignUp_InputPassword_Container > span:last-child {
   color: #888;
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.027em;
   line-height: 18px;
   margin-bottom: 10ox;
+}
+
+.passwordChkMessage {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 400;
+  color: red;
 }
 
 .SignUpModal_divider {

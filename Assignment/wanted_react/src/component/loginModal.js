@@ -490,7 +490,11 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
                   placeholder="비밀번호를 입력해주세요."
                   onChange={passWordOnChange}
                 />
-                {!passwordChk && <span>올바르지 않은 비밀번호입니다.</span>}
+                {!passwordChk && (
+                  <span className="passwordChkMessage">
+                    올바르지 않은 비밀번호입니다.
+                  </span>
+                )}
                 <input
                   className="signUpPwConfirm"
                   type="password"
@@ -498,7 +502,10 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
                   onChange={passwordConfirmOnChange}
                 />
                 {!passwordConfirmChk && (
-                  <span>비밀번호가 서로 일치하지 않습니다.</span>
+                  <span className="passwordChkMessage">
+                    비밀번호가 서로 일치하지 않습니다.
+                    <br />
+                  </span>
                 )}
                 <span>
                   영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합해 8자 이상

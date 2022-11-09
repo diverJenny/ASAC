@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../css/header.css";
 
-function Header({ LoginModalOn, SetLoginModalOn, SetSearchBarOn }) {
+function Header({ SetLoginModalOn, SetSearchBarOn }) {
   function ShowLoginModal() {
     SetLoginModalOn(1);
     // console.log(LoginModalOn);
@@ -28,6 +28,7 @@ function Header({ LoginModalOn, SetLoginModalOn, SetSearchBarOn }) {
                 <img
                   id="MainBar_nav_top_logo"
                   src="https://www.wantedlab.com/img/logo.png"
+                  alt=""
                 />
               </Link>
             </div>

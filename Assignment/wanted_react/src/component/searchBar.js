@@ -6,17 +6,17 @@ import SearchTags from "../searchTags.json";
 function SearchBar({ SetSearchBarOn }) {
   //   const [SearchItem, SetSearchItem] = useState("");
 
-  const searchHandler = (e) => {
-    console.log(e.currentTatget.value);
-    // PaymentResponse.refreshFunction(e.currentTatget.value);
-  };
-
   function enterKey() {
     if (window.event.keyCode === 13) {
       searchHandler();
       //   alert("enter");
     }
   }
+
+  const searchHandler = (e) => {
+    console.log(e.currentTatget.value);
+    // PaymentResponse.refreshFunction(e.currentTatget.value);
+  };
 
   function SearchBarOff() {
     SetSearchBarOn(false);

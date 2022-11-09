@@ -3,7 +3,7 @@ import { useState } from "react";
 import Main from "./pages/main";
 import DevRecruitMain from "./pages/dev_recruit_main";
 import RecruitDetail from "./pages/recruit_detail_page";
-import SearchBar from "./pages/searchBar";
+import SearchBar from "./component/searchBar";
 import SearchResult from "./pages/searchResult";
 import LoginModal from "./component/loginModal";
 import Header from "./component/header";
