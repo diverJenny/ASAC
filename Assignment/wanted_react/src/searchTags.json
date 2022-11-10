@@ -1,27 +1,27 @@
 [
   {
     "id": 1,
-    "tagName": "#퇴사율5%이하",
+    "tagName": "퇴사율5%이하",
     "tagClassName": "ResignationRateLessThan5Percent"
   },
   {
     "id": 2,
-    "tagName": "#연봉상위2~5%",
+    "tagName": "연봉상위2~5%",
     "tagClassName": "Top2_5PercentOfAnnualSalary"
   },
   {
     "id": 3,
-    "tagName": "#자기계발",
+    "tagName": "자기계발",
     "tagClassName": "SelfDevelopment"
   },
   {
     "id": 4,
-    "tagName": "#연봉상위6~10%",
+    "tagName": "연봉상위6~10%",
     "tagClassName": "Top6_10PercentOfAnnualSalary"
   },
   {
     "id": 5,
-    "tagName": "#리프레시휴가",
+    "tagName": "리프레시휴가",
     "tagClassName": "RefreshVacation"
   }
 ]

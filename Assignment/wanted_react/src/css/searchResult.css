@@ -2,17 +2,24 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
 }
 
 .SearchResultHeaderContainer {
   width: 100%;
-  max-width: 1060px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 }
 
 .SearchResultHeader {
+  display: flex;
+  justify-content: center;
   width: 100%;
   max-width: 1060px;
-  margin: auto;
   height: 96px;
   padding: 30px 0;
   background-color: #fff;
@@ -44,6 +51,7 @@
   font-size: 14px;
   font-weight: 600;
   color: #268bf7;
+  cursor: pointer;
 }
 
 .ShowAllTagsToSearchBtn img {
@@ -55,7 +63,46 @@
 .SearchSuggestionContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: #fff;
   padding: 0 0 24px;
+}
+
+.SearchSuggestion_Tags_List {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.SearchSuggestionItem {
+  display: block;
+  width: auto;
+}
+
+.SearchSuggestion_TagItem_Btn {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
+  padding: 0 26px;
+  border-radius: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  background: #f3f5f8;
+}
+
+.Selected_TagItem {
+  background: #eaf5ff;
+  color: #268bf7;
+}
+
+.SearchResult_Company_Wrapper {
+  width: 90%;
+  height: 100%;
+  max-width: 1060px;
+  margin: 0 auto 60px;
 }

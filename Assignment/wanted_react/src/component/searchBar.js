@@ -1,22 +1,34 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../css/searchBar.css";
 import SearchTags from "../searchTags.json";
+import SearchResult from "../pages/searchResult";
 
 function SearchBar({ SetSearchBarOn }) {
-  //   const [SearchItem, SetSearchItem] = useState("");
+  let navigate = useNavigate();
+
+  const [SearchInput, SetSearchInput] = useState("");
+  const searchItemOnChange = (e) => {
+    SetSearchInput(e.target.value);
+    console.log("searchItem: " + SearchInput);
+  }
 
   function enterKey() {
-    if (window.event.keyCode === 13) {
-      searchHandler();
-      //   alert("enter");
+    if (SearchInput !== ""
+      && window.event.keyCode === 13) {
+      navigate('/SearchResult/', {state: SearchInput});
+      console.log("enter Key");
+      SearchBarOff();
+    }
+    else if (SearchInput === "") {
+      alert("검색어를 입력하세요.");
     }
   }
 
-  const searchHandler = (e) => {
-    console.log(e.currentTatget.value);
-    // PaymentResponse.refreshFunction(e.currentTatget.value);
-  };
+  function tagSearch(e) {
+    navigate('/SearchResult/', {state: e.target.value })
+    SearchBarOff();
+  }
 
   function SearchBarOff() {
     SetSearchBarOn(false);
@@ -40,6 +52,7 @@ function SearchBar({ SetSearchBarOn }) {
               className="SearchInput"
               placeholder="#태그, 회사, 포지션 검색"
               onKeyUp={enterKey}
+              onChange={searchItemOnChange}
             />
           </div>
           <div className="SearchBy_Tags">
@@ -59,8 +72,11 @@ function SearchBar({ SetSearchBarOn }) {
             <ul className="SearchBy_Tags_List">
               {SearchTags.map((i) => (
                 <li className="Search_TagItem">
-                  <button className={`Search_TagItem_Btn ${i.tagClassName}`}>
-                    {i.tagName}
+                  <button
+                    className={`Search_TagItem_Btn ${i.tagClassName}`}
+                    value={i.tagName}
+                    onClick={tagSearch}>
+                    {`#${i.tagName}`}
                   </button>
                 </li>
               ))}

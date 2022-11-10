@@ -5,7 +5,7 @@ import JobListTag from "../jobListTag.json";
 import CompanyHiringList from "../company_HiringList.json";
 import recruitList from "../recruitList.json";
 import { Link } from "react-router-dom";
-import {priceFormat} from "../utils/numberFormating"
+import { priceFormat } from "../utils/numberFormating"
 
 function DevRecruitMain() {
   return (

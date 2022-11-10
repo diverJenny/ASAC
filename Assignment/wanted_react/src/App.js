@@ -21,7 +21,10 @@ function App() {
             SetLoginModalOn={SetLoginModalOn}
           />
         )}
-        {SearchBarOn && <SearchBar SetSearchBarOn={SetSearchBarOn} />}
+        {SearchBarOn &&
+          <SearchBar
+            SetSearchBarOn={SetSearchBarOn}
+        />}
         <Header
           LoginModalOn={LoginModalOn}
           SetLoginModalOn={SetLoginModalOn}
@@ -32,7 +35,8 @@ function App() {
           <Route path="/DevRecruitMain" element={<DevRecruitMain />}></Route>
           <Route path="/RecruitDetail" element={<RecruitDetail />}></Route>
           <Route path="/RecruitDetail/:id" element={<RecruitDetail />}></Route>
-          <Route path="/SearchResult" element={<SearchResult />}></Route>
+          <Route path="/SearchResult" element={<SearchResult />}>
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
