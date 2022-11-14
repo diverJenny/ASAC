@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 function SearchResult() {
   // const searchWord = useLocation().state;
-  const [searchWord, setSearchWord] = useState("#" + useLocation().state);
+  const [searchWord, setSearchWord] = useState("");
   const [filterData, setFilterData] = useState([]);
 
   useEffect(() => {
@@ -17,13 +17,18 @@ function SearchResult() {
           temp=[...temp,list]
         }
       })
-      setFilterData(temp)
+      setFilterData(temp);
     });
 
   // useEffect() forEach는 아래와 동일하게 동작한다.
 /*   for(int list=0; list<searchCompanyByTag.length(); list++) {
   } */
   }, [searchWord]);
+
+  const useLoc = useLocation().state;
+  useEffect(() => {
+    setSearchWord(useLoc);
+  }, [useLoc]);
 
   function tagSearch(e) {
     setSearchWord(e.target.value);
