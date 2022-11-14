@@ -10,14 +10,14 @@ function SearchBar({ SetSearchBarOn }) {
   const [SearchInput, SetSearchInput] = useState("");
   const searchItemOnChange = (e) => {
     SetSearchInput(e.target.value);
-    console.log("searchItem: " + SearchInput);
+    // console.log("searchItem: " + SearchInput);
   }
 
   function enterKey() {
     if (SearchInput !== ""
       && window.event.keyCode === 13) {
       navigate('/SearchResult/', {state: SearchInput});
-      console.log("enter Key");
+      // console.log("enter Key");
       SearchBarOff();
     }
     else if (SearchInput === "") {
