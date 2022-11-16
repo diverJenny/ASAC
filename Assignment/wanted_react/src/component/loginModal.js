@@ -91,6 +91,16 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
     }
   };
 
+  const [isAllChecked, setIsAllChecked] = useState(false);
+  const [checkedItems, setCheckedItems] = useState([]);
+
+  const allAgreeHandler = (checked) => {
+    setIsAllChecked(!isAllChecked);
+    if (checked) {
+      setCheckedItems([...checkedItems]);
+    }
+  };
+
   // 회원가입 모달에서 뒤로가기
   function GoBackSignUp() {
     SetLoginModalOn(1);
