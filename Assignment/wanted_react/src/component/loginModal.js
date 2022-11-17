@@ -63,43 +63,82 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
     }
   }, [passwordConfirmInput]);
 
-  /* ----- 회원가입 동의 체크 박스 ----- */
-  // 체크된 아이템을 담는 배열
-  const [checkedConsent, setCheckedConsent] = useState([]);
+  // /* ----- 회원가입 동의 체크 박스 ----- */
+  // // 체크된 아이템을 담는 배열
+  // const [checkedConsent, setCheckedConsent] = useState([]);
 
-  // 체크박스 단일 선택
-  const handleSingleCheck = (checked, id) => {
-    if (checked) {
-      // 단일 선택 시 체크된 아이템 배열에 추가
-      setCheckedConsent((prev) => [...prev, id]);
-    } else {
-      // 단일 선택 해제 시 체크된 아이템을 제외한 배열
-      setCheckedConsent(checkedConsent.filter((element) => element !== id));
-    }
-  };
+  // // 체크박스 단일 선택
+  // const handleSingleCheck = (checked, id) => {
+  //   if (checked) {
+  //     // 단일 선택 시 체크된 아이템 배열에 추가
+  //     setCheckedConsent((prev) => [...prev, id]);
+  //   } else {
+  //     // 단일 선택 해제 시 체크된 아이템을 제외한 배열
+  //     setCheckedConsent(checkedConsent.filter((element) => element !== id));
+  //   }
+  // };
 
-  // 체크박스 전체 선택
-  const handleAllCheck = (checked) => {
-    if (checked) {
-      // 전체 선택 시 모든 아이템의 id를 담을 배열
-      const idArray = [];
-      ConsentList.forEach((element) => idArray.push(element.id));
-      setCheckedConsent(idArray);
-    } else {
-      // 전체 선택 해제 시 isCheckedConsent를 빈 배열로 상태 업데이트
-      setCheckedConsent([]);
-    }
-  };
+  // // 체크박스 전체 선택
+  // const handleAllCheck = (checked) => {
+  //   if (checked) {
+  //     // 전체 선택 시 모든 아이템의 id를 담을 배열
+  //     const idArray = [];
+  //     ConsentList.forEach((element) => idArray.push(element.id));
+  //     setCheckedConsent(idArray);
+  //   } else {
+  //     // 전체 선택 해제 시 isCheckedConsent를 빈 배열로 상태 업데이트
+  //     setCheckedConsent([]);
+  //   }
+  // };
+
+  // const [isAllChecked, setIsAllChecked] = useState(false);
+  // const [checkItem, setCheckItem] = useState([]);
+  // const [check1, setCheck1] = useState(false);
+  // const [check2, setCheck2] = useState(false);
+  // const [check3, setCheck3] = useState(false);
+
+  // const allAgreeHandler = (checked) => {
+  //   setIsAllChecked(!isAllChecked);
+  //   if (checked) {
+  //     setCheckItem([true,true,true]);
+  //   }
+  //   else {
+  //     setCheckItem([false,false,false]);
+  //   }
+  // };
 
   const [isAllChecked, setIsAllChecked] = useState(false);
-  const [checkedItems, setCheckedItems] = useState([]);
+  const [checkItem, setCheckItem] = useState([]);
+  
+  useEffect(() => {
+    console.log("나와");
+  }, [checkItem]);
 
   const allAgreeHandler = (checked) => {
-    setIsAllChecked(!isAllChecked);
     if (checked) {
-      setCheckedItems([...checkedItems]);
+      for(let i = 0; i < ConsentList.length; i++) {
+        checkItem.push(ConsentList[i].id);
+        setCheckItem(checkItem);
+        console.log('after', checkItem);
+      };
+      // setIsAllChecked(true);
+    }
+    else {
+      // setIsAllChecked(false);
+      setCheckItem([]);
     }
   };
+
+  const agreeHandler = (id, checked) => {
+    if(checked) {
+      setCheckItem(checkItem => [...checkItem, id]);
+    }
+    else if (!checked && checkItem.includes(id)) {
+      setCheckItem(checkItem.filter((i) => i !== id));
+    }
+  };
+
+
 
   // 회원가입 모달에서 뒤로가기
   function GoBackSignUp() {
@@ -529,25 +568,28 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
                   type="checkbox"
                   className="ConsentChkBox"
                   id="FullConsentChkBox"
-                  onChange={(e) => handleAllCheck(e.target.checked)}
-                  checked={
-                    checkedConsent.length === ConsentList.length ? true : false
-                  }
+                  onChange={(e) => allAgreeHandler(e.target.checked)}
                 />
-                <label for="FullConsentChkBox">
+                <label htmlFor="FullConsentChkBox">
                   <span>전체 동의</span>
                 </label>
               </div>
               <hr className="SignUpModal_divider" />
+              {
+                console.log('sd', checkItem)
+              }
               {ConsentList?.map((i, key) => (
                 <div className="ConsentItem" key={key}>
                   <input
                     type="checkbox"
                     className="ConsentChkBox"
                     id={i.name}
-                    onChange={(e) => handleSingleCheck(e.target.checked, i.id)}
-                    checked={checkedConsent.includes(i.id) ? true : false}
-                  />
+                    onChange={(e) => agreeHandler(i.id, e.target.checked)} // 함수 호출 시 전달할 매개변수가 있는 경우 콜백함수 형태로 사용.
+                    checked={checkItem.includes(i.id) ? true : false}
+                    />
+                  {
+                    console.log('check', checkItem.includes(i.id))
+                  }
                   <label htmlFor={i.name}>
                     <span>
                       {i.content}
