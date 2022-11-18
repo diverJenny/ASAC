@@ -109,36 +109,41 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
 
   const [isAllChecked, setIsAllChecked] = useState(false);
   const [checkItem, setCheckItem] = useState([]);
-  
-  useEffect(() => {
-    console.log("나와");
-  }, [checkItem]);
+
+  // useEffect(() => {
+  //   console.log("나와");
+  // }, [checkItem]);
 
   const allAgreeHandler = (checked) => {
     if (checked) {
-      for(let i = 0; i < ConsentList.length; i++) {
+      for (let i = 0; i < ConsentList.length; i++) {
         checkItem.push(ConsentList[i].id);
-        setCheckItem(checkItem);
-        console.log('after', checkItem);
-      };
+        setCheckItem([...checkItem]);
+        console.log("after", checkItem);
+      }
       // setIsAllChecked(true);
-    }
-    else {
+    } else {
       // setIsAllChecked(false);
       setCheckItem([]);
     }
   };
 
   const agreeHandler = (id, checked) => {
-    if(checked) {
-      setCheckItem(checkItem => [...checkItem, id]);
-    }
-    else if (!checked && checkItem.includes(id)) {
-      setCheckItem(checkItem.filter((i) => i !== id));
+    if (checked) {
+      setCheckItem((checkItem) => [...checkItem, id]);
+    } else if (!checked && checkItem.includes(id)) {
+      const filter = checkItem.filter((i) => i !== id);
+      setCheckItem([...filter]);
     }
   };
 
-
+  useEffect(() => {
+    if (checkItem.length >= 3) {
+      setIsAllChecked(true);
+    } else {
+      setIsAllChecked(false);
+    }
+  }, [checkItem]);
 
   // 회원가입 모달에서 뒤로가기
   function GoBackSignUp() {
@@ -569,15 +574,13 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
                   className="ConsentChkBox"
                   id="FullConsentChkBox"
                   onChange={(e) => allAgreeHandler(e.target.checked)}
+                  checked={isAllChecked ? true : false}
                 />
                 <label htmlFor="FullConsentChkBox">
                   <span>전체 동의</span>
                 </label>
               </div>
               <hr className="SignUpModal_divider" />
-              {
-                console.log('sd', checkItem)
-              }
               {ConsentList?.map((i, key) => (
                 <div className="ConsentItem" key={key}>
                   <input
@@ -586,10 +589,8 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
                     id={i.name}
                     onChange={(e) => agreeHandler(i.id, e.target.checked)} // 함수 호출 시 전달할 매개변수가 있는 경우 콜백함수 형태로 사용.
                     checked={checkItem.includes(i.id) ? true : false}
-                    />
-                  {
-                    console.log('check', checkItem.includes(i.id))
-                  }
+                  />
+                  {console.log("check", checkItem.includes(i.id))}
                   <label htmlFor={i.name}>
                     <span>
                       {i.content}
