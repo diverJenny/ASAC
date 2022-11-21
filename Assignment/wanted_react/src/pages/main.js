@@ -1,13 +1,13 @@
 import "../css/base_page.css";
 import "../css/main.css";
 import Footer from "../component/footer";
-import CareerContents from "../careerContents.json";
+import careerContentsList from "../careerContents.json";
 import Article from "../article.json";
 import VODContents from "../vodContents.json";
-
 import TopBennerContents from "../topBannerContents.json";
 import SubTitle from "../subTitle.json";
 import CareerCategory from "../careerCategory.json";
+import CareerContents from "../component/careerContents";
 
 function Main() {
   return (
@@ -180,7 +180,7 @@ function Main() {
               </div>
               <div className="CareerContents_List_Wrapper">
                 <ul className="CareerContents_List">
-                  {CareerContents.map((i) => (
+                  {/* {careerContentsList.map((i) => (
                     <li className="CareerContentCard_CareerContentCard">
                       <a href="#">
                         <div className="CareerContentCard_CareerContentCard_Thumbnail">
@@ -205,7 +205,8 @@ function Main() {
                         </div>
                       </a>
                     </li>
-                  ))}
+                  ))} */}
+                  <CareerContents contentList={careerContentsList}/>
                 </ul>
                 <div className="CareerContentList_More">
                   <button className="CareerContentList_More_Button">

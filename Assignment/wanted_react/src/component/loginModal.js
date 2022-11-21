@@ -602,7 +602,6 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
               ))}
             </div>
             <div className="SignUp_Input_Submit">
-              <div></div>
               <button className="SignUp_Input_SubmitBtn">
                 <span>가입하기</span>
               </button>

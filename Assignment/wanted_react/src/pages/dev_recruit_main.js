@@ -6,6 +6,7 @@ import CompanyHiringList from "../company_HiringList.json";
 import recruitList from "../recruitList.json";
 import { Link } from "react-router-dom";
 import { priceFormat } from "../utils/numberFormating"
+import styled from "styled-components";
 
 function DevRecruitMain() {
   return (
@@ -128,12 +129,19 @@ function DevRecruitMain() {
             <div className="JobList_Tag_Slider">
               <div className="JobList_Tag_Slider_List">
                 {JobListTag.map((i) => (
-                  <div className="JobList_Tag_btn" id={i.tagId}>
-                    <span>
-                      {i.tagName}
-                      <img src={i.img} alt={i.tagName} />
-                    </span>
-                  </div>
+                  // <div className="JobList_Tag_btn" id={i.tagId}>
+                  //   <span>
+                  //     {i.tagName}
+                  //     <img src={i.img} alt={i.tagName} />
+                  //   </span>
+                  // </div>
+                  // 랜덤 색상
+                  <JobListTagStyle tagBackground={"#"+Math.round(Math.random()*0xffffff).toString(16)}>
+                      <span>
+                        {i.tagName}
+                        <img src={i.img} alt={i.tagName} />
+                      </span>
+                  </JobListTagStyle>
                 ))}
               </div>
             </div>
@@ -266,5 +274,36 @@ function DevRecruitMain() {
     </>
   );
 }
+
+const JobListTagStyle = styled.div`
+  outline: none;
+  display: block;
+  height: 32px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  border: 1px solid transparent;
+  background: ${props => props.tagBackground};
+  opacity: 70%;
+
+  span {
+    color: #e3e3e3 !important;
+    display: flex;
+    flex-direction: row;
+
+    img {
+      width: 16px;
+      height: 16px;
+      margin-left: 5px;
+      display: block;
+    }
+  }
+`
 
 export default DevRecruitMain;
