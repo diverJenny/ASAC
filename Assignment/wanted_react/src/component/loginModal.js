@@ -4,12 +4,19 @@ import "../css/loginModal.css";
 import { isValidEmail } from "../utils/emailFormating";
 import { isSamePassword, isValidPassword } from "../utils/passwordFormating";
 import ConsentList from "../consent.json";
+import {openLoginModal, offLoginModal, openSignupModal} from "../modules/loginModalStatus";
+import { useDispatch, useSelector } from "react-redux";
 
-function LoginModal({ LoginModalOn, SetLoginModalOn }) {
+function LoginModal() {
+  // loginModal의 상태값을 loginModalState에 할당.
+  const loginModalState = useSelector(state => state.loginModalStatus);
+  // state값을 dispatch를 통해서 redux에 전달
+  const dispatch = useDispatch();
+
   function LoginModalOff() {
     // console.log("LoginModalOff : " + LoginModalOn);
     // console.log("SetLoginModalOn" + SetLoginModalOn);
-    SetLoginModalOn(0);
+    dispatch(offLoginModal());
     // console.log("LoginModalOff : " + LoginModalOn);
   }
 
@@ -32,7 +39,7 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
 
   function SignUpModalOn() {
     // console.log("EmailInput : " + EmailInput)
-    if (isValidEmail(EmailInput)) SetLoginModalOn(2);
+    if (isValidEmail(EmailInput)) dispatch(openSignupModal());
   }
 
   const [passwordInput, setPasswordInput] = useState("");
@@ -63,56 +70,8 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
     }
   }, [passwordConfirmInput]);
 
-  // /* ----- 회원가입 동의 체크 박스 ----- */
-  // // 체크된 아이템을 담는 배열
-  // const [checkedConsent, setCheckedConsent] = useState([]);
-
-  // // 체크박스 단일 선택
-  // const handleSingleCheck = (checked, id) => {
-  //   if (checked) {
-  //     // 단일 선택 시 체크된 아이템 배열에 추가
-  //     setCheckedConsent((prev) => [...prev, id]);
-  //   } else {
-  //     // 단일 선택 해제 시 체크된 아이템을 제외한 배열
-  //     setCheckedConsent(checkedConsent.filter((element) => element !== id));
-  //   }
-  // };
-
-  // // 체크박스 전체 선택
-  // const handleAllCheck = (checked) => {
-  //   if (checked) {
-  //     // 전체 선택 시 모든 아이템의 id를 담을 배열
-  //     const idArray = [];
-  //     ConsentList.forEach((element) => idArray.push(element.id));
-  //     setCheckedConsent(idArray);
-  //   } else {
-  //     // 전체 선택 해제 시 isCheckedConsent를 빈 배열로 상태 업데이트
-  //     setCheckedConsent([]);
-  //   }
-  // };
-
-  // const [isAllChecked, setIsAllChecked] = useState(false);
-  // const [checkItem, setCheckItem] = useState([]);
-  // const [check1, setCheck1] = useState(false);
-  // const [check2, setCheck2] = useState(false);
-  // const [check3, setCheck3] = useState(false);
-
-  // const allAgreeHandler = (checked) => {
-  //   setIsAllChecked(!isAllChecked);
-  //   if (checked) {
-  //     setCheckItem([true,true,true]);
-  //   }
-  //   else {
-  //     setCheckItem([false,false,false]);
-  //   }
-  // };
-
   const [isAllChecked, setIsAllChecked] = useState(false);
   const [checkItem, setCheckItem] = useState([]);
-
-  // useEffect(() => {
-  //   console.log("나와");
-  // }, [checkItem]);
 
   const allAgreeHandler = (checked) => {
     if (checked) {
@@ -147,7 +106,7 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
 
   // 회원가입 모달에서 뒤로가기
   function GoBackSignUp() {
-    SetLoginModalOn(1);
+    dispatch(openLoginModal());
   }
 
   function OutSideClick(e) {
@@ -161,7 +120,8 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
   return (
     <>
       {/* {console.log("LoginModalOn : " + LoginModalOn)} */}
-      {LoginModalOn === 1 && (
+      {/* {console.log(loginModalState)} */}
+      {loginModalState.loginModalStatus === 1 && (
         <div
           id="LoginModalContainer"
           className="LoginModalContainer"
@@ -314,7 +274,7 @@ function LoginModal({ LoginModalOn, SetLoginModalOn }) {
         </div>
       )}
 
-      {LoginModalOn === 2 && (
+      {loginModalState.loginModalStatus === 2 && (
         <div className="SignUpModalContainer" onClick={SignUpModalOutSideClick}>
           <div className="SignUpModal">
             <div className="SignUpModal_Header">

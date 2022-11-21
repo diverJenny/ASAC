@@ -7,18 +7,21 @@ import SearchBar from "./component/searchBar";
 import SearchResult from "./pages/searchResult";
 import LoginModal from "./component/loginModal";
 import Header from "./component/header";
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
-  const [LoginModalOn, SetLoginModalOn] = useState(0);
+  // const [LoginModalOn, SetLoginModalOn] = useState(0);
   const [SearchBarOn, SetSearchBarOn] = useState(false);
+
+  const loginModalState = useSelector(state => state.loginModalStatus);
 
   return (
     <>
       <BrowserRouter>
-        {LoginModalOn !== 0 && (
+        {loginModalState.loginModalStatus !== 0 && (
           <LoginModal
-            LoginModalOn={LoginModalOn}
-            SetLoginModalOn={SetLoginModalOn}
+            // LoginModalOn={LoginModalOn}
+            // SetLoginModalOn={SetLoginModalOn}
           />
         )}
         {SearchBarOn &&
@@ -26,8 +29,8 @@ function App() {
             SetSearchBarOn={SetSearchBarOn}
         />}
         <Header
-          LoginModalOn={LoginModalOn}
-          SetLoginModalOn={SetLoginModalOn}
+          // LoginModalOn={LoginModalOn}
+          // SetLoginModalOn={SetLoginModalOn}
           SetSearchBarOn={SetSearchBarOn}
         />
         <Routes>

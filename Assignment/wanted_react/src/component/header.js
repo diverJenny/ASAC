@@ -1,10 +1,14 @@
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "../css/header.css";
+import { openLoginModal } from "../modules/loginModalStatus";
 
 function Header({ SetLoginModalOn, SetSearchBarOn }) {
+  
+  const dispatch = useDispatch();
+
   function ShowLoginModal() {
-    SetLoginModalOn(1);
-    // console.log(LoginModalOn);
+    dispatch(openLoginModal());
   }
 
   function SearchBarOn() {
