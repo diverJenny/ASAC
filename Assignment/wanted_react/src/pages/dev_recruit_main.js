@@ -5,10 +5,18 @@ import JobListTag from "../jobListTag.json";
 import CompanyHiringList from "../company_HiringList.json";
 import recruitList from "../recruitList.json";
 import { Link } from "react-router-dom";
-import { priceFormat } from "../utils/numberFormating"
+import { priceFormat } from "../utils/numberFormating";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { addBookMark } from "../modules/bookMarkStatus";
 
 function DevRecruitMain() {
+  const dispatch = useDispatch();
+
+  const setBookMark = () => {
+    dispatch(addBookMark());
+  };
+
   return (
     <>
       <LoginModal />
@@ -136,11 +144,15 @@ function DevRecruitMain() {
                   //   </span>
                   // </div>
                   // 랜덤 색상
-                  <JobListTagStyle tagBackground={"#"+Math.round(Math.random()*0xffffff).toString(16)}>
-                      <span>
-                        {i.tagName}
-                        <img src={i.img} alt={i.tagName} />
-                      </span>
+                  <JobListTagStyle
+                    tagBackground={
+                      "#" + Math.round(Math.random() * 0xffffff).toString(16)
+                    }
+                  >
+                    <span>
+                      {i.tagName}
+                      <img src={i.img} alt={i.tagName} />
+                    </span>
                   </JobListTagStyle>
                 ))}
               </div>
@@ -159,7 +171,7 @@ function DevRecruitMain() {
         </div>
 
         <div className="Main">
-          <div className="JobList_BookmarkBtn">
+          <div className="JobList_BookmarkBtn" onClick={setBookMark}>
             <a href="">
               <svg
                 viewBox="0 0 18 18"
@@ -289,7 +301,7 @@ const JobListTagStyle = styled.div`
   line-height: 16px;
   font-weight: 400;
   border: 1px solid transparent;
-  background: ${props => props.tagBackground};
+  background: ${(props) => props.tagBackground};
   opacity: 70%;
 
   span {
@@ -304,6 +316,6 @@ const JobListTagStyle = styled.div`
       display: block;
     }
   }
-`
+`;
 
 export default DevRecruitMain;
