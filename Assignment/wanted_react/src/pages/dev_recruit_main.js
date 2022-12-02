@@ -8,17 +8,17 @@ import { Link } from "react-router-dom";
 import { priceFormat } from "../utils/numberFormating";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import { addBookMark } from "../modules/bookMarkStatus";
+import { addBookMark, deleteBookMark } from "../modules/bookMarkStatus";
 
 function DevRecruitMain() {
   const dispatch = useDispatch();
-  const selector = useSelector((state) => state.bookMarkStatus);
+  const selector = useSelector((state) => state.bookMarkStatus.bookMarks);
 
   const setBookMark = (e) => {
-    dispatch(addBookMark(e));
+    selector.includes(e)? dispatch(deleteBookMark(e)) : dispatch(addBookMark(e))
   };
   // console.log(selector);
-  
+
   return (
     <>
       <LoginModal />
