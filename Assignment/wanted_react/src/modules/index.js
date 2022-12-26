@@ -6,7 +6,7 @@ import bookMarkStatus from "./bookMarkStatus";
 
 const rootReducer = combineReducers({
   loginModalStatus, // reducer가 추가되면 이곳에 나열해주고 root reducer로 사용
-  bookMarkStatus,
+  bookMarkStatus
 });
 
 export default rootReducer;

@@ -7,15 +7,17 @@ import recruitList from "../recruitList.json";
 import { Link } from "react-router-dom";
 import { priceFormat } from "../utils/numberFormating";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
-import { addBookMark } from "../modules/bookMarkStatus";
+import { useDispatch, useSelector } from "react-redux";
+import { addBookMark, deleteBookMark } from "../modules/bookMarkStatus";
 
 function DevRecruitMain() {
   const dispatch = useDispatch();
+  const selector = useSelector((state) => state.bookMarkStatus.bookMarks);
 
-  const setBookMark = () => {
-    dispatch(addBookMark());
+  const setBookMark = (e) => {
+    selector.includes(e)? dispatch(deleteBookMark(e)) : dispatch(addBookMark(e))
   };
+  // console.log(selector);
 
   return (
     <>
@@ -171,7 +173,7 @@ function DevRecruitMain() {
         </div>
 
         <div className="Main">
-          <div className="JobList_BookmarkBtn" onClick={setBookMark}>
+          <div className="JobList_BookmarkBtn">
             <a href="">
               <svg
                 viewBox="0 0 18 18"
@@ -224,59 +226,37 @@ function DevRecruitMain() {
             <ul className="RecruitList">
               {recruitList.map((i) => (
                 <li>
-                  <Link to={"/RecruitDetail/" + i.id}>
-                    <div className="RecruitList_Content">
-                      {/* <Link to={"/RecruitDetail/" + i.id}> */}
-                      {/* 탬플릿 리터럴을 사용한 아래 코드와 동일 */}
-                      <Link to={`/RecruitDetail/${i.id}`}>
-                        <div className="RecruitList_Content_Img">
-                          <img src={i.img} alt={i.company} />
-                          <svg
-                            width="22"
-                            height="22"
-                            viewBox="0 0 18 18"
-                            fill="none"
-                            xmlns="https://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M3.58065 1C3.25997 1 3 1.26206 3 1.58533V16.4138C3 16.8632 3.48164 17.145 3.86873 16.922L9.00004 13.9662L14.1313 16.922C14.5184 17.145 15 16.8632 15 16.4138V1.58533C15 1.26206 14.74 1 14.4194 1H9.00004H3.58065ZM8.71195 12.7838C8.89046 12.681 9.10961 12.681 9.28812 12.7838L13.8387 15.4052V2.17067H9.00004H4.1613V15.4052L8.71195 12.7838Z"
-                              fill="white"
-                            ></path>
-                            <path
-                              d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
-                              fill="black"
-                              fillOpacity="0.25"
-                            ></path>
-                          </svg>
-                        </div>
-                        <div className="RecruitList_Content_Info">
-                          <span className="RecruitList_Content_Info_Position">
-                            {i.position}
-                          </span>
-                          <span className="RecruitList_Content_Info__CompanyName">
-                            {i.company}
-                          </span>
-                          {i.responseLevel !== "" ? (
-                            <div className="RecruitList_Content_Info_ResponseLevelLabel">
-                              <span>응답률 매우 높음</span>
-                            </div>
-                          ) : (
-                            ""
-                          )}
-                          <div className="RecruitList_Content_Info_Location">
-                            <span>{i.city}</span>
-                            <span>·</span>
-                            <span>{i.company}</span>
+                  <div className="RecruitList_Content">
+                    <img src={selector.includes(i.id) ? require("../images/bookmark_chk.png") : require("../images/bookmark2.png")} onClick={()=>{setBookMark(i.id)}}></img>
+                    <Link to={"/RecruitDetail/" + i.id}>
+                      <div className="RecruitList_Content_Img">
+                        <img src={i.img} alt={i.company} />
+                      </div>
+                      <div className="RecruitList_Content_Info">
+                        <span className="RecruitList_Content_Info_Position">
+                          {i.position}
+                        </span>
+                        <span className="RecruitList_Content_Info__CompanyName">
+                          {i.company}
+                        </span>
+                        {i.responseLevel !== "" ? (
+                          <div className="RecruitList_Content_Info_ResponseLevelLabel">
+                            <span>응답률 매우 높음</span>
                           </div>
-                          <span className="RecruitList_Content_Info_Reward">
-                            채용보상금 {priceFormat(i.reward)}원
-                          </span>
+                        ) : (
+                          ""
+                        )}
+                        <div className="RecruitList_Content_Info_Location">
+                          <span>{i.city}</span>
+                          <span>·</span>
+                          <span>{i.company}</span>
                         </div>
-                      </Link>
-                    </div>
-                  </Link>
+                        <span className="RecruitList_Content_Info_Reward">
+                          채용보상금 {priceFormat(i.reward)}원
+                        </span>
+                      </div>
+                    </Link>
+                  </div>
                 </li>
               ))}
             </ul>
